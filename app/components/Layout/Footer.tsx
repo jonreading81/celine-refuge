@@ -16,7 +16,6 @@ const Footer = () => (
               Please reach out to us with any questions or concerns. We’re happy
               to hear from you.
             </p>
-            <p className="mt-10">Registered Charity: 12345-67</p>
           </div>
           <div className="basis-1/3"></div>
           <div className="basis-1/2 border-b border-white pb-4">
@@ -44,9 +43,7 @@ const Footer = () => (
     </div>
     <div className="mx-auto text-center sm:text-xs mt-6">
       <Logo />
-      <p className="font-default mb-10">
-        © 2035 ChoosEquality. Powered and secured by Wix
-      </p>
+      <p className="font-default mb-10">© 2035 Celine</p>
     </div>
   </footer>
 );

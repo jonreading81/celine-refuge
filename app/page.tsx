@@ -26,11 +26,11 @@ export default function Home() {
               you can do to help.
             </p>
             <a
-              href="/projects"
+              href="/news"
               className="text-purple-site py-6 font-site"
               data-testid={testIds.HOME_PAGE.OUR_INITIATIVES_CTA}
             >
-              Read More
+              Learn more about our projects
             </a>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function Home() {
               and grow.
             </p>
             <a href="/about" className="text-purple-site py-6 font-site">
-              Read More
+              Learn more about our mission
             </a>
           </div>
         </div>

@@ -59,55 +59,6 @@ export default async function Page() {
             </button>
           </form>
         </div>
-        <div className="max-w-4xl mx-auto mt-10">
-          <h3 className="font-site text-lg my-3">Partner</h3>
-          <form className="border-2 border-blue-site p-8">
-            <div className="flex flex-col sm:flex-row sm:gap-12">
-              <div className="basis-1/2">
-                <label className="text-xs" htmlFor="company">
-                  Company
-                </label>
-                <input
-                  className="input"
-                  type="text"
-                  name="company"
-                  id="company"
-                />
-                <label className="text-xs" htmlFor="address">
-                  Address
-                </label>
-                <input
-                  className="input"
-                  type="email"
-                  name="address"
-                  id="address"
-                />
-              </div>
-              <div className="basis-1/2">
-                <label className="text-xs" htmlFor="contact">
-                  Point of Contact
-                </label>
-                <input
-                  className="input"
-                  type="text"
-                  name="contact"
-                  id="contact"
-                />
-                <label className="text-xs" htmlFor="phone">
-                  Phone
-                </label>
-                <input className="input" type="tel" name="phone" id="phone" />
-              </div>
-            </div>
-            <label className="text-xs" htmlFor="social">
-              Social Media Links
-            </label>
-            <input className="input" type="text" name="social" id="social" />
-            <button className="btn-main w-full mt-6 text-xl" type="submit">
-              Apply
-            </button>
-          </form>
-        </div>
       </div>
     </div>
   );

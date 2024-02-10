@@ -10,15 +10,8 @@ const Header = () => (
     >
       <div className="flex sm:px-6 sm:px-14 h-header sm:items-center sm:gap-4 sm:gap-8">
         <h2 className="flex-1">
-          <a
-            href="/"
-            className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6"
-          >
+          <a href="/" className="flex flex-col sm:flex-row gap-2 sm:gap-6">
             <Logo />
-            <div>
-              <span className="block font-site">ChoosEquality</span>
-              <span className="text-xs">Education for All</span>
-            </div>
           </a>
         </h2>
         <div>
