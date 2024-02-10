@@ -4,7 +4,7 @@ export default async function Page() {
     <div className="relative">
       <div className="w-full h-[400px] relative">
         <WixMediaImage
-          media="https://static.wixstatic.com/media/0b340f_a5c250a81aed4d7fa68e005cff2132c8~mv2_d_3840_1960_s_2.jpg/v1/fill/w_3456,h_984,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/0b340f_a5c250a81aed4d7fa68e005cff2132c8~mv2_d_3840_1960_s_2.jpg"
+          media="https://static.wixstatic.com/media/8ad122_27aa0ed95d9e486492ed68822e3213f8~mv2.webp"
           alt="projects"
           sizes="100vw"
           objectFit="cover"
