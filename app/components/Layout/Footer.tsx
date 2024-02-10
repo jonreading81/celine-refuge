@@ -20,13 +20,14 @@ const Footer = () => (
           <div className="basis-1/3"></div>
           <div className="basis-1/2 border-b border-white pb-4">
             <p className="mt-10">
-              500 Terry Francois Street
-              <br /> San Francisco, CA 94158
+              500 Street
+              <br /> France
+              <br /> Earth
             </p>
             <p className="mt-10">Phone: 1-800-000-0000</p>
           </div>
         </div>
-        <h3 className="text-4xl mt-10">info@mysite.com</h3>
+        <h3 className="text-4xl mt-10">info@refuge.com</h3>
       </div>
       <div className="basis-1/3 bg-gray-100 p-14 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold">BE THE FIRST TO KNOW</h2>

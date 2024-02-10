@@ -12,7 +12,7 @@ export default function Home() {
         <div className="basis-1/3">
           <div className="h-[370px] relative">
             <WixMediaImage
-              media="https://static.wixstatic.com/media/0b340f_d146a1cff38b4503ae5e6ccc9aa86368~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_434,h_460,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/0b340f_d146a1cff38b4503ae5e6ccc9aa86368~mv2_d_5184_3456_s_4_2.jpg"
+              media="https://static.wixstatic.com/media/8ad122_22cc5ee3edcd46beb0f751469c21e050~mv2.webp"
               objectFit="cover"
               sizes="50vw"
               disableZoom={true}
@@ -21,9 +21,10 @@ export default function Home() {
           <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:mt-[-300px]">
             <h3 className="text-2xl font-site">Our Initiatives</h3>
             <p className="my-6 text-sm">
-              Our initiatives bring people together to help solve real problems
-              and evoke a positive change. Explore our initiatives and see what
-              you can do to help.
+              For me, sharing a table and sleeping quarters with a young family
+              I had just met, in a place I'd only decided to trek to on a spur
+              of the moment whim, was a warm and intimate experience that's
+              rarely encountered, and one I won't soon forget
             </p>
             <a
               href="/news"
@@ -37,7 +38,7 @@ export default function Home() {
         <div className="basis-2/3">
           <div className="h-[370px] relative">
             <WixMediaImage
-              media="https://static.wixstatic.com/media/0b340f_c407b331d71449afa40b30f6efb200aa~mv2_d_5580_4160_s_4_2.jpg/v1/fill/w_615,h_460,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/0b340f_c407b331d71449afa40b30f6efb200aa~mv2_d_5580_4160_s_4_2.jpg"
+              media="https://static.wixstatic.com/media/8ad122_27aa0ed95d9e486492ed68822e3213f8~mv2.webp"
               objectFit="cover"
               sizes="100vw"
               disableZoom={true}
@@ -46,11 +47,10 @@ export default function Home() {
           <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:ml-32 sm:mt-[-430px]">
             <h3 className="text-2xl font-site">Our Mission</h3>
             <p className="my-6 text-sm">
-              We believe that education is a human right and a powerful tool for
-              social change. We provide educational projects, learning resources
-              and mentoring programs for kids of all ages and backgrounds. We
-              aim to create a world where everyone has the opportunity to learn
-              and grow.
+              For me, sharing a table and sleeping quarters with a young family
+              I had just met, in a place I'd only decided to trek to on a spur
+              of the moment whim, was a warm and intimate experience that's
+              rarely encountered, and one I won't soon forget
             </p>
             <a href="/about" className="text-purple-site py-6 font-site">
               Learn more about our mission

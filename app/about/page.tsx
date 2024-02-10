@@ -14,8 +14,6 @@ export default async function About() {
     })
     .find();
 
-  console.log(about.data?.mastheadImage);
-
   return (
     <div className="relative">
       <div className="w-full h-[400px] relative">

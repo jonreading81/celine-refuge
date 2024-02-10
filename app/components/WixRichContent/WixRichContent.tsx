@@ -34,12 +34,11 @@ const ContentNode = ({ node }: { node: Node }) => {
     const { image } = node.imageData;
 
     return (
-      <div className=" py-6 w-full h-[400px] relative">
+      <div className=" py-6 w-full relative">
         <WixMediaImage
           media={`wix:image://v1/${image.src.id}`}
           alt={image.alt}
           sizes="100vw"
-          objectFit="contain"
           disableZoom={true}
         />
       </div>

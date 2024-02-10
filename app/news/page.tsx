@@ -10,13 +10,11 @@ export default async function News() {
     })
     .find();
 
-  console.log(items[0].data!.date);
-
   return (
     <div className="relative">
       <div className="w-full h-[400px] relative">
         <WixMediaImage
-          media="https://static.wixstatic.com/media/0b340f_0b4d1813105145bfa782ce1d7a379151~mv2_d_5760_3840_s_4_2.jpg/v1/fill/w_1920,h_492,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/0b340f_0b4d1813105145bfa782ce1d7a379151~mv2_d_5760_3840_s_4_2.jpg"
+          media="https://static.wixstatic.com/media/8ad122_27aa0ed95d9e486492ed68822e3213f8~mv2.webp"
           alt="news"
           sizes="100vw"
           objectFit="cover"
@@ -31,8 +29,8 @@ export default async function News() {
           News & Updates
         </h1>
         <p className="pt-6 max-w-3xl text-sm text-center mx-auto">
-          Read the latest news and stay up to date about our organization, our
-          projects, our events, and the impact we’re making.
+          Read the latest news and stay up to date about the refuges and any
+          upcoming events.
         </p>
         <div
           className="grid grid-cols-1 sm:grid-cols-3 gap-7 grid-flow-row mt-10"
@@ -51,11 +49,11 @@ export default async function News() {
                   objectFit="cover"
                   disableZoom={true}
                 />
-                <span className="bg-blue-site text-white px-6 py-2 absolute bottom-[-20px]">
-                  {formatDate(
-                    new Date(item.data!.date?.$date ?? item.data!.date)
-                  )}
-                </span>
+                {item.data!.date && (
+                  <span className="bg-blue-site text-white px-6 py-2 absolute bottom-[-20px]">
+                    {formatDate(new Date(item.data!.date))}
+                  </span>
+                )}
               </div>
               <div className="bg-white relative mt-10 px-8 pb-10">
                 <h2 className="mb-10 font-site">{item.data!.title}</h2>
@@ -65,7 +63,7 @@ export default async function News() {
                   href={`/news/${item.data!.slug}`}
                   className="text-purple-site py-6 font-site"
                 >
-                  Read More
+                  Learn More
                 </a>
               </div>
             </div>
