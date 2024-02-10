@@ -1,7 +1,7 @@
 'use client';
 import { NavLink } from './NavLink';
 import { useCallback, useState } from 'react';
-import type { LinkProps } from 'next/link';
+
 import { usePathname } from 'next/navigation';
 
 const navbarItems = [
@@ -10,6 +10,12 @@ const navbarItems = [
   { ref: '/news', label: 'News' },
   { ref: '/contact', label: 'Contact' },
 ];
+
+type LinkProps = {
+  href: string;
+  children: React.ReactNode;
+  onClick?: () => void;
+};
 
 const StyledNavLink = ({
   isActive,
@@ -20,7 +26,7 @@ const StyledNavLink = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <NavLink
+  <a
     className={`${className ?? ''} ${
       isActive ? 'text-purple-site' : 'hover:text-purple-site'
     }`}
