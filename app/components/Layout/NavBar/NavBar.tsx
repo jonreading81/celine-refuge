@@ -60,6 +60,7 @@ export function NavBar() {
             ></span>
           ))}
         </div>
+        <span className="sr-only">Toggle Menu</span>
       </button>
       <nav
         className={`${
