@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="mx-auto relative sm:px-20 py-5">
       <div
-        className="flex mt-12 sm:mt-32 sm:gap-12 flex-col sm:flex-row"
+        className="flex mt-12 sm:mt-20 sm:gap-12 flex-col sm:flex-row"
         data-testid={testIds.HOME_PAGE.HIGHLIGHTS}
       >
         <div className="basis-1/3">
