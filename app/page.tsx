@@ -22,9 +22,9 @@ export default function Home() {
             <h3 className="text-2xl font-site">Our Initiatives</h3>
             <p className="my-6 text-sm">
               For me, sharing a table and sleeping quarters with a young family
-              I had just met, in a place I'd only decided to trek to on a spur
-              of the moment whim, was a warm and intimate experience that's
-              rarely encountered, and one I won't soon forget
+              I had just met, in a place I&apos;d only decided to trek to on a
+              spur of the moment whim, was a warm and intimate experience
+              that&apos;s rarely encountered, and one I won&apos;t soon forget
             </p>
             <a
               href="/news"
@@ -48,9 +48,9 @@ export default function Home() {
             <h3 className="text-2xl font-site">Our Mission</h3>
             <p className="my-6 text-sm">
               For me, sharing a table and sleeping quarters with a young family
-              I had just met, in a place I'd only decided to trek to on a spur
-              of the moment whim, was a warm and intimate experience that's
-              rarely encountered, and one I won't soon forget
+              I had just met, in a place I&apos;d only decided to trek to on a
+              spur of the moment whim, was a warm and intimate experience that`s
+              rarely encountered, and one I won&apos;t soon forget
             </p>
             <a href="/about" className="text-purple-site py-6 font-site">
               Learn more about our mission
