@@ -10,7 +10,7 @@ export const CarouselClient = () => {
 
   return (
     <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 mt-20 sm:mt-40">
-      <Carousel>
+      <Carousel indicators={false}>
         {texts.map((text, i) => (
           <div
             key={i}

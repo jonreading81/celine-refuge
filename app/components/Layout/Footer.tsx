@@ -28,7 +28,7 @@ const Footer = () => (
         </div>
         <h3 className="text-4xl mt-10">info@mysite.com</h3>
       </div>
-      <div className="basis-1/3 bg-gray-200 p-14 text-center">
+      <div className="basis-1/3 bg-gray-100 p-14 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold">BE THE FIRST TO KNOW</h2>
         <p className="mt-6">Sign up to our newsletter to stay informed</p>
         <input
@@ -36,14 +36,14 @@ const Footer = () => (
           className="my-6 w-3/4 block mx-auto bg-transparent border-0 border-b border-blue-site text-blue-site"
           placeholder="Email Address"
         />
-        <a href="" className="text-purple-site py-6 font-site">
+        <a href="" className="text-blue-site py-6 font-site">
           Subscribe Now
         </a>
       </div>
     </div>
     <div className="mx-auto text-center sm:text-xs mt-6">
       <Logo />
-      <p className="font-default mb-10">© 2035 Celine</p>
+      <button className="font-default mb-10">© 2035 Celine</button>
     </div>
   </footer>
 );
