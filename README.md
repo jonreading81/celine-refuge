@@ -1,7 +1,5 @@
 # Celine Refuge
 
-![Template showcase](docs/media/template-showcase.gif)
-
 ## Local Development
 
 Prerequisites:
