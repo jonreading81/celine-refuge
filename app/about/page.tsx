@@ -1,4 +1,5 @@
 import { WixMediaImage } from '@app/components/Image/WixMediaImage';
+import { WixRichContent } from '@app/components/WixRichContent/WixRichContent';
 import { getWixClient } from '@app/hooks/useWixClientServer';
 
 import testIds from '@app/utils/test-ids';
@@ -13,12 +14,15 @@ export default async function About() {
     })
     .find();
 
+  console.log(about.data.mastheadImage);
+
   return (
     <div className="relative">
       <div className="w-full h-[400px] relative">
         <WixMediaImage
-          media="https://static.wixstatic.com/media/0b340f_c407b331d71449afa40b30f6efb200aa~mv2_d_5580_4160_s_4_2.jpg/v1/fill/w_1920,h_492,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/0b340f_c407b331d71449afa40b30f6efb200aa~mv2_d_5580_4160_s_4_2.jpg"
-          alt="projects"
+          priority={true}
+          media={about.data.mastheadImage}
+          alt="Image showing whatb we are about"
           sizes="100vw"
           objectFit="cover"
           disableZoom={true}
@@ -27,10 +31,12 @@ export default async function About() {
       <div className="max-w-7xl mx-auto mt-[-120px] relative bg-white px-8 sm:px-20">
         <h1 className="text-center py-8 font-site">{about.data!.title}</h1>
 
-        <p
+        <div
           className="py-6 max-w-3xl text-sm mx-auto"
           dangerouslySetInnerHTML={{ __html: about.data!.intro }}
         />
+
+        <WixRichContent richcontent={about.data.richcontent} />
 
         <p className="pt-6 max-w-3xl text-sm text-center mx-auto">
           ChoosEquality is a non-profit organization that aims to bring

@@ -19,6 +19,7 @@ export function WixMediaImage({
   sizes = '10vw',
   objectFit,
   disableZoom = false,
+  priority = false,
 }: {
   media?: string;
   alt?: string;
@@ -28,6 +29,7 @@ export function WixMediaImage({
   className?: string;
   disableZoom?: boolean;
   objectFit?: 'cover' | 'contain';
+  priority?: boolean;
 }) {
   const imageUrl = media
     ? getImageUrlForMedia(media || '', width, height)
@@ -49,6 +51,7 @@ export function WixMediaImage({
           className={`object-cover w-full ${
             !disableZoom ? 'group-hover:scale-110' : ''
           } transition duration-300 ease-in-out ${className}`}
+          priority={priority}
         />
       </div>
     </div>
