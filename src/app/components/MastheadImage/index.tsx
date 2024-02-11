@@ -1,6 +1,12 @@
 import { PrismicNextImage } from '@prismicio/next';
 
-export const MastheadImage = ({ image }) => {
+import type { ImageField } from '@prismicio/client';
+
+type Props = {
+  image: ImageField;
+};
+
+export const MastheadImage = ({ image }: Props) => {
   return (
     <div className="w-full h-[400px] overflow-hidden  relative">
       <PrismicNextImage

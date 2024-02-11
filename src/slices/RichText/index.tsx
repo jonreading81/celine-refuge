@@ -13,7 +13,7 @@ const components: JSXMapSerializer = {
   },
   paragraph: ({ children }) => <p className="mb-4 text-md">{children}</p>,
   heading1: ({ children }) => <h1 className="mb-6">{children}</h1>,
-  heading1: ({ children }) => <h1 className="mb-6">{children}</h1>,
+  heading2: ({ children }) => <h2 className="mb-6">{children}</h2>,
 };
 
 type RichTextProps = SliceComponentProps<Content.RichTextSlice>;
