@@ -19,7 +19,7 @@ export default async function About() {
   const {
     data: { slices, title, masthead_image },
   } = await client.getByUID('page', PAGE).catch(() => notFound());
-  console.log(title);
+
   return (
     <div className="relative">
       <div className="w-full h-[400px] overflow-hidden  relative">
@@ -30,7 +30,6 @@ export default async function About() {
           className="object-cover w-full"
         />
       </div>
-
       <div className="max-w-7xl mx-auto mt-[-120px] relative bg-white px-8 sm:px-20">
         <h1 className="text-center py-8 font-site">{prismic.asText(title)}</h1>
 

@@ -1,0 +1,49 @@
+{
+  "id": "promo_panel",
+  "type": "SharedSlice",
+  "name": "PromoPanel",
+  "description": "PromoPanel",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "intro": {
+          "type": "Text",
+          "config": {
+            "label": "Intro",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "page_link": {
+          "type": "Link",
+          "config": {
+            "label": "Page link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

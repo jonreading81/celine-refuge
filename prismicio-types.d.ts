@@ -4,7 +4,10 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = ImageWithTextSlice | RichTextSlice;
+type PageDocumentDataSlicesSlice =
+  | PromoPanelSlice
+  | ImageWithTextSlice
+  | RichTextSlice;
 
 /**
  * Content for Page documents
@@ -160,6 +163,81 @@ export type ImageWithTextSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *PromoPanel → Items*
+ */
+export interface PromoPanelSliceDefaultItem {
+  /**
+   * Title field in *PromoPanel → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo_panel.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Intro field in *PromoPanel → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo_panel.items[].intro
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  intro: prismic.KeyTextField;
+
+  /**
+   * Image field in *PromoPanel → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo_panel.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Page link field in *PromoPanel → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo_panel.items[].page_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  page_link: prismic.LinkField;
+}
+
+/**
+ * Default variation for PromoPanel Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PromoPanelSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Record<string, never>,
+  Simplify<PromoPanelSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *PromoPanel*
+ */
+type PromoPanelSliceVariation = PromoPanelSliceDefault;
+
+/**
+ * PromoPanel Shared Slice
+ *
+ * - **API ID**: `promo_panel`
+ * - **Description**: PromoPanel
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PromoPanelSlice = prismic.SharedSlice<
+  'promo_panel',
+  PromoPanelSliceVariation
+>;
+
+/**
  * Primary content in *RichText → Primary*
  */
 export interface RichTextSliceDefaultPrimary {
@@ -223,6 +301,10 @@ declare module '@prismicio/client' {
       ImageWithTextSliceDefaultItem,
       ImageWithTextSliceVariation,
       ImageWithTextSliceDefault,
+      PromoPanelSlice,
+      PromoPanelSliceDefaultItem,
+      PromoPanelSliceVariation,
+      PromoPanelSliceDefault,
       RichTextSlice,
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,

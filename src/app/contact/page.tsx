@@ -13,11 +13,15 @@ const PAGE = 'contact';
 
 export const generateMetadata = generateMetadataForPage(PAGE);
 
-export default async function Home() {
+export default async function Contact() {
   const client = createClient();
   const page = await client.getByUID('page', PAGE).catch(() => notFound());
 
-  return <SliceZone slices={page.data.slices} components={components} />;
+  return (
+    <div>
+      <SliceZone slices={page.data.slices} components={components} />
+    </div>
+  );
 }
 // export default async function Page() {
 //   return (

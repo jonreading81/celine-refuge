@@ -35,6 +35,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "promo_panel": {
+              "type": "SharedSlice"
+            },
             "image_with_text": {
               "type": "SharedSlice"
             },
