@@ -12,7 +12,7 @@ export type PromoPanelProps = SliceComponentProps<Content.PromoPanelSlice>;
  * Component for "PromoPanel" Slices.
  */
 const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
-  if (items.length < 2) return null;
+  if (items.length < 2) return <></>;
 
   return (
     <section>
