@@ -16,7 +16,7 @@ const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
 
   return (
     <section className="mb-6">
-      <div className="mx-auto relative  py-5">
+      <div className="mx-auto relative  py-8">
         <div className="flex  sm:mt-20 sm:gap-12 flex-col sm:flex-row">
           <div className="basis-1/3">
             <div className="h-[370px] relative overflow-hidden">
