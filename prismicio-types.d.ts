@@ -5,6 +5,7 @@ import type * as prismic from '@prismicio/client';
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | NewsPanelSlice
   | PromoPanelSlice
   | ImageWithTextSlice
   | RichTextSlice;
@@ -163,6 +164,91 @@ export type ImageWithTextSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *NewsPanel → Items*
+ */
+export interface NewsPanelSliceDefaultItem {
+  /**
+   * Title field in *NewsPanel → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_panel.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Intro field in *NewsPanel → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_panel.items[].intro
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  intro: prismic.KeyTextField;
+
+  /**
+   * Image field in *NewsPanel → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_panel.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Date field in *NewsPanel → Items*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_panel.items[].date
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date: prismic.DateField;
+
+  /**
+   * Link field in *NewsPanel → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_panel.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Default variation for NewsPanel Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NewsPanelSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Record<string, never>,
+  Simplify<NewsPanelSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *NewsPanel*
+ */
+type NewsPanelSliceVariation = NewsPanelSliceDefault;
+
+/**
+ * NewsPanel Shared Slice
+ *
+ * - **API ID**: `news_panel`
+ * - **Description**: NewsPanel
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NewsPanelSlice = prismic.SharedSlice<
+  'news_panel',
+  NewsPanelSliceVariation
+>;
+
+/**
  * Primary content in *PromoPanel → Items*
  */
 export interface PromoPanelSliceDefaultItem {
@@ -301,6 +387,10 @@ declare module '@prismicio/client' {
       ImageWithTextSliceDefaultItem,
       ImageWithTextSliceVariation,
       ImageWithTextSliceDefault,
+      NewsPanelSlice,
+      NewsPanelSliceDefaultItem,
+      NewsPanelSliceVariation,
+      NewsPanelSliceDefault,
       PromoPanelSlice,
       PromoPanelSliceDefaultItem,
       PromoPanelSliceVariation,

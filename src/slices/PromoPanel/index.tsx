@@ -15,7 +15,7 @@ const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
   if (items.length < 2) return <></>;
 
   return (
-    <section>
+    <section className="mb-6">
       <div className="mx-auto relative sm:px-20 py-5">
         <div className="flex mt-12 sm:mt-28 sm:gap-12 flex-col sm:flex-row">
           <div className="basis-1/3">

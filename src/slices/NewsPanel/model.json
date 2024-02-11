@@ -1,0 +1,56 @@
+{
+  "id": "news_panel",
+  "type": "SharedSlice",
+  "name": "NewsPanel",
+  "description": "NewsPanel",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "intro": {
+          "type": "Text",
+          "config": {
+            "label": "Intro",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "date": {
+          "type": "Date",
+          "config": {
+            "label": "Date",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}
