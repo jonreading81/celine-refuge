@@ -5,9 +5,9 @@ import type * as prismic from '@prismicio/client';
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | ImageBlockSlice
   | NewsPanelSlice
   | PromoPanelSlice
-  | ImageWithTextSlice
   | RichTextSlice;
 
 /**
@@ -94,73 +94,58 @@ export type PageDocument<Lang extends string = string> =
 export type AllDocumentTypes = PageDocument;
 
 /**
- * Primary content in *ImageWithText → Primary*
+ * Primary content in *ImageBlock → Primary*
  */
-export interface ImageWithTextSliceDefaultPrimary {
+export interface ImageBlockSliceDefaultPrimary {
   /**
-   * Title field in *ImageWithText → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: image_with_text.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-}
-
-/**
- * Primary content in *ImageWithText → Items*
- */
-export interface ImageWithTextSliceDefaultItem {
-  /**
-   * Image field in *ImageWithText → Items*
+   * Image field in *ImageBlock → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: image_with_text.items[].image
+   * - **API ID Path**: image_block.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * text field in *ImageWithText → Items*
+   * Description field in *ImageBlock → Primary*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: image_with_text.items[].text
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **API ID Path**: image_block.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  text: prismic.RichTextField;
+  description: prismic.KeyTextField;
 }
 
 /**
- * Default variation for ImageWithText Slice
+ * Default variation for ImageBlock Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type ImageWithTextSliceDefault = prismic.SharedSliceVariation<
+export type ImageBlockSliceDefault = prismic.SharedSliceVariation<
   'default',
-  Simplify<ImageWithTextSliceDefaultPrimary>,
-  Simplify<ImageWithTextSliceDefaultItem>
+  Simplify<ImageBlockSliceDefaultPrimary>,
+  never
 >;
 
 /**
- * Slice variation for *ImageWithText*
+ * Slice variation for *ImageBlock*
  */
-type ImageWithTextSliceVariation = ImageWithTextSliceDefault;
+type ImageBlockSliceVariation = ImageBlockSliceDefault;
 
 /**
- * ImageWithText Shared Slice
+ * ImageBlock Shared Slice
  *
- * - **API ID**: `image_with_text`
- * - **Description**: ImageWithText
+ * - **API ID**: `image_block`
+ * - **Description**: ImageBlock
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type ImageWithTextSlice = prismic.SharedSlice<
-  'image_with_text',
-  ImageWithTextSliceVariation
+export type ImageBlockSlice = prismic.SharedSlice<
+  'image_block',
+  ImageBlockSliceVariation
 >;
 
 /**
@@ -382,11 +367,10 @@ declare module '@prismicio/client' {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
-      ImageWithTextSlice,
-      ImageWithTextSliceDefaultPrimary,
-      ImageWithTextSliceDefaultItem,
-      ImageWithTextSliceVariation,
-      ImageWithTextSliceDefault,
+      ImageBlockSlice,
+      ImageBlockSliceDefaultPrimary,
+      ImageBlockSliceVariation,
+      ImageBlockSliceDefault,
       NewsPanelSlice,
       NewsPanelSliceDefaultItem,
       NewsPanelSliceVariation,

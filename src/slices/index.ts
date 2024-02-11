@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 
 export const components = {
-  image_with_text: dynamic(() => import('./ImageWithText')),
+  image_block: dynamic(() => import('./ImageBlock')),
   news_panel: dynamic(() => import('./NewsPanel')),
   promo_panel: dynamic(() => import('./PromoPanel')),
   rich_text: dynamic(() => import('./RichText')),

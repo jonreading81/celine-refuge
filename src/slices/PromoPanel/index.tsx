@@ -16,8 +16,8 @@ const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
 
   return (
     <section className="mb-6">
-      <div className="mx-auto relative sm:px-20 py-5">
-        <div className="flex mt-12 sm:mt-28 sm:gap-12 flex-col sm:flex-row">
+      <div className="mx-auto relative  py-5">
+        <div className="flex  sm:mt-20 sm:gap-12 flex-col sm:flex-row">
           <div className="basis-1/3">
             <div className="h-[370px] relative overflow-hidden">
               <PrismicNextImage

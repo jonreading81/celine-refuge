@@ -24,7 +24,7 @@ export default async function Home() {
   return (
     <div>
       <MastheadImage image={masthead_image} />
-      <div className="max-w-7xl mx-auto mt-[-120px] relative bg-white px-8 sm:px-20">
+      <div className="max-w-7xl mx-auto  relative bg-white px-8 sm:px-20">
         <SliceZone slices={slices} components={components} />
         <CarouselClient />
       </div>

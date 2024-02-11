@@ -35,13 +35,13 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "image_block": {
+              "type": "SharedSlice"
+            },
             "news_panel": {
               "type": "SharedSlice"
             },
             "promo_panel": {
-              "type": "SharedSlice"
-            },
-            "image_with_text": {
               "type": "SharedSlice"
             },
             "rich_text": {
