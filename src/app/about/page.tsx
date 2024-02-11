@@ -9,6 +9,7 @@ import { createClient } from '@/prismicio';
 import { components } from '@/slices';
 import { generateMetadataForPage } from '@/app/utils/generateMetadataByPage';
 import { PrismicNextImage } from '@prismicio/next';
+import { MastheadImage } from '@app/components/MastheadImage';
 
 const PAGE = 'about';
 
@@ -22,14 +23,7 @@ export default async function About() {
 
   return (
     <div className="relative">
-      <div className="w-full h-[400px] overflow-hidden  relative">
-        <PrismicNextImage
-          field={masthead_image}
-          priority={true}
-          sizes="100vw"
-          className="object-cover w-full"
-        />
-      </div>
+      <MastheadImage image={masthead_image} />
       <div className="max-w-7xl mx-auto mt-[-120px] relative bg-white px-8 sm:px-20">
         <h1 className="text-center py-8 font-site">{prismic.asText(title)}</h1>
 
