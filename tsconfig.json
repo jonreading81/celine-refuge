@@ -3,9 +3,10 @@
     "baseUrl": ".",
     "paths": {
       "@statics/*": ["public/*"],
-      "@app/*": ["app/*"],
-      "@tests/*": ["tests/*"],
-      "@api/*": ["src/pages/api/*"]
+      "@app/*": ["src/app/*"],
+      "@tests/*": ["src/tests/*"],
+      "@api/*": ["src/app/pages/api/*"],
+      "@/*": ["src/*"]
     },
     "target": "es2015",
     "lib": ["dom", "dom.iterable", "esnext"],
