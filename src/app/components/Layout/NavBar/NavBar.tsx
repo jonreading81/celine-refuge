@@ -45,7 +45,7 @@ export function NavBar() {
   return (
     <>
       <button
-        className="block md:hidden float-right relative z-50"
+        className="block md:hidden float-right relative z-50 h-[54px]"
         onClick={toggleOpen}
       >
         <div className="space-y-2 absolute top-0 right-0 bg-purple-site p-3">
