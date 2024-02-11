@@ -22,6 +22,14 @@
           "single": "heading1"
         }
       },
+      "masthead_image": {
+        "type": "Image",
+        "config": {
+          "label": "Masthead Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

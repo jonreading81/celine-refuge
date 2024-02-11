@@ -8,6 +8,7 @@ import * as prismic from '@prismicio/client';
 import { createClient } from '@/prismicio';
 import { components } from '@/slices';
 import { generateMetadataForPage } from '@/app/utils/generateMetadataByPage';
+import { PrismicNextImage } from '@prismicio/next';
 
 const PAGE = 'about';
 
@@ -15,48 +16,26 @@ export const generateMetadata = generateMetadataForPage(PAGE);
 
 export default async function About() {
   const client = createClient();
-  const page = await client.getByUID('page', PAGE).catch(() => notFound());
+  const {
+    data: { slices, title, masthead_image },
+  } = await client.getByUID('page', PAGE).catch(() => notFound());
+  console.log(title);
+  return (
+    <div className="relative">
+      <div className="w-full h-[400px] overflow-hidden  relative">
+        <PrismicNextImage
+          field={masthead_image}
+          priority={true}
+          sizes="100vw"
+          className="object-cover w-full"
+        />
+      </div>
 
-  return <SliceZone slices={page.data.slices} components={components} />;
+      <div className="max-w-7xl mx-auto mt-[-120px] relative bg-white px-8 sm:px-20">
+        <h1 className="text-center py-8 font-site">{prismic.asText(title)}</h1>
+
+        <SliceZone slices={slices} components={components} />
+      </div>
+    </div>
+  );
 }
-
-// export default async function About() {
-//   const wixClient = await getWixClient();
-//   const {
-//     items: [about],
-//   } = await wixClient.items
-//     .queryDataItems({
-//       dataCollectionId: 'About',
-//     })
-//     .find();
-
-//   return (
-//     <div className="relative">
-//       <div className="w-full h-[400px] relative">
-//         <WixMediaImage
-//           priority={true}
-//           media={about.data?.mastheadImage}
-//           alt="Image showing whatb we are about"
-//           sizes="100vw"
-//           objectFit="cover"
-//           disableZoom={true}
-//         />
-//       </div>
-//       <div className="max-w-7xl mx-auto mt-[-120px] relative bg-white px-8 sm:px-20">
-//         <h1 className="text-center py-8 font-site">{about.data!.title}</h1>
-
-//         <div className="py-6 max-w-3xl text-sm mx-auto">
-//           <div
-//             className="mb-4"
-//             dangerouslySetInnerHTML={{ __html: about.data!.intro }}
-//           />
-//           <div>
-//             {about.data?.richcontent && (
-//               <WixRichContent nodes={about.data?.richcontent.nodes} />
-//             )}
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }

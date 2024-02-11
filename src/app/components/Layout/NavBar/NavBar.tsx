@@ -1,7 +1,7 @@
 'use client';
 import { NavLink } from './NavLink';
 import { useCallback, useState } from 'react';
-
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const navbarItems = [
@@ -26,7 +26,7 @@ const StyledNavLink = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <a
+  <Link
     className={`${className ?? ''} ${
       isActive ? 'text-purple-site' : 'hover:text-purple-site'
     }`}

@@ -13,12 +13,8 @@ export type ImageWithTextProps =
  * Component for "ImageWithText" Slices.
  */
 const ImageWithText = ({ slice }: ImageWithTextProps): JSX.Element => {
-  console.log(slice);
   return (
-    <section
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-    >
+    <section>
       <h2>{slice.primary.title}</h2>
       {slice.items.map((item) => (
         <>
