@@ -878,6 +878,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:18.11.8":
+  version: 18.11.8
+  resolution: "@types/node@npm:18.11.8"
+  checksum: 60b358f97c1a029722dc785811b217615ef20249c3fbde60a65869cfd7a5cd5b1872ee95c79c187ef70e5a078f4ac7670d2129803985268b1f021ad6e8040af8
+  languageName: node
+  linkType: hard
+
 "@types/parse5@npm:^6.0.0":
   version: 6.0.3
   resolution: "@types/parse5@npm:6.0.3"
@@ -1538,6 +1545,7 @@ __metadata:
     "@prismicio/next": ^1.5.0
     "@prismicio/react": ^2.7.3
     "@slicemachine/adapter-next": ^0.3.35
+    "@types/node": 18.11.8
     "@types/react": 18.0.24
     "@types/react-dom": 18.0.8
     autoprefixer: ^10.4.13
