@@ -1,4 +1,3 @@
-import { CarouselClient } from '@app/components/Carousel/Carousel';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -26,7 +25,6 @@ export default async function Home() {
       <MastheadImage image={masthead_image} />
       <div className="max-w-7xl mx-auto mt-[-120px] relative bg-white px-8 sm:px-20">
         <SliceZone slices={slices} components={components} />
-        <CarouselClient />
       </div>
     </div>
   );

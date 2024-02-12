@@ -1,4 +1,15 @@
-export const ContactForm = () => {
+import { Content } from '@prismicio/client';
+import { SliceComponentProps } from '@prismicio/react';
+
+/**
+ * Props for `ContactForm`.
+ */
+export type ContactFormProps = SliceComponentProps<Content.ContactFormSlice>;
+
+/**
+ * Component for "ContactForm" Slices.
+ */
+const ContactForm = ({ slice }: ContactFormProps): JSX.Element => {
   return (
     <div className="max-w-4xl mx-auto mb-12">
       <form className="border-2 border-blue-site p-8">
@@ -47,3 +58,5 @@ export const ContactForm = () => {
     </div>
   );
 };
+
+export default ContactForm;

@@ -3,8 +3,10 @@
 import dynamic from 'next/dynamic';
 
 export const components = {
+  contact_form: dynamic(() => import('./ContactForm')),
   image_block: dynamic(() => import('./ImageBlock')),
   news_panel: dynamic(() => import('./NewsPanel')),
   promo_panel: dynamic(() => import('./PromoPanel')),
+  reviews_carousel: dynamic(() => import('./ReviewsCarousel')),
   rich_text: dynamic(() => import('./RichText')),
 };

@@ -5,6 +5,8 @@ import type * as prismic from '@prismicio/client';
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | ReviewsCarouselSlice
+  | ContactFormSlice
   | ImageBlockSlice
   | NewsPanelSlice
   | PromoPanelSlice
@@ -92,6 +94,36 @@ export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, 'page', Lang>;
 
 export type AllDocumentTypes = PageDocument;
+
+/**
+ * Default variation for ContactForm Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactFormSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *ContactForm*
+ */
+type ContactFormSliceVariation = ContactFormSliceDefault;
+
+/**
+ * ContactForm Shared Slice
+ *
+ * - **API ID**: `contact_form`
+ * - **Description**: ContactForm
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactFormSlice = prismic.SharedSlice<
+  'contact_form',
+  ContactFormSliceVariation
+>;
 
 /**
  * Primary content in *ImageBlock → Primary*
@@ -309,6 +341,61 @@ export type PromoPanelSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *ReviewsCarousel → Items*
+ */
+export interface ReviewsCarouselSliceDefaultItem {
+  /**
+   * Name field in *ReviewsCarousel → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: reviews_carousel.items[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Review field in *ReviewsCarousel → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: reviews_carousel.items[].review
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  review: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ReviewsCarousel Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ReviewsCarouselSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Record<string, never>,
+  Simplify<ReviewsCarouselSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *ReviewsCarousel*
+ */
+type ReviewsCarouselSliceVariation = ReviewsCarouselSliceDefault;
+
+/**
+ * ReviewsCarousel Shared Slice
+ *
+ * - **API ID**: `reviews_carousel`
+ * - **Description**: ReviewsCarousel
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ReviewsCarouselSlice = prismic.SharedSlice<
+  'reviews_carousel',
+  ReviewsCarouselSliceVariation
+>;
+
+/**
  * Primary content in *RichText → Primary*
  */
 export interface RichTextSliceDefaultPrimary {
@@ -367,6 +454,9 @@ declare module '@prismicio/client' {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      ContactFormSlice,
+      ContactFormSliceVariation,
+      ContactFormSliceDefault,
       ImageBlockSlice,
       ImageBlockSliceDefaultPrimary,
       ImageBlockSliceVariation,
@@ -379,6 +469,10 @@ declare module '@prismicio/client' {
       PromoPanelSliceDefaultItem,
       PromoPanelSliceVariation,
       PromoPanelSliceDefault,
+      ReviewsCarouselSlice,
+      ReviewsCarouselSliceDefaultItem,
+      ReviewsCarouselSliceVariation,
+      ReviewsCarouselSliceDefault,
       RichTextSlice,
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
