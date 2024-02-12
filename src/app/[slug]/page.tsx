@@ -1,4 +1,3 @@
-import { CarouselClient } from '@app/components/Carousel/Carousel';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
