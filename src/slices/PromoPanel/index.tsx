@@ -16,16 +16,16 @@ const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
 
   return (
     <section className="mb-6">
-      <div className="mx-auto relative  py-8">
-        <div className="flex  sm:mt-20 sm:gap-12 flex-col sm:flex-row">
-          <div className="basis-1/3">
+      <div className="mx-auto relative py-10 md:py-14 lg:py-16">
+        <div className="flex sm:gap-12 flex-col sm:flex-row">
+          <div className="basis-2/4">
             <div className="h-[370px] relative overflow-hidden">
               <PrismicNextImage
                 field={items[0].image}
                 className="object-cover object-center w-full h-full"
               />
             </div>
-            <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:mt-[-300px]">
+            <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:mt-[-200px]">
               <h3 className="text-2xl font-site">{items[0].title}</h3>
               <p className="my-6 text-sm">{items[0].intro}</p>
               <PrismicNextLink
@@ -36,14 +36,14 @@ const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
               </PrismicNextLink>
             </div>
           </div>
-          <div className="basis-2/3">
+          <div className="basis-2/4">
             <div className="h-[370px] relative overflow-hidden">
               <PrismicNextImage
                 field={items[1].image}
                 className="object-cover object-center w-full h-full"
               />
             </div>
-            <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:ml-32 sm:mt-[-430px]">
+            <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white  sm:mt-[-200px]">
               <h3 className="text-2xl font-site">{items[1].title}</h3>
               <p className="my-6 text-sm">{items[1].intro}</p>
 
