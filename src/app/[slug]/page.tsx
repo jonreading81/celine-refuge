@@ -9,6 +9,7 @@ import { createClient } from '@/prismicio';
 import { components } from '@/slices';
 import { generateMetadataForPage } from '@/app/utils/generateMetadataByPage';
 import { MastheadImage } from '@app/components/MastheadImage';
+import { SliceWrapper } from '@app/components/SliceWrapper';
 
 type Params = { slug: string };
 
@@ -25,10 +26,10 @@ export default async function NewsItem({ params }: { params: Params }) {
   return (
     <>
       <MastheadImage image={masthead_image} />
-      <div className="max-w-7xl mx-auto mt-[-120px] relative bg-white px-8 sm:px-20">
+      <SliceWrapper>
         <h1 className="text-center py-8 font-site">{prismic.asText(title)}</h1>
         <SliceZone slices={slices} components={components} />
-      </div>
+      </SliceWrapper>
     </>
   );
 }

@@ -9,6 +9,7 @@ import { components } from '@/slices';
 import { generateMetadataForPage } from '@/app/utils/generateMetadataByPage';
 import { PrismicNextImage } from '@prismicio/next';
 import { MastheadImage } from '@app/components/MastheadImage';
+import { SliceWrapper } from '@app/components/SliceWrapper';
 
 const PAGE = 'home';
 
@@ -23,9 +24,9 @@ export default async function Home() {
   return (
     <div>
       <MastheadImage image={masthead_image} />
-      <div className="max-w-7xl mx-auto mt-[-120px] relative bg-white px-8 sm:px-20">
+      <SliceWrapper>
         <SliceZone slices={slices} components={components} />
-      </div>
+      </SliceWrapper>
     </div>
   );
 }
