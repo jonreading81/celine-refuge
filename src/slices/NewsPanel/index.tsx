@@ -22,7 +22,7 @@ const NewsPanel = ({ slice: { items } }: NewsPanelProps): JSX.Element => {
                 field={item.image}
                 priority={true}
                 sizes="100vw"
-                className="object-cover w-full"
+                className="object-cover object-center h-full w-full"
               />
               {item.date && (
                 <span className="bg-blue-site text-white px-6 py-2 absolute bottom-0">

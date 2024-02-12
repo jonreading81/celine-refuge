@@ -96,3 +96,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+.rich-text {
+  a {
+    @apply text-blue-500;
+    text-decoration: underline
+  }
+  strong{
+    font-weight: bold;
+  }
+  
+}

@@ -13,7 +13,7 @@ export const MastheadImage = ({ image }: Props) => {
         field={image}
         priority={true}
         sizes="100vw"
-        className="object-cover w-full"
+        className="object-cover object-center h-full w-full"
       />
     </div>
   );

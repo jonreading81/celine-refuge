@@ -22,7 +22,7 @@ const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
             <div className="h-[370px] relative overflow-hidden">
               <PrismicNextImage
                 field={items[0].image}
-                className="object-cover w-full"
+                className="object-cover object-center w-full h-full"
               />
             </div>
             <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:mt-[-300px]">
@@ -40,7 +40,7 @@ const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
             <div className="h-[370px] relative overflow-hidden">
               <PrismicNextImage
                 field={items[1].image}
-                className="object-cover w-full"
+                className="object-cover object-center w-full h-full"
               />
             </div>
             <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:ml-32 sm:mt-[-430px]">

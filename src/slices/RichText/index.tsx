@@ -20,7 +20,7 @@ type RichTextProps = SliceComponentProps<Content.RichTextSlice>;
 
 export default function RichText({ slice }: RichTextProps) {
   return (
-    <section className="flex justify-center items-center">
+    <section className="rich-text flex justify-center items-center">
       <div className="max-w-[740px]">
         <PrismicRichText
           field={slice.primary.content}
