@@ -1,0 +1,10 @@
+.wrapper {
+    a {
+      @apply text-blue-700;
+      text-decoration: underline
+    }
+    strong{
+      font-weight: bold;
+    }
+    
+  }
