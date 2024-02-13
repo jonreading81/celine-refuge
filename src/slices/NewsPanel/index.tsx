@@ -18,21 +18,24 @@ const NewsPanel = ({ slice: { items } }: NewsPanelProps): JSX.Element => {
         {items!.map((item, id) => (
           <div key={id} className="relative border">
             <div className="h-[320px] relative overflow-hidden">
-              <PrismicNextImage
-                field={item.image}
-                priority={true}
-                sizes="100vw"
-                className="object-cover object-center h-full w-full"
-              />
+              <PrismicNextLink field={item.link}>
+                <PrismicNextImage
+                  field={item.image}
+                  priority={true}
+                  sizes="100vw"
+                  className="object-cover object-center h-full w-full"
+                />
+              </PrismicNextLink>
               {item.date && (
                 <span className="bg-blue-site text-white px-6 py-2 absolute bottom-0">
                   {formatDate(new Date(item.date))}
                 </span>
               )}
             </div>
-
             <div className="bg-white relative mt-4 px-8 pb-10">
-              <h2 className="mt-2 pt-3 mb-10 font-site">{item.title}</h2>
+              <PrismicNextLink field={item.link}>
+                <h2 className="mt-2 pt-3 mb-10 font-site">{item.title}</h2>
+              </PrismicNextLink>
               <p className="text-sm mb-6">{item.intro}</p>
 
               <PrismicNextLink
