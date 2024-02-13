@@ -13,7 +13,7 @@ export type ImageBlockProps = SliceComponentProps<Content.ImageBlockSlice>;
 const ImageBlock = ({ slice: { primary } }: ImageBlockProps): JSX.Element => {
   return (
     <section className="flex justify-center items-center mb-8">
-      <div className="w-full max-w-[740px]">
+      <div className="w-full max-w-[740px]  rounded-xl overflow-hidden">
         <PrismicNextImage
           field={primary.image}
           className="object-cover w-full max-w-[740px]"
