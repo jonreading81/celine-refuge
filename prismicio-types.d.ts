@@ -5,6 +5,7 @@ import type * as prismic from '@prismicio/client';
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | GalleryCarouselSlice
   | ReviewsCarouselSlice
   | ContactFormSlice
   | ImageBlockSlice
@@ -123,6 +124,66 @@ type ContactFormSliceVariation = ContactFormSliceDefault;
 export type ContactFormSlice = prismic.SharedSlice<
   'contact_form',
   ContactFormSliceVariation
+>;
+
+/**
+ * Primary content in *GalleryCarousel → Primary*
+ */
+export interface GalleryCarouselSliceDefaultPrimary {
+  /**
+   * Placeholder field in *GalleryCarousel → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_carousel.primary.placeholder
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  placeholder: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *GalleryCarousel → Items*
+ */
+export interface GalleryCarouselSliceDefaultItem {
+  /**
+   * Image field in *GalleryCarousel → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_carousel.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for GalleryCarousel Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GalleryCarouselSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<GalleryCarouselSliceDefaultPrimary>,
+  Simplify<GalleryCarouselSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *GalleryCarousel*
+ */
+type GalleryCarouselSliceVariation = GalleryCarouselSliceDefault;
+
+/**
+ * GalleryCarousel Shared Slice
+ *
+ * - **API ID**: `gallery_carousel`
+ * - **Description**: GalleryCarousel
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GalleryCarouselSlice = prismic.SharedSlice<
+  'gallery_carousel',
+  GalleryCarouselSliceVariation
 >;
 
 /**
@@ -457,6 +518,11 @@ declare module '@prismicio/client' {
       ContactFormSlice,
       ContactFormSliceVariation,
       ContactFormSliceDefault,
+      GalleryCarouselSlice,
+      GalleryCarouselSliceDefaultPrimary,
+      GalleryCarouselSliceDefaultItem,
+      GalleryCarouselSliceVariation,
+      GalleryCarouselSliceDefault,
       ImageBlockSlice,
       ImageBlockSliceDefaultPrimary,
       ImageBlockSliceVariation,

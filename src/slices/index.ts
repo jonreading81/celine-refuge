@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 
 export const components = {
   contact_form: dynamic(() => import('./ContactForm')),
+  gallery_carousel: dynamic(() => import('./GalleryCarousel')),
   image_block: dynamic(() => import('./ImageBlock')),
   news_panel: dynamic(() => import('./NewsPanel')),
   promo_panel: dynamic(() => import('./PromoPanel')),

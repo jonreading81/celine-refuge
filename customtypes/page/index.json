@@ -35,6 +35,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "gallery_carousel": {
+              "type": "SharedSlice"
+            },
             "reviews_carousel": {
               "type": "SharedSlice"
             },
