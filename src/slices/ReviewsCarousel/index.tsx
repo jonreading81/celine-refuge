@@ -2,7 +2,7 @@
 
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
-import { Carousel } from '@material-tailwind/react';
+import Carousel from '@app/components/Carousel';
 
 /**
  * Props for `ReviewsCarousel`.
