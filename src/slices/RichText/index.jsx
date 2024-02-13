@@ -1,4 +1,3 @@
-import type { Content } from '@prismicio/client';
 import {
   PrismicRichText,
   SliceComponentProps,
@@ -7,7 +6,7 @@ import {
 
 import * as styles from './styles.module.css';
 
-const components: JSXMapSerializer = {
+const components = {
   label: ({ node, children }) => {
     if (node.data.label === 'codespan') {
       return <code>{children}</code>;
@@ -18,9 +17,7 @@ const components: JSXMapSerializer = {
   heading2: ({ children }) => <h2 className="mb-12">{children}</h2>,
 };
 
-type RichTextProps = SliceComponentProps<Content.RichTextSlice>;
-
-export default function RichText({ slice }: RichTextProps) {
+export default function RichText({ slice }) {
   return (
     <section className={`${styles.wrapper} flex justify-center items-center`}>
       <div className="max-w-[740px]">

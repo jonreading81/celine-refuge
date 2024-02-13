@@ -1,14 +1,21 @@
 'use client';
+import * as React from 'react';
 import {
   Carousel as TailwindCarousel,
+  CarouselProps,
   IconButton,
 } from '@material-tailwind/react';
 
 import PreviousArrow from './PreviousArrow';
 import NextArrow from './NextArrow';
 
-const Carousel = ({ children, ...props }) => (
-  <TailwindCarousel prevArrow={PreviousArrow} nextArrow={NextArrow} {...props}>
+const Carousel = ({ children, placeholder, ...props }) => (
+  <TailwindCarousel
+    placeholder={placeholder}
+    prevArrow={PreviousArrow}
+    nextArrow={NextArrow}
+    {...props}
+  >
     {children}
   </TailwindCarousel>
 );
