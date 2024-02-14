@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 type Props = {
-  children: React.Node;
+  children: React.ReactNode;
 };
 
-const Caption = ({ children }: Prop) => (
+const Caption = ({ children }: Props) => (
   <p className="text-sm bg-gray-100 p-6">{children}</p>
 );
 
