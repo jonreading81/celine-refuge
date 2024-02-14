@@ -139,6 +139,16 @@ export interface GalleryCarouselSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   placeholder: prismic.KeyTextField;
+
+  /**
+   * Description field in *GalleryCarousel → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_carousel.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
 }
 
 /**

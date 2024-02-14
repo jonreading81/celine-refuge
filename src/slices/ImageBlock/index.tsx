@@ -1,6 +1,7 @@
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 import { PrismicNextImage } from '@prismicio/next';
+import Caption from '@app/components/Caption';
 
 /**
  * Props for `ImageBlock`.
@@ -13,12 +14,12 @@ export type ImageBlockProps = SliceComponentProps<Content.ImageBlockSlice>;
 const ImageBlock = ({ slice: { primary } }: ImageBlockProps): JSX.Element => {
   return (
     <section className="flex justify-center items-center mb-8">
-      <div className="w-full max-w-[740px]  rounded-xl overflow-hidden">
+      <div className="w-full max-w-[740px] overflow-hidden">
         <PrismicNextImage
           field={primary.image}
           className="object-cover w-full max-w-[740px]"
         />
-        <p className="text-sm bg-gray-100 p-6">{primary.description}</p>
+        <Caption>{primary.description}</Caption>
       </div>
     </section>
   );

@@ -7,6 +7,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "motor",
 				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "FieldContent",
+				"value": "arrive",
+				"type": "Text"
 			}
 		},
 		"items": [

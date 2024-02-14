@@ -1,6 +1,7 @@
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 import Carousel from '@app/components/Carousel';
+import Caption from '@app/components/Caption';
 import { PrismicNextImage } from '@prismicio/next';
 
 /**
@@ -12,21 +13,22 @@ export type GalleryCarouselProps =
 /**
  * Component for "GalleryCarousel" Slices.
  */
-const GalleryCarousel = ({ slice }: GalleryCarouselProps): JSX.Element => {
+const GalleryCarousel = ({
+  slice: { primary, items },
+}: GalleryCarouselProps): JSX.Element => {
   return (
-    <Carousel
-      className="aspect-video rounded-xl mb-8"
-      loop
-      placeholder={slice.primary.placeholder}
-    >
-      {slice.items.map(({ image }, i) => (
-        <PrismicNextImage
-          key={i}
-          field={image}
-          className="h-full w-full object-cover object-center"
-        />
-      ))}
-    </Carousel>
+    <div className="  mb-8">
+      <Carousel className="aspect-video" loop placeholder={primary.placeholder}>
+        {items.map(({ image }, i) => (
+          <PrismicNextImage
+            key={i}
+            field={image}
+            className="h-full w-full object-cover object-center"
+          />
+        ))}
+      </Carousel>
+      <Caption>{primary.description}</Caption>
+    </div>
   );
 };
 
