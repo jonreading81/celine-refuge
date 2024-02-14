@@ -18,7 +18,7 @@ export const generateMetadata = generateMetadataForPage(PAGE);
 export default async function Home() {
   const client = createClient();
   const {
-    data: { slices, title, masthead_image },
+    data: { slices, masthead_image },
   } = await client.getByUID('page', PAGE).catch(() => notFound());
 
   return (
