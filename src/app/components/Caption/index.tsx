@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 type Props = {
-  children: React.ReactNode;
+play  children: React.ReactNode;
 };
 
 const Caption = ({ children }: Props) => (
