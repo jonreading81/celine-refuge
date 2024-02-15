@@ -1,6 +1,6 @@
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
-import Navbar from '@app/components/Navbar';
+import NavBar from '@app/components/NavBar';
 
 /**
  * Props for `Navigation`.
@@ -11,7 +11,7 @@ export type NavigationProps = SliceComponentProps<Content.NavigationSlice>;
  * Component for "Navigation" Slices.
  */
 const Navigation = ({ slice }: NavigationProps): JSX.Element => {
-  return <Navbar navItems={slice.items} />;
+  return <NavBar navItems={slice.items} />;
 };
 
 export default Navigation;
