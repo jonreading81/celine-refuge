@@ -32,7 +32,7 @@ function NavbarDefault({ navItems }) {
           key={link.url}
           as="li"
           variant="small"
-          className="flex items-center gap-x-2 py-2 font-medium max-md:border-b-2 "
+          className="flex items-center gap-x-2 py-2 font-medium border-b-2 lg:border-none "
         >
           <PrismicNextLink
             field={link}
