@@ -3,7 +3,7 @@ import React from 'react';
 import { useCallback, useState } from 'react';
 import {
   Navbar,
-  MobileNav,
+  Collapse,
   Typography,
   Button,
   IconButton,
@@ -80,7 +80,7 @@ export function NavbarDefault() {
 
         <IconButton
           variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden text-blue-site"
+          className="scale-125 ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden text-blue-site"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >
@@ -114,11 +114,12 @@ export function NavbarDefault() {
               />
             </svg>
           )}
+          <span className="sr-only">Toggle Navigation</span>
         </IconButton>
       </div>
-      <MobileNav open={openNav}>
+      <Collapse open={openNav}>
         <div className="my-4">{navList}</div>
-      </MobileNav>
+      </Collapse>
     </Navbar>
   );
 }
