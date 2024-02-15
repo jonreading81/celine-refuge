@@ -1,11 +1,12 @@
-import { NavbarDefault } from '@app/components/NavBar';
+import Navigation from '@/slices/Navigation';
 import { Logo } from '@app/components/Logo/Logo';
-import testIds from '@app/utils/test-ids';
 
-const Header = () => (
+type Props = { navigationSlice: { items: [] } };
+
+const Header = ({ navigationSlice }: Props) => (
   <>
-    <header className="w-full" data-testid={testIds.LAYOUT.HEADER}>
-      <NavbarDefault />
+    <header className="w-full">
+      <Navigation slice={navigationSlice} />
     </header>
   </>
 );

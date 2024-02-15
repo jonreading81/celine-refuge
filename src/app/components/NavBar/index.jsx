@@ -11,24 +11,9 @@ import {
 import { Logo } from '@app/components/Logo/Logo';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { PrismicNextLink } from '@prismicio/next';
 
-const navbarItems = [
-  { ref: '/', label: 'Home' },
-  { ref: '/about', label: 'About' },
-  { ref: '/news', label: 'News' },
-  { ref: '/contact', label: 'Contact' },
-];
-
-const StyledNavLink = ({ isActive, className, ...linkProps }) => (
-  <Link
-    className={`${className ?? ''} ${
-      isActive ? 'text-purple-site' : 'hover:text-purple-site'
-    }`}
-    {...linkProps}
-  />
-);
-
-export function NavbarDefault() {
+function NavbarDefault({ navItems }) {
   const [openNav, setOpenNav] = React.useState(false);
   const pathname = usePathname();
   const [linkRef, setLinkRef] = useState(pathname);
@@ -42,23 +27,27 @@ export function NavbarDefault() {
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-site">
-      {navbarItems.map(({ ref, label }) => (
+      {navItems.map(({ title, link }) => (
         <Typography
-          key={ref}
+          key={link.url}
           as="li"
           variant="small"
           className="flex items-center gap-x-2 py-2 font-medium max-md:border-b-2 "
         >
-          <StyledNavLink
-            isActive={ref === linkRef}
-            href={ref}
+          <PrismicNextLink
+            field={link}
+            className={`${
+              link.url === linkRef
+                ? 'text-purple-site'
+                : 'hover:text-purple-site'
+            }`}
             onClick={() => {
-              setLinkRef(ref);
+              setLinkRef(link.url);
               setOpenNav(false);
             }}
           >
-            {label}
-          </StyledNavLink>
+            {title}
+          </PrismicNextLink>
         </Typography>
       ))}
     </ul>
@@ -123,3 +112,5 @@ export function NavbarDefault() {
     </Navbar>
   );
 }
+
+export default NavbarDefault;
