@@ -87,13 +87,13 @@ export const ContactInfo = ({
 
   return (
     <div className="flex flex-col lg:flex-row">
-      <div className="basis-2/3 bg-blue-site text-white p-14 lg:pl-44">
+      <div className="basis-2/3 bg-blue-site text-white p-14 ">
         <h2 className="text-2xl sm:text-3xl font-bold font-site">{title}</h2>
         <div className="flex flex-col sm:flex-row text-sm font-helvetica mb-6">
-          <div className="basis-1/3 border-b border-white pb-4">
+          <div className="basis-1/2 border-b border-white pb-4 sm:mr-6 md:mr-14">
             <p className="mt-10">{intro}</p>
           </div>
-          <div className="basis-1/3"></div>
+
           <div className="basis-1/2 border-b border-white pb-4">
             <p className="mt-10">
               {name}
@@ -109,8 +109,8 @@ export const ContactInfo = ({
             <p className="mt-10">{phone}</p>
           </div>
         </div>
-        <a href={`mailto:${email}`} className="text-lg mt-10">
-          {email}
+        <a href={`mailto:${email}`} className="text-md mt-10 font-bold">
+          Email: {email}
         </a>
       </div>
       <div className="basis-1/3 bg-gray-100 p-14 text-color-blue-site">
