@@ -15,7 +15,7 @@ export type ReviewsCarouselProps =
  */
 const ReviewsCarousel = ({ slice }: ReviewsCarouselProps): JSX.Element => {
   return (
-    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 mt-6 bg-blue-site rounded-xl ">
+    <div className="h-60 sm:h-80 xl:h-96  mt-6 bg-blue-site rounded-xl ">
       <Carousel autoplay loop placeholder="Reviews carousel">
         {slice.items.map(({ name, review }, i) => (
           <div
