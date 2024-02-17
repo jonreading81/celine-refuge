@@ -2,24 +2,6 @@
 import { useState } from 'react';
 import { Input, Typography, Button } from '@material-tailwind/react';
 
-// const data = {
-//   title: 'Contact us',
-//   intro:
-//     'Please reach out to us with any questions or concerns. We’re happy to hear from you.',
-//   name: 'Refuge gîte du suffet',
-//   address_1: "Chem. du Val d'Ambi",
-//   address_2: '73500',
-//   address_3: 'Bamans',
-//   address_4: 'France',
-//   phone: 'Phone: (+33) 6 21 63 56 80',
-//   email: 'celine.vigouroux86@hotmail.fr',
-//   signup_title: 'Be the first to hear',
-//   signup_intro: 'Sign up to our newsletter to stay informed.',
-//   signup_button: 'Sign up now',
-//   signup_success_message: 'Your details have been added to our mailing list.',
-//   signup_error_message: 'Please enter a valid email address.',
-// };
-
 const validateEmail = (email) => {
   return email.match(
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -87,9 +69,9 @@ export const ContactInfo = ({
 
   return (
     <div className="flex flex-col lg:flex-row">
-      <div className="basis-2/3 bg-blue-site text-white p-14 ">
+      <div className="basis-2/3 bg-blue-site text-white p-14 lg:pl-28">
         <h2 className="text-2xl sm:text-3xl font-bold font-site">{title}</h2>
-        <div className="flex flex-col sm:flex-row text-sm font-helvetica mb-6">
+        <div className="flex flex-col sm:flex-row text-sm font-helvetica mb-6 ">
           <div className="basis-1/2 border-b border-white pb-4 sm:mr-6 md:mr-14">
             <p className="mt-10">{intro}</p>
           </div>
@@ -110,7 +92,7 @@ export const ContactInfo = ({
           </div>
         </div>
         <a href={`mailto:${email}`} className="text-md mt-10 font-bold">
-          Email: {email}
+          {email}
         </a>
       </div>
       <div className="basis-1/3 bg-gray-100 p-14 text-color-blue-site">
