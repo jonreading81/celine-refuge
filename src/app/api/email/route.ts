@@ -3,7 +3,7 @@ import Mail from 'nodemailer/lib/mailer';
 
 import { Resend } from 'resend';
 
-export async function POST(request: NextRequest, res: NextApiResponse) {
+export async function POST(request: NextRequest, res: NextResponse) {
   const resend = new Resend(process.env.RESEND_APIKEY);
   const { email: to, subject, message: text } = await request.json();
 
