@@ -1,5 +1,4 @@
 import { type NextRequest, NextResponse } from 'next/server';
-import Mail from 'nodemailer/lib/mailer';
 
 import { Resend } from 'resend';
 
