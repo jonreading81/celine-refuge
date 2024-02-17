@@ -26,6 +26,8 @@ const validateEmail = (email) => {
   );
 };
 
+const apiEndpoint = '/api/email';
+
 export const ContactInfo = () => {
   const {
     title,
@@ -44,17 +46,44 @@ export const ContactInfo = () => {
     signup_error_message,
   } = data;
 
+  const [isLoading, setIsLoading] = useState(false);
   const [userEmail, setUserEmail] = useState('');
-  const [error, setError] = useState(false);
+  const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
 
-  const signup = () => {
+  const sendEmail = () => {
+    setIsLoading(true);
+    fetch(apiEndpoint, {
+      method: 'POST',
+      body: JSON.stringify({
+        email: 'jon.reading.email@gmail.com',
+        subject: 'Add user to mailing list',
+        message: userEmail,
+      }),
+    })
+      .then((res) => res.json())
+      .then(({ error }) => {
+        if (error) {
+          setError('Server Error');
+          return;
+        }
+        setError('');
+        setSuccess(true);
+        setUserEmail('');
+      })
+      .catch((err) => {
+        setError('Server Error');
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+
+  const validate = () => {
     if (validateEmail(userEmail)) {
-      setError(false);
-      setSuccess(true);
-      setUserEmail('');
+      sendEmail();
     } else {
-      setError(true);
+      setError(signup_error_message);
     }
   };
 
@@ -104,12 +133,21 @@ export const ContactInfo = () => {
           />
         </div>
 
+        {isLoading && (
+          <div
+            class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
+            role="alert"
+          >
+            <span class="font-medium">Verifying details</span>
+          </div>
+        )}
+
         {error && (
           <div
             class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
             role="alert"
           >
-            <span class="font-medium">{signup_error_message}</span>
+            <span class="font-medium">{error}</span>
           </div>
         )}
 
@@ -123,7 +161,7 @@ export const ContactInfo = () => {
         )}
 
         <Button
-          onClick={signup}
+          onClick={validate}
           className="mt-6 bg-blue-site"
           fullWidth
           color="blue"

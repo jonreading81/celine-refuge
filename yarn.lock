@@ -981,6 +981,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/nodemailer@npm:^6.4.14":
+  version: 6.4.14
+  resolution: "@types/nodemailer@npm:6.4.14"
+  dependencies:
+    "@types/node": "*"
+  checksum: 5f61f01dd736b17f431d1e8b320322f86460604b45df947fc4bc8999d7c7719405e349f7abba86e4fb100a464a30b52615d00dac03d9cb37562ff04487ebd310
+  languageName: node
+  linkType: hard
+
 "@types/parse5@npm:^6.0.0":
   version: 6.0.3
   resolution: "@types/parse5@npm:6.0.3"
@@ -1661,6 +1670,7 @@ __metadata:
     "@prismicio/react": ^2.7.3
     "@slicemachine/adapter-next": ^0.3.35
     "@types/node": ^20
+    "@types/nodemailer": ^6.4.14
     "@types/react": ^18
     "@types/react-dom": ^18
     autoprefixer: ^10.0.1
@@ -1670,6 +1680,7 @@ __metadata:
     eslint-config-prettier: ^8.5.0
     eslint-plugin-prettier: ^4.2.1
     next: 14.1.0
+    nodemailer: ^6.9.9
     postcss: ^8
     postcss-nesting: ^12.0.2
     prettier: ^2.8.0
@@ -5117,6 +5128,13 @@ __metadata:
   version: 2.0.14
   resolution: "node-releases@npm:2.0.14"
   checksum: 59443a2f77acac854c42d321bf1b43dea0aef55cd544c6a686e9816a697300458d4e82239e2d794ea05f7bbbc8a94500332e2d3ac3f11f52e4b16cbe638b3c41
+  languageName: node
+  linkType: hard
+
+"nodemailer@npm:^6.9.9":
+  version: 6.9.9
+  resolution: "nodemailer@npm:6.9.9"
+  checksum: 9af862b497273796ad6ba7ca9eac23a7d69737554f6dd51cfd3557f60902c56344158192672f1208daf00340a47a9e1805bd809965edc191011b35dd98a74be1
   languageName: node
   linkType: hard
 
