@@ -4,6 +4,40 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+type FooterDocumentDataSlicesSlice = ContactInfoSlice;
+
+/**
+ * Content for Footer documents
+ */
+interface FooterDocumentData {
+  /**
+   * Slice Zone field in *Footer*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<FooterDocumentDataSlicesSlice>;
+}
+
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    'footer',
+    Lang
+  >;
+
 type NavigationDocumentDataSlicesSlice = NavigationSlice;
 
 /**
@@ -139,7 +173,10 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, 'page', Lang>;
 
-export type AllDocumentTypes = NavigationDocument | PageDocument;
+export type AllDocumentTypes =
+  | FooterDocument
+  | NavigationDocument
+  | PageDocument;
 
 /**
  * Default variation for ContactForm Slice
@@ -169,6 +206,181 @@ type ContactFormSliceVariation = ContactFormSliceDefault;
 export type ContactFormSlice = prismic.SharedSlice<
   'contact_form',
   ContactFormSliceVariation
+>;
+
+/**
+ * Primary content in *ContactInfo → Primary*
+ */
+export interface ContactInfoSliceDefaultPrimary {
+  /**
+   * title field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Intro field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.intro
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  intro: prismic.KeyTextField;
+
+  /**
+   * Name field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Address 1 field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.address_1
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address_1: prismic.KeyTextField;
+
+  /**
+   * Address 2 field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.address_2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address_2: prismic.KeyTextField;
+
+  /**
+   * Address 3 field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.address_3
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address_3: prismic.KeyTextField;
+
+  /**
+   * Address 4 field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.address_4
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address_4: prismic.KeyTextField;
+
+  /**
+   * Phone field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.phone
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone: prismic.KeyTextField;
+
+  /**
+   * email field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.email
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
+
+  /**
+   * Signup title field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.signup_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  signup_title: prismic.KeyTextField;
+
+  /**
+   * Signup Intro field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.signup_intro
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  signup_intro: prismic.KeyTextField;
+
+  /**
+   * Signup button field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.signup_button
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  signup_button: prismic.KeyTextField;
+
+  /**
+   * Signup success message field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.signup_success_message
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  signup_success_message: prismic.KeyTextField;
+
+  /**
+   * Signup Error message field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.signup_error_message
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  signup_error_message: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ContactInfo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactInfoSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<ContactInfoSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ContactInfo*
+ */
+type ContactInfoSliceVariation = ContactInfoSliceDefault;
+
+/**
+ * ContactInfo Shared Slice
+ *
+ * - **API ID**: `contact_info`
+ * - **Description**: ContactInfo
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactInfoSlice = prismic.SharedSlice<
+  'contact_info',
+  ContactInfoSliceVariation
 >;
 
 /**
@@ -621,6 +833,9 @@ declare module '@prismicio/client' {
 
   namespace Content {
     export type {
+      FooterDocument,
+      FooterDocumentData,
+      FooterDocumentDataSlicesSlice,
       NavigationDocument,
       NavigationDocumentData,
       NavigationDocumentDataSlicesSlice,
@@ -631,6 +846,10 @@ declare module '@prismicio/client' {
       ContactFormSlice,
       ContactFormSliceVariation,
       ContactFormSliceDefault,
+      ContactInfoSlice,
+      ContactInfoSliceDefaultPrimary,
+      ContactInfoSliceVariation,
+      ContactInfoSliceDefault,
       GalleryCarouselSlice,
       GalleryCarouselSliceDefaultPrimary,
       GalleryCarouselSliceDefaultItem,

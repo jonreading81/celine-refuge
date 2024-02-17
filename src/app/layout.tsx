@@ -14,11 +14,18 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const client = createClient();
-  const {
-    data: {
-      slices: [navigationSlice],
+
+  const [
+    {
+      data: {
+        slices: [navigationSlice],
+      },
     },
-  } = await client.getByUID('navigation', 'header');
+    footer,
+  ] = await Promise.all([
+    client.getByUID('navigation', 'header'),
+    client.getSingle('footer'),
+  ]);
 
   return (
     <html lang="en">
@@ -28,7 +35,7 @@ export default async function RootLayout({
       <body className="text-blue-site bg-white">
         <Header navigationSlice={navigationSlice} />
         <main className="bg-white min-h-[600px]">{children}</main>
-        <Footer />
+        <Footer {...footer.data} />
         <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>
