@@ -4,7 +4,7 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type FooterDocumentDataSlicesSlice = ContactInfoSlice;
+type FooterDocumentDataSlicesSlice = CopyrightSlice | ContactInfoSlice;
 
 /**
  * Content for Footer documents
@@ -179,6 +179,51 @@ export type AllDocumentTypes =
   | PageDocument;
 
 /**
+ * Primary content in *ContactForm → Primary*
+ */
+export interface ContactFormSliceDefaultPrimary {
+  /**
+   * Email field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.email
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
+
+  /**
+   * Button Text field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * success message field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.success_message
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  success_message: prismic.KeyTextField;
+
+  /**
+   * Validation error field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.validation_error
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  validation_error: prismic.KeyTextField;
+}
+
+/**
  * Default variation for ContactForm Slice
  *
  * - **API ID**: `default`
@@ -187,7 +232,7 @@ export type AllDocumentTypes =
  */
 export type ContactFormSliceDefault = prismic.SharedSliceVariation<
   'default',
-  Record<string, never>,
+  Simplify<ContactFormSliceDefaultPrimary>,
   never
 >;
 
@@ -381,6 +426,51 @@ type ContactInfoSliceVariation = ContactInfoSliceDefault;
 export type ContactInfoSlice = prismic.SharedSlice<
   'contact_info',
   ContactInfoSliceVariation
+>;
+
+/**
+ * Primary content in *Copyright → Primary*
+ */
+export interface CopyrightSliceDefaultPrimary {
+  /**
+   * Copyright Text field in *Copyright → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: copyright.primary.copyright_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  copyright_text: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Copyright Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CopyrightSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<CopyrightSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Copyright*
+ */
+type CopyrightSliceVariation = CopyrightSliceDefault;
+
+/**
+ * Copyright Shared Slice
+ *
+ * - **API ID**: `copyright`
+ * - **Description**: Copyright
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CopyrightSlice = prismic.SharedSlice<
+  'copyright',
+  CopyrightSliceVariation
 >;
 
 /**
@@ -844,12 +934,17 @@ declare module '@prismicio/client' {
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
       ContactFormSlice,
+      ContactFormSliceDefaultPrimary,
       ContactFormSliceVariation,
       ContactFormSliceDefault,
       ContactInfoSlice,
       ContactInfoSliceDefaultPrimary,
       ContactInfoSliceVariation,
       ContactInfoSliceDefault,
+      CopyrightSlice,
+      CopyrightSliceDefaultPrimary,
+      CopyrightSliceVariation,
+      CopyrightSliceDefault,
       GalleryCarouselSlice,
       GalleryCarouselSliceDefaultPrimary,
       GalleryCarouselSliceDefaultItem,

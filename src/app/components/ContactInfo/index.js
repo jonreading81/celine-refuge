@@ -1,14 +1,9 @@
 'use client';
 import { useState } from 'react';
 import { Input, Typography, Button } from '@material-tailwind/react';
-
-const validateEmail = (email) => {
-  return email.match(
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  );
-};
-
-const apiEndpoint = '/api/email';
+import { FormStatus } from '@app/components/FormStatus';
+import { validateEmail } from '@app/utils/validateEmail';
+import { useSendEmail } from '@app/hooks/useSendEmail';
 
 export const ContactInfo = ({
   title,
@@ -26,38 +21,13 @@ export const ContactInfo = ({
   signup_success_message,
   signup_error_message,
 }) => {
-  const [isLoading, setIsLoading] = useState(false);
   const [userEmail, setUserEmail] = useState('');
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState(false);
-
-  const sendEmail = () => {
-    setIsLoading(true);
-    fetch(apiEndpoint, {
-      method: 'POST',
-      body: JSON.stringify({
-        email,
-        subject: 'Add user to mailing list',
-        message: userEmail,
-      }),
-    })
-      .then((res) => res.json())
-      .then(({ error }) => {
-        if (error) {
-          setError('Server Error');
-          return;
-        }
-        setError('');
-        setSuccess(true);
-        setUserEmail('');
-      })
-      .catch((err) => {
-        setError('Server Error');
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  };
+  const { sendEmail, setError, success, error, loading } = useSendEmail({
+    email,
+    subject: 'Add email to mailing list',
+    message: userEmail,
+    reset: () => setUserEmail(''),
+  });
 
   const validate = () => {
     if (validateEmail(userEmail)) {
@@ -75,7 +45,6 @@ export const ContactInfo = ({
           <div className="basis-1/2 border-b border-white pb-4 sm:mr-6 md:mr-14">
             <p className="mt-10">{intro}</p>
           </div>
-
           <div className="basis-1/2 border-b border-white pb-4">
             <p className="mt-10">
               {name}
@@ -110,30 +79,11 @@ export const ContactInfo = ({
             onChange={(e) => setUserEmail(e.target.value)}
           />
         </div>
-        {isLoading && (
-          <div
-            class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
-            role="alert"
-          >
-            <span class="font-medium">Verifying details</span>
-          </div>
-        )}
-        {error && (
-          <div
-            class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
-            role="alert"
-          >
-            <span class="font-medium">{error}</span>
-          </div>
-        )}
-        {success && (
-          <div
-            class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
-            role="alert"
-          >
-            <span class="font-medium">{signup_success_message}</span>
-          </div>
-        )}
+        <FormStatus
+          loading={loading && 'Loading...'}
+          error={error}
+          success={success && signup_success_message}
+        />
         <Button
           onClick={validate}
           className="mt-6 bg-blue-site"

@@ -2,7 +2,28 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
+		"primary": {
+			"success_message": {
+				"__TYPE__": "FieldContent",
+				"value": "little",
+				"type": "Text"
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "lying",
+				"type": "Text"
+			},
+			"email": {
+				"__TYPE__": "FieldContent",
+				"value": "melted",
+				"type": "Text"
+			},
+			"validation_error": {
+				"__TYPE__": "FieldContent",
+				"value": "frighten",
+				"type": "Text"
+			}
+		},
 		"items": []
 	}
 ]

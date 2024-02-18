@@ -10,7 +10,38 @@
       "docURL": "...",
       "version": "initial",
       "description": "Default",
-      "imageUrl": ""
+      "imageUrl": "",
+      "primary": {
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email",
+            "placeholder": ""
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
+        },
+        "success_message": {
+          "type": "Text",
+          "config": {
+            "label": "success message",
+            "placeholder": ""
+          }
+        },
+        "validation_error": {
+          "type": "Text",
+          "config": {
+            "label": "Validation error",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
     }
   ]
 }
