@@ -18,15 +18,15 @@ const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
         <div className="flex sm:gap-12 flex-col sm:flex-row">
           {items.map((item, index) => (
             <div key={index} className="basis-2/4">
-              <div className="h-[370px] relative overflow-hidden">
+              <div className="h-[300px] lg:h-[400px] relative overflow-hidden">
                 <PrismicNextLink field={item.page_link}>
                   <PrismicNextImage
                     field={item.image}
-                    className="object-cover object-center w-full h-full"
+                    className=" object-cover object-center w-full h-full"
                   />
                 </PrismicNextLink>
               </div>
-              <div className="border-y-4 border-blue-site p-8 sm:w-60 relative bg-white sm:mt-[-200px]">
+              <div className="border-y-4 border-blue-site p-8 md:w-[70%] lg:w-[60%] relative bg-white md:mt-[-200px]">
                 <PrismicNextLink field={item.page_link}>
                   <h3 className="text-2xl font-site">{item.title}</h3>
                 </PrismicNextLink>
