@@ -45,17 +45,6 @@ type NavigationDocumentDataSlicesSlice = NavigationSlice;
  */
 interface NavigationDocumentData {
   /**
-   * Name field in *Navigation*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.name
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  name: prismic.KeyTextField;
-
-  /**
    * Slice Zone field in *Navigation*
    *
    * - **Field Type**: Slice Zone
@@ -71,13 +60,13 @@ interface NavigationDocumentData {
  * Navigation document from Prismic
  *
  * - **API ID**: `navigation`
- * - **Repeatable**: `true`
+ * - **Repeatable**: `false`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
 export type NavigationDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
+  prismic.PrismicDocumentWithoutUID<
     Simplify<NavigationDocumentData>,
     'navigation',
     Lang

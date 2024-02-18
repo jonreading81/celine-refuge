@@ -23,7 +23,7 @@ export default async function RootLayout({
     },
     footer,
   ] = await Promise.all([
-    client.getByUID('navigation', 'header'),
+    client.getSingle('navigation'),
     client.getSingle('footer'),
   ]);
 

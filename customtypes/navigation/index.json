@@ -2,23 +2,10 @@
   "format": "custom",
   "id": "navigation",
   "label": "Navigation",
-  "repeatable": true,
+  "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "uid": {
-        "config": {
-          "label": "UID"
-        },
-        "type": "UID"
-      },
-      "name": {
-        "type": "Text",
-        "config": {
-          "label": "Name",
-          "placeholder": ""
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
