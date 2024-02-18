@@ -16,7 +16,6 @@ import { PrismicNextLink } from '@prismicio/next';
 function NavbarDefault({ navItems }) {
   const [openNav, setOpenNav] = React.useState(false);
   const pathname = usePathname();
-  const [linkRef, setLinkRef] = useState(pathname);
 
   React.useEffect(() => {
     window.addEventListener(
@@ -37,12 +36,11 @@ function NavbarDefault({ navItems }) {
           <PrismicNextLink
             field={link}
             className={`${
-              link.url === linkRef
+              link.url === pathname
                 ? 'text-purple-site'
                 : 'hover:text-purple-site'
             }`}
             onClick={() => {
-              setLinkRef(link.url);
               setOpenNav(false);
             }}
           >
