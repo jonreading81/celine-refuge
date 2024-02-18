@@ -2,6 +2,13 @@
 
 ## Local Development
 
+add .env.local
+
+```
+NEXT_PUBLIC_PRISMIC_ENVIRONMENT=
+RESEND_APIKEY=
+```
+
 Run the development server:
 
 1. Run either:
@@ -23,6 +30,13 @@ Run the development server:
 
 You can deploy this repository using any platform which supports Next.js Version 13 and [App Router](https://nextjs.org/docs/app).
 
+It is deployed on https://vercel.com/
+
+# Services
+
+- The content is managed using https://prismic.io/ headless cms.
+- Emails are sent using https://resend.com and requires an API key.
+
 # Learn More
 
 This template is written in [Next.js](https://nextjs.org/docs) 13 using the [Next.js App Router](https://nextjs.org/docs/app).
@@ -38,4 +52,3 @@ Additionally, this template uses the following libraries and features:
 - [TypeScript](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html)
 - [TanStack Query v4](https://tanstack.com/query/latest)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Flowbite](https://flowbite.com/)
