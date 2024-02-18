@@ -29,7 +29,7 @@ const ContactForm = ({
 
   const { sendEmail, setError, success, error, loading } = useSendEmail({
     email,
-    subject: 'Contact messagse from website',
+    subject: 'Contact from the website',
     message: `Name: ${name}\nEmail: ${userEmail}\nPhone: ${phone}\n\n${message}`,
     reset,
   });
