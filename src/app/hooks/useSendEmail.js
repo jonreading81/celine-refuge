@@ -13,7 +13,7 @@ export const useSendEmail = ({ email, subject, message, reset }) => {
     fetch(process.env.sendEmailAPIEndpoint, {
       method: 'POST',
       body: JSON.stringify({
-        email: 'jon.reading.email@gmail.com',
+        email,
         subject,
         message,
       }),

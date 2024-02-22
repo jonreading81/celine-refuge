@@ -39,7 +39,6 @@ const ContactForm = ({
       sendEmail();
     } else {
       setError(validation_error);
-      return;
     }
   };
 
