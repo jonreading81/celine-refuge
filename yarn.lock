@@ -43,12 +43,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/selector-specificity@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@csstools/selector-specificity@npm:3.0.1"
+"@csstools/selector-specificity@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@csstools/selector-specificity@npm:3.0.2"
   peerDependencies:
     postcss-selector-parser: ^6.0.13
-  checksum: e4b5aac3bd3ca1f824cb9578f52b16046a519aa8050ce291da37e611976a83cd3b2b2f908d2678dd4cbbe00bbde8ec28c34fffc40dbbf9a13608dfcaf382ee80
+  checksum: af3cc9282b600170b7de0fed2106830ab353359bd11f66cf71259419c9bddf8f0773c3a6e513cd9f66fd7e4920a1786a7c288723cbb3ae207974c1e7de26293e
   languageName: node
   linkType: hard
 
@@ -5747,14 +5747,14 @@ __metadata:
   linkType: hard
 
 "postcss-nesting@npm:^12.0.2":
-  version: 12.0.2
-  resolution: "postcss-nesting@npm:12.0.2"
+  version: 12.0.4
+  resolution: "postcss-nesting@npm:12.0.4"
   dependencies:
-    "@csstools/selector-specificity": ^3.0.1
+    "@csstools/selector-specificity": ^3.0.2
     postcss-selector-parser: ^6.0.13
   peerDependencies:
     postcss: ^8.4
-  checksum: 41701bff41910eef1236d7be076b0cfa9f11e0a15b07816daa052c4eff53675b35df80dc4c8e7b5bd6bca906b2878fc2e4f5344bc9d80392953af1aad815aa93
+  checksum: fcf625e7a2eb94367fcbe31ee3af05e481bd495fc6744e3ec527a9001a5c7d2b388915e238278ad48e8e15adc9453c2ddf3c5cb6657102c4db8aaac515a4a71a
   languageName: node
   linkType: hard
 
