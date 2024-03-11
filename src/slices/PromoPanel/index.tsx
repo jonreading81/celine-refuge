@@ -13,8 +13,8 @@ export type PromoPanelProps = SliceComponentProps<Content.PromoPanelSlice>;
  */
 const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
   return (
-    <section className="mb-6">
-      <div className="mx-auto relative py-10 md:py-14 lg:py-16">
+    <section className="mb-12">
+      <div className="mx-auto relative">
         <div className="flex sm:gap-12 flex-col sm:flex-row">
           {items.map((item, index) => (
             <div key={index} className="basis-2/4">

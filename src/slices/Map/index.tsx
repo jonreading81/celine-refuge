@@ -21,7 +21,7 @@ const MapSlice = ({
 }: MapProps): JSX.Element => {
   const position = { lat, lng };
   return (
-    <section className="aspect-video">
+    <section className="aspect-video mb-12">
       <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}>
         <Map center={position} zoom={zoom}>
           <Marker position={position} />

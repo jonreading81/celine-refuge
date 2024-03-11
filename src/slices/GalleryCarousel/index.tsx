@@ -17,7 +17,7 @@ const GalleryCarousel = ({
   slice: { primary, items },
 }: GalleryCarouselProps): JSX.Element => {
   return (
-    <div className="  mb-8">
+    <div className="mb-12">
       <Carousel className="aspect-video" loop placeholder={primary.placeholder}>
         {items.map(({ image }, i) => (
           <PrismicNextImage

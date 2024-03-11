@@ -5,7 +5,7 @@ import { components } from '@/slices';
 import { SliceZone } from '@prismicio/react';
 
 const Footer = ({ slices }) => (
-  <footer className="m-h-56 leading-7  px-8 pt-12 ">
+  <footer className="m-h-56 leading-7  px-8 ">
     <SliceZone slices={slices} components={components} />
   </footer>
 );
