@@ -35,7 +35,7 @@ const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
                   className="text-purple-site py-6 font-site"
                   field={item.page_link}
                 >
-                  Learn more about {item.title}
+                  En savoir plus sur {item.title}
                 </PrismicNextLink>
               </div>
             </div>

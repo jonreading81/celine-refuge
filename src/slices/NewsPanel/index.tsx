@@ -42,7 +42,7 @@ const NewsPanel = ({ slice: { items } }: NewsPanelProps): JSX.Element => {
                 className="text-purple-site py-6 font-site"
                 field={item.link}
               >
-                Learn More
+                Apprendre encore plus
               </PrismicNextLink>
             </div>
           </div>
