@@ -25,7 +25,7 @@ export default async function NewsItem({ params }: { params: Params }) {
     <>
       <MastheadImage image={masthead_image} />
       <SliceWrapper>
-        <h1 className="text-center mt-4 mb-6 font-site">
+        <h1 className="text-center  mb-10 font-site">
           {prismic.asText(title)}
         </h1>
         <SliceZone slices={slices} components={components} />
