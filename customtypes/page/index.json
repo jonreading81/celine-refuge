@@ -35,6 +35,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "map": {
+              "type": "SharedSlice"
+            },
             "gallery_carousel": {
               "type": "SharedSlice"
             },

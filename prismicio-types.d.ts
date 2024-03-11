@@ -73,6 +73,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | MapSlice
   | GalleryCarouselSlice
   | ReviewsCarouselSlice
   | ContactFormSlice
@@ -588,6 +589,58 @@ export type ImageBlockSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Map → Primary*
+ */
+export interface MapSliceDefaultPrimary {
+  /**
+   * Position field in *Map → Primary*
+   *
+   * - **Field Type**: GeoPoint
+   * - **Placeholder**: *None*
+   * - **API ID Path**: map.primary.position
+   * - **Documentation**: https://prismic.io/docs/field#geopoint
+   */
+  position: prismic.GeoPointField;
+
+  /**
+   * Zoom field in *Map → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: map.primary.zoom
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  zoom: prismic.NumberField;
+}
+
+/**
+ * Default variation for Map Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MapSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<MapSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Map*
+ */
+type MapSliceVariation = MapSliceDefault;
+
+/**
+ * Map Shared Slice
+ *
+ * - **API ID**: `map`
+ * - **Description**: Map
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MapSlice = prismic.SharedSlice<'map', MapSliceVariation>;
+
+/**
  * Primary content in *Navigation → Items*
  */
 export interface NavigationSliceDefaultItem {
@@ -943,6 +996,10 @@ declare module '@prismicio/client' {
       ImageBlockSliceDefaultPrimary,
       ImageBlockSliceVariation,
       ImageBlockSliceDefault,
+      MapSlice,
+      MapSliceDefaultPrimary,
+      MapSliceVariation,
+      MapSliceDefault,
       NavigationSlice,
       NavigationSliceDefaultItem,
       NavigationSliceVariation,

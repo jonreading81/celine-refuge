@@ -8,6 +8,7 @@ export const components = {
   copyright: dynamic(() => import('./Copyright')),
   gallery_carousel: dynamic(() => import('./GalleryCarousel')),
   image_block: dynamic(() => import('./ImageBlock')),
+  map: dynamic(() => import('./Map')),
   navigation: dynamic(() => import('./Navigation')),
   news_panel: dynamic(() => import('./NewsPanel')),
   promo_panel: dynamic(() => import('./PromoPanel')),

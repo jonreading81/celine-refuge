@@ -1,0 +1,32 @@
+{
+  "id": "map",
+  "type": "SharedSlice",
+  "name": "Map",
+  "description": "Map",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "position": {
+          "type": "GeoPoint",
+          "config": {
+            "label": "Position"
+          }
+        },
+        "zoom": {
+          "type": "Number",
+          "config": {
+            "label": "Zoom",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
