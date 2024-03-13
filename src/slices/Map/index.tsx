@@ -20,7 +20,12 @@ const MapSlice = ({
   },
 }: MapProps): JSX.Element => {
   if (!lng || !lng) {
-    return null;
+    return (
+      <h3 className="p-6 my-6 text-center bg-red-300 text-black">
+        Please Provide a postion for the map in the format long, lat e.g.
+        45.206191545441555, 6.8458295423283415
+      </h3>
+    );
   }
 
   const position = { lng, lat };
