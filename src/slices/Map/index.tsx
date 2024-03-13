@@ -14,12 +14,17 @@ export type MapProps = SliceComponentProps<Content.MapSlice>;
 const MapSlice = ({
   slice: {
     primary: {
-      position: { latitude: lat, longitude: lng },
+      position: { longitude: lat, longitude: lng },
       zoom,
     },
   },
 }: MapProps): JSX.Element => {
-  const position = { lat, lng };
+  if (!lng || !lng) {
+    return null;
+  }
+
+  const position = { lng, lat };
+
   return (
     <section className="aspect-video mb-12">
       <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}>
