@@ -15,7 +15,7 @@ const MapSlice = ({
   slice: {
     primary: {
       position: { longitude: lng, latitude: lat },
-      zoom,
+      zoom = 12,
     },
   },
 }: MapProps): JSX.Element => {
