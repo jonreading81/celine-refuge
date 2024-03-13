@@ -14,7 +14,7 @@ export type NewsPanelProps = SliceComponentProps<Content.NewsPanelSlice>;
 const NewsPanel = ({ slice: { items } }: NewsPanelProps): JSX.Element => {
   return (
     <section>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 grid-flow-row mb-12">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 grid-flow-row mb-12">
         {items!.map((item, id) => (
           <div key={id} className="relative border">
             <div className="h-[320px] relative overflow-hidden">

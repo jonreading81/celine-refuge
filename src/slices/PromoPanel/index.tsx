@@ -15,9 +15,9 @@ const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
   return (
     <section className="mb-12">
       <div className="mx-auto relative">
-        <div className="flex sm:gap-12 flex-col sm:flex-row">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 grid-flow-row mb-12">
           {items.map((item, index) => (
-            <div key={index} className="basis-2/4">
+            <div key={index}>
               <div className="h-[300px] lg:h-[400px] relative overflow-hidden">
                 <PrismicNextLink field={item.page_link}>
                   <PrismicNextImage
