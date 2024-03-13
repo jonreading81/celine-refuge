@@ -15,7 +15,7 @@ const MapSlice = ({
   slice: {
     primary: {
       position: { longitude: lng, latitude: lat },
-      zoom = 12,
+      zoom,
     },
   },
 }: MapProps): JSX.Element => {
@@ -33,7 +33,7 @@ const MapSlice = ({
   return (
     <section className="aspect-video mb-12">
       <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}>
-        <Map defaultCenter={position} defaultZoom={zoom}>
+        <Map defaultCenter={position} defaultZoom={zoom ?? 12}>
           <Marker position={position} />
         </Map>
       </APIProvider>
