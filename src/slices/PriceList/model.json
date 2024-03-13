@@ -1,0 +1,55 @@
+{
+  "id": "price_list",
+  "type": "SharedSlice",
+  "name": "PriceList",
+  "description": "PriceList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "column_one_heading": {
+          "type": "Text",
+          "config": {
+            "label": "Column one heading",
+            "placeholder": ""
+          }
+        },
+        "column_two_heading": {
+          "type": "Text",
+          "config": {
+            "label": "Column two heading",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "name": {
+          "type": "Text",
+          "config": {
+            "label": "Name",
+            "placeholder": ""
+          }
+        },
+        "price": {
+          "type": "Number",
+          "config": {
+            "label": "Price",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

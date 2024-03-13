@@ -73,6 +73,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | PriceListSlice
   | MapSlice
   | GalleryCarouselSlice
   | ReviewsCarouselSlice
@@ -781,6 +782,96 @@ export type NewsPanelSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *PriceList → Primary*
+ */
+export interface PriceListSliceDefaultPrimary {
+  /**
+   * Title field in *PriceList → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: price_list.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Column one heading field in *PriceList → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: price_list.primary.column_one_heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  column_one_heading: prismic.KeyTextField;
+
+  /**
+   * Column two heading field in *PriceList → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: price_list.primary.column_two_heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  column_two_heading: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *PriceList → Items*
+ */
+export interface PriceListSliceDefaultItem {
+  /**
+   * Name field in *PriceList → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: price_list.items[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Price field in *PriceList → Items*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: price_list.items[].price
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  price: prismic.NumberField;
+}
+
+/**
+ * Default variation for PriceList Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PriceListSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<PriceListSliceDefaultPrimary>,
+  Simplify<PriceListSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *PriceList*
+ */
+type PriceListSliceVariation = PriceListSliceDefault;
+
+/**
+ * PriceList Shared Slice
+ *
+ * - **API ID**: `price_list`
+ * - **Description**: PriceList
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PriceListSlice = prismic.SharedSlice<
+  'price_list',
+  PriceListSliceVariation
+>;
+
+/**
  * Primary content in *PromoPanel → Items*
  */
 export interface PromoPanelSliceDefaultItem {
@@ -1008,6 +1099,11 @@ declare module '@prismicio/client' {
       NewsPanelSliceDefaultItem,
       NewsPanelSliceVariation,
       NewsPanelSliceDefault,
+      PriceListSlice,
+      PriceListSliceDefaultPrimary,
+      PriceListSliceDefaultItem,
+      PriceListSliceVariation,
+      PriceListSliceDefault,
       PromoPanelSlice,
       PromoPanelSliceDefaultItem,
       PromoPanelSliceVariation,

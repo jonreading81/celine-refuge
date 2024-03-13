@@ -1,0 +1,46 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "one",
+				"type": "Text"
+			},
+			"column_one_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "touch",
+				"type": "Text"
+			},
+			"column_two_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "what",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"name",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "darkness",
+							"type": "Text"
+						}
+					],
+					[
+						"price",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "3",
+							"type": "Number"
+						}
+					]
+				]
+			}
+		]
+	}
+]

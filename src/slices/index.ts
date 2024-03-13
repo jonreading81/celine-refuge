@@ -11,6 +11,7 @@ export const components = {
   map: dynamic(() => import('./Map')),
   navigation: dynamic(() => import('./Navigation')),
   news_panel: dynamic(() => import('./NewsPanel')),
+  price_list: dynamic(() => import('./PriceList')),
   promo_panel: dynamic(() => import('./PromoPanel')),
   reviews_carousel: dynamic(() => import('./ReviewsCarousel')),
   rich_text: dynamic(() => import('./RichText')),
