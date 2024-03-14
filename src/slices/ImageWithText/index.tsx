@@ -23,7 +23,7 @@ const ImageWithText = ({
   return (
     <section className="lg:grid grid-cols-2 gap-8 mb-12">
       <PrismicNextImage
-        className={`lg:aspect-[4/3] object-cover object-center mb-8 lg:mb-0 ${
+        className={`lg:aspect-[4/3] object-cover object-center mb-4 lg:mb-0 ${
           alignment === 'Image right' ? 'lg:order-last' : ''
         }`}
         field={image}
