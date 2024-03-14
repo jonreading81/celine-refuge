@@ -55,7 +55,7 @@ function NavbarDefault({ navItems }) {
     <Navbar
       shadow={false}
       fullWidth={true}
-      className="mx-auto max-w-screen-xl p-4 text-color-blue-site-900"
+      className="mx-auto max-w-screen-2xl px-4 2xl:px-0 py-4 text-color-blue-site-900"
     >
       <div className=" flex items-center justify-between">
         <h2 className="flex-1 self-center">
