@@ -24,11 +24,11 @@ const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
                 <PrismicNextLink field={item.page_link}>
                   <PrismicNextImage
                     field={item.image}
-                    className=" object-cover object-center w-full h-full"
+                    className="rounded-lg  object-cover object-center w-full h-full"
                   />
                 </PrismicNextLink>
               </div>
-              <div className="border-y-4 border-blue-site p-8 md:w-[70%] lg:w-[60%] relative bg-white md:mt-[-200px]">
+              <div className=" border-y-4 border-blue-site p-8 md:w-[70%] lg:w-[60%] relative bg-white md:mt-[-200px]">
                 <PrismicNextLink field={item.page_link}>
                   <h3 className="text-2xl font-site">{item.title}</h3>
                 </PrismicNextLink>

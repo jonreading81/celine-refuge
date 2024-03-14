@@ -16,7 +16,10 @@ const NewsPanel = ({ slice: { items } }: NewsPanelProps): JSX.Element => {
     <Slice>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 grid-flow-row">
         {items!.map((item, id) => (
-          <div key={id} className="relative border">
+          <div
+            key={id}
+            className="relative border border-blue-gray-100 rounded-xl shadow-xl overflow-hidden"
+          >
             <div className="h-[320px] relative overflow-hidden">
               <PrismicNextLink field={item.link}>
                 <PrismicNextImage
