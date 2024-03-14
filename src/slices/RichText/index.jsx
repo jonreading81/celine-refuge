@@ -1,33 +1,15 @@
-import {
-  PrismicRichText,
-  SliceComponentProps,
-  JSXMapSerializer,
-} from '@prismicio/react';
+import { PrismicRichText, SliceComponentProps } from '@prismicio/react';
+
+import { components } from '@app/utils/richTextComponents';
 
 import * as styles from './styles.module.css';
 
-const components = {
-  label: ({ node, children }) => {
-    if (node.data.label === 'codespan') {
-      return <code>{children}</code>;
-    }
-  },
-  paragraph: ({ children }) => <p className="mb-6 text-md">{children}</p>,
-  heading1: ({ children }) => <h1 className="font-bold mb-6">{children}</h1>,
-  heading2: ({ children }) => (
-    <h2 className="text-2xl font-bold mb-6">{children}</h2>
-  ),
-  heading3: ({ children }) => (
-    <h3 className="text-xl  font-bold mb-6">{children}</h3>
-  ),
-  list: ({ children }) => <ul className="mb-6">{children}</ul>,
-  listItem: ({ children }) => <li className="mb-2">{children}</li>,
-};
-
 export default function RichText({ slice }) {
   return (
-    <section className={`${styles.wrapper} flex justify-center items-center`}>
-      <div className="max-w-[740px]">
+    <section
+      className={`${styles.wrapper} flex justify-center items-center mb-12`}
+    >
+      <div className="max-w-[940px]">
         <PrismicRichText
           field={slice.primary.content}
           components={components}

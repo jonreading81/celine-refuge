@@ -73,6 +73,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | ImageWithTextSlice
   | PriceListSlice
   | MapSlice
   | GalleryCarouselSlice
@@ -587,6 +588,72 @@ type ImageBlockSliceVariation = ImageBlockSliceDefault;
 export type ImageBlockSlice = prismic.SharedSlice<
   'image_block',
   ImageBlockSliceVariation
+>;
+
+/**
+ * Primary content in *ImageWithText → Primary*
+ */
+export interface ImageWithTextSliceDefaultPrimary {
+  /**
+   * alignment field in *ImageWithText → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Image left
+   * - **API ID Path**: image_with_text.primary.alignment
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  alignment: prismic.SelectField<'Image left' | 'Image right', 'filled'>;
+
+  /**
+   * Image field in *ImageWithText → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_with_text.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Text field in *ImageWithText → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_with_text.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for ImageWithText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageWithTextSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<ImageWithTextSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ImageWithText*
+ */
+type ImageWithTextSliceVariation = ImageWithTextSliceDefault;
+
+/**
+ * ImageWithText Shared Slice
+ *
+ * - **API ID**: `image_with_text`
+ * - **Description**: ImageWithText
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageWithTextSlice = prismic.SharedSlice<
+  'image_with_text',
+  ImageWithTextSliceVariation
 >;
 
 /**
@@ -1127,6 +1194,10 @@ declare module '@prismicio/client' {
       ImageBlockSliceDefaultPrimary,
       ImageBlockSliceVariation,
       ImageBlockSliceDefault,
+      ImageWithTextSlice,
+      ImageWithTextSliceDefaultPrimary,
+      ImageWithTextSliceVariation,
+      ImageWithTextSliceDefault,
       MapSlice,
       MapSliceDefaultPrimary,
       MapSliceVariation,
