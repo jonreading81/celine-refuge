@@ -796,24 +796,44 @@ export interface PriceListSliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
-   * Column one heading field in *PriceList → Primary*
+   * Column heading 1 field in *PriceList → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: price_list.primary.column_one_heading
+   * - **API ID Path**: price_list.primary.column_heading_1
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  column_one_heading: prismic.KeyTextField;
+  column_heading_1: prismic.KeyTextField;
 
   /**
-   * Column two heading field in *PriceList → Primary*
+   * Column heading 2 field in *PriceList → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: price_list.primary.column_two_heading
+   * - **API ID Path**: price_list.primary.column_heading_2
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  column_two_heading: prismic.KeyTextField;
+  column_heading_2: prismic.KeyTextField;
+
+  /**
+   * Column heading 3 field in *PriceList → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: price_list.primary.column_heading_3
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  column_heading_3: prismic.KeyTextField;
+
+  /**
+   * Column heading 4 field in *PriceList → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: price_list.primary.column_heading_4
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  column_heading_4: prismic.KeyTextField;
 }
 
 /**
@@ -831,14 +851,34 @@ export interface PriceListSliceDefaultItem {
   name: prismic.KeyTextField;
 
   /**
-   * Price field in *PriceList → Items*
+   * Price 1 field in *PriceList → Items*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
-   * - **API ID Path**: price_list.items[].price
+   * - **API ID Path**: price_list.items[].price_1
    * - **Documentation**: https://prismic.io/docs/field#number
    */
-  price: prismic.NumberField;
+  price_1: prismic.NumberField;
+
+  /**
+   * Price 2 field in *PriceList → Items*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: price_list.items[].price_2
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  price_2: prismic.NumberField;
+
+  /**
+   * Price 3 field in *PriceList → Items*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: price_list.items[].price_3
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  price_3: prismic.NumberField;
 }
 
 /**

@@ -19,17 +19,31 @@
             "placeholder": ""
           }
         },
-        "column_one_heading": {
+        "column_heading_1": {
           "type": "Text",
           "config": {
-            "label": "Column one heading",
+            "label": "Column heading 1",
             "placeholder": ""
           }
         },
-        "column_two_heading": {
+        "column_heading_2": {
           "type": "Text",
           "config": {
-            "label": "Column two heading",
+            "label": "Column heading 2",
+            "placeholder": ""
+          }
+        },
+        "column_heading_3": {
+          "type": "Text",
+          "config": {
+            "label": "Column heading 3",
+            "placeholder": ""
+          }
+        },
+        "column_heading_4": {
+          "type": "Text",
+          "config": {
+            "label": "Column heading 4",
             "placeholder": ""
           }
         }
@@ -42,10 +56,24 @@
             "placeholder": ""
           }
         },
-        "price": {
+        "price_1": {
           "type": "Number",
           "config": {
-            "label": "Price",
+            "label": "Price 1",
+            "placeholder": ""
+          }
+        },
+        "price_2": {
+          "type": "Number",
+          "config": {
+            "label": "Price 2",
+            "placeholder": ""
+          }
+        },
+        "price_3": {
+          "type": "Number",
+          "config": {
+            "label": "Price 3",
             "placeholder": ""
           }
         }

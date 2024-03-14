@@ -8,14 +8,24 @@
 				"value": "one",
 				"type": "Text"
 			},
-			"column_one_heading": {
+			"column_heading_1": {
 				"__TYPE__": "FieldContent",
-				"value": "touch",
+				"value": "stared",
 				"type": "Text"
 			},
-			"column_two_heading": {
+			"column_heading_2": {
 				"__TYPE__": "FieldContent",
-				"value": "what",
+				"value": "west",
+				"type": "Text"
+			},
+			"column_heading_3": {
+				"__TYPE__": "FieldContent",
+				"value": "production",
+				"type": "Text"
+			},
+			"column_heading_4": {
+				"__TYPE__": "FieldContent",
+				"value": "ability",
 				"type": "Text"
 			}
 		},
@@ -32,10 +42,26 @@
 						}
 					],
 					[
-						"price",
+						"price_1",
 						{
 							"__TYPE__": "FieldContent",
-							"value": "3",
+							"value": "91",
+							"type": "Number"
+						}
+					],
+					[
+						"price_2",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "21",
+							"type": "Number"
+						}
+					],
+					[
+						"price_3",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "74",
 							"type": "Number"
 						}
 					]
