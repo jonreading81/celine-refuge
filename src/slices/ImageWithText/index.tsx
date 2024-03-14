@@ -6,6 +6,7 @@ import { PrismicNextImage } from '@prismicio/next';
 import { Card } from '@material-tailwind/react';
 
 import { components } from '@app/utils/richTextComponents';
+import { Slice } from '@app/components/Slice';
 
 /**
  * Props for `ImageWithText`.
@@ -22,17 +23,19 @@ const ImageWithText = ({
   },
 }: ImageWithTextProps): JSX.Element => {
   return (
-    <section className="lg:grid grid-cols-2 gap-8 mb-12">
-      <PrismicNextImage
-        className={`rounded-lg shadow-lg lg:aspect-[4/3] object-cover object-center mb-4 lg:mb-0 ${
-          alignment === 'Image right' ? 'lg:order-last' : ''
-        }`}
-        field={image}
-      />
-      <div>
-        <PrismicRichText field={text} components={components} />
+    <Slice>
+      <div className="lg:grid grid-cols-2 gap-8">
+        <PrismicNextImage
+          className={`rounded-lg shadow-lg lg:aspect-[4/3] object-cover object-center mb-4 lg:mb-0 ${
+            alignment === 'Image right' ? 'lg:order-last' : ''
+          }`}
+          field={image}
+        />
+        <div>
+          <PrismicRichText field={text} components={components} />
+        </div>
       </div>
-    </section>
+    </Slice>
   );
 };
 

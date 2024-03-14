@@ -2,7 +2,7 @@ import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
 import { formatDate } from '@app/utils/date-formatter';
-
+import { Slice } from '@app/components/Slice';
 /**
  * Props for `NewsPanel`.
  */
@@ -13,8 +13,8 @@ export type NewsPanelProps = SliceComponentProps<Content.NewsPanelSlice>;
  */
 const NewsPanel = ({ slice: { items } }: NewsPanelProps): JSX.Element => {
   return (
-    <section>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 grid-flow-row mb-12">
+    <Slice>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 grid-flow-row">
         {items!.map((item, id) => (
           <div key={id} className="relative border">
             <div className="h-[320px] relative overflow-hidden">
@@ -48,7 +48,7 @@ const NewsPanel = ({ slice: { items } }: NewsPanelProps): JSX.Element => {
           </div>
         ))}
       </div>
-    </section>
+    </Slice>
   );
 };
 

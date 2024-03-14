@@ -4,6 +4,8 @@ import Carousel from '@app/components/Carousel';
 import Caption from '@app/components/Caption';
 import { PrismicNextImage } from '@prismicio/next';
 
+import { Slice } from '@app/components/Slice';
+
 /**
  * Props for `GalleryCarousel`.
  */
@@ -17,8 +19,8 @@ const GalleryCarousel = ({
   slice: { primary, items },
 }: GalleryCarouselProps): JSX.Element => {
   return (
-    <div className="mb-12">
-      <div className="mb-12 rounded-xl shadow-lg overflow-hidden">
+    <Slice>
+      <div className=" rounded-xl shadow-lg overflow-hidden">
         <Carousel
           className="aspect-video "
           loop
@@ -34,7 +36,7 @@ const GalleryCarousel = ({
         </Carousel>
         <Caption>{primary.description}</Caption>
       </div>
-    </div>
+    </Slice>
   );
 };
 

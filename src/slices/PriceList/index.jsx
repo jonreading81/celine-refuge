@@ -2,6 +2,7 @@
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 import { Card } from '@material-tailwind/react';
+import { Slice } from '@app/components/Slice';
 
 /**
  * Props for `PriceList`.
@@ -26,9 +27,9 @@ const price = (price) => `€${price.toFixed(2)}`;
 
 const PriceList = ({ slice: { primary, items } }) => {
   return (
-    <>
+    <Slice>
       <h3 className="text-3xl text-center mb-8">{primary.title}</h3>
-      <Card className="h-full w-full overflow-scroll mb-12 text-sm md:text-lg">
+      <Card className="h-full w-full overflow-scroll text-sm md:text-lg">
         <table className=" table-fixed w-full min-w-max table-auto text-left">
           <thead>
             <tr>
@@ -62,7 +63,7 @@ const PriceList = ({ slice: { primary, items } }) => {
           </tbody>
         </table>
       </Card>
-    </>
+    </Slice>
   );
 };
 

@@ -7,6 +7,8 @@ import { FormStatus } from '@app/components/FormStatus';
 import { validateEmail } from '@app/utils/validateEmail';
 import { useSendEmail } from '@app/hooks/useSendEmail';
 
+import { Slice } from '@app/components/Slice';
+
 /**
  * Component for "ContactForm" Slices.
  */
@@ -43,61 +45,63 @@ const ContactForm = ({
   };
 
   return (
-    <div className="max-w-4xl mx-auto mb-12">
-      <form className="border-2 border-blue-gray-100 p-8">
-        <div className="mb-6">
-          <Input
-            color="blue-gray"
-            label="Name"
-            size="lg"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div className="mb-6">
-          <Input
-            color="blue-gray"
-            label="Email"
-            size="lg"
-            value={userEmail}
-            onChange={(e) => setUserEmail(e.target.value)}
-          />
-        </div>
-        <div className="mb-6">
-          <Input
-            color="blue-gray"
-            label="Phone"
-            size="lg"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
-        </div>
+    <Slice>
+      <div className="max-w-4xl mx-auto">
+        <form className="border-2 border-blue-gray-100 p-8">
+          <div className="mb-6">
+            <Input
+              color="blue-gray"
+              label="Name"
+              size="lg"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+          <div className="mb-6">
+            <Input
+              color="blue-gray"
+              label="Email"
+              size="lg"
+              value={userEmail}
+              onChange={(e) => setUserEmail(e.target.value)}
+            />
+          </div>
+          <div className="mb-6">
+            <Input
+              color="blue-gray"
+              label="Phone"
+              size="lg"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
+          </div>
 
-        <div className="mb-6">
-          <Textarea
-            color="blue-gray"
-            label="Message"
-            size="lg"
-            onChange={(e) => setMessage(e.target.value)}
-            value={message}
+          <div className="mb-6">
+            <Textarea
+              color="blue-gray"
+              label="Message"
+              size="lg"
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
+            />
+          </div>
+          <FormStatus
+            loading={loading && 'Loading...'}
+            error={error}
+            success={success && success_message}
           />
-        </div>
-        <FormStatus
-          loading={loading && 'Loading...'}
-          error={error}
-          success={success && success_message}
-        />
 
-        <Button
-          className="mt-6 bg-blue-site"
-          fullWidth
-          color="blue"
-          onClick={validateForm}
-        >
-          {button_text}
-        </Button>
-      </form>
-    </div>
+          <Button
+            className="mt-6 bg-blue-site"
+            fullWidth
+            color="blue"
+            onClick={validateForm}
+          >
+            {button_text}
+          </Button>
+        </form>
+      </div>
+    </Slice>
   );
 };
 

@@ -2,7 +2,7 @@
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 import { APIProvider, Map, Marker } from '@vis.gl/react-google-maps';
-
+import { Slice } from '@app/components/Slice';
 /**
  * Props for `Map`.
  */
@@ -31,13 +31,15 @@ const MapSlice = ({
   const position = { lng, lat };
 
   return (
-    <section className="aspect-video mb-12">
-      <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}>
-        <Map defaultCenter={position} defaultZoom={zoom ?? 12}>
-          <Marker position={position} />
-        </Map>
-      </APIProvider>
-    </section>
+    <Slice>
+      <div className="aspect-video">
+        <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}>
+          <Map defaultCenter={position} defaultZoom={zoom ?? 12}>
+            <Marker position={position} />
+          </Map>
+        </APIProvider>
+      </div>
+    </Slice>
   );
 };
 

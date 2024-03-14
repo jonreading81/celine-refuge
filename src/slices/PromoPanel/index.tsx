@@ -3,6 +3,8 @@ import { SliceComponentProps } from '@prismicio/react';
 import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
 import * as prismic from '@prismicio/client';
 
+import { Slice } from '@app/components/Slice';
+
 /**
  * Props for `PromoPanel`.
  */
@@ -13,7 +15,7 @@ export type PromoPanelProps = SliceComponentProps<Content.PromoPanelSlice>;
  */
 const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
   return (
-    <section className="mb-12">
+    <Slice>
       <div className="mx-auto relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 grid-flow-row mb-12">
           {items.map((item, index) => (
@@ -42,7 +44,7 @@ const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
           ))}
         </div>
       </div>
-    </section>
+    </Slice>
   );
 };
 
