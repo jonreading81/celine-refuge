@@ -39,7 +39,7 @@ export const ContactInfo = ({
 
   return (
     <div className="flex flex-col lg:flex-row">
-      <div className="basis-2/3 bg-blue-site text-white p-14 lg:pl-28">
+      <div className="basis-2/3 bg-blue-site text-white p-14 ">
         <h2 className="text-2xl sm:text-3xl font-bold font-site">{title}</h2>
         <div className="flex flex-col sm:flex-row text-sm font-helvetica mb-6 ">
           <div className="basis-1/2 border-b border-white pb-4 sm:mr-6 md:mr-14">
