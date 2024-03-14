@@ -1,7 +1,7 @@
 'use client';
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
-import { Card, Typography } from '@material-tailwind/react';
+import { Card } from '@material-tailwind/react';
 
 /**
  * Props for `PriceList`.

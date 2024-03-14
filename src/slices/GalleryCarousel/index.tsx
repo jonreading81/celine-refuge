@@ -18,16 +18,22 @@ const GalleryCarousel = ({
 }: GalleryCarouselProps): JSX.Element => {
   return (
     <div className="mb-12">
-      <Carousel className="aspect-video" loop placeholder={primary.placeholder}>
-        {items.map(({ image }, i) => (
-          <PrismicNextImage
-            key={i}
-            field={image}
-            className="h-full w-full object-cover object-center"
-          />
-        ))}
-      </Carousel>
-      <Caption>{primary.description}</Caption>
+      <div className="mb-12 rounded-xl shadow-lg overflow-hidden">
+        <Carousel
+          className="aspect-video "
+          loop
+          placeholder={primary.placeholder}
+        >
+          {items.map(({ image }, i) => (
+            <PrismicNextImage
+              key={i}
+              field={image}
+              className="h-full w-full object-cover object-center"
+            />
+          ))}
+        </Carousel>
+        <Caption>{primary.description}</Caption>
+      </div>
     </div>
   );
 };
