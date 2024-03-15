@@ -26,6 +26,19 @@
             "label": "Description",
             "placeholder": ""
           }
+        },
+        "width": {
+          "type": "Select",
+          "config": {
+            "label": "width",
+            "placeholder": "",
+            "options": [
+              "Full",
+              "Large",
+              "Medium"
+            ],
+            "default_value": "Full"
+          }
         }
       },
       "items": {}

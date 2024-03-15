@@ -4,6 +4,12 @@ import { PrismicNextImage } from '@prismicio/next';
 import Caption from '@app/components/Caption';
 import { Slice } from '@app/components/Slice';
 
+const WIDTHS = {
+  Full: '',
+  Large: 'max-w-screen-lg',
+  Medium: 'max-w-screen-md',
+};
+
 /**
  * Props for `ImageBlock`.
  */
@@ -13,10 +19,13 @@ export type ImageBlockProps = SliceComponentProps<Content.ImageBlockSlice>;
  * Component for "ImageBlock" Slices.
  */
 const ImageBlock = ({ slice: { primary } }: ImageBlockProps): JSX.Element => {
+  const width = WIDTHS[primary.width] ?? '';
   return (
     <Slice>
       <div className="flex justify-center items-center ">
-        <div className="w-full  rounded-xl shadow-lg overflow-hidden">
+        <div
+          className={`w-full ${width}  rounded-xl shadow-lg overflow-hidden`}
+        >
           <PrismicNextImage
             field={primary.image}
             className="object-cover w-full w-full"

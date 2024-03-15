@@ -30,6 +30,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "during",
 				"type": "Text"
+			},
+			"width": {
+				"__TYPE__": "FieldContent",
+				"value": "Full",
+				"type": "Select"
 			}
 		},
 		"items": []
