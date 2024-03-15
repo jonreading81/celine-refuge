@@ -10,6 +10,7 @@ import { generateMetadataForPage } from '@/app/utils/generateMetadataByPage';
 import { PrismicNextImage } from '@prismicio/next';
 import { MastheadImage } from '@app/components/MastheadImage';
 import { SliceWrapper } from '@app/components/SliceWrapper';
+import { ErrorBoundary } from '@app/components/ErrorBoundary';
 
 const PAGE = 'home';
 
@@ -25,7 +26,9 @@ export default async function Home() {
     <div>
       <MastheadImage image={masthead_image} />
       <SliceWrapper>
-        <SliceZone slices={slices} components={components} />
+        <ErrorBoundary>
+          <SliceZone slices={slices} components={components} />
+        </ErrorBoundary>
       </SliceWrapper>
     </div>
   );
