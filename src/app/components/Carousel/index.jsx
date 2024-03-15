@@ -6,16 +6,8 @@ import {
   IconButton,
 } from '@material-tailwind/react';
 
-import PreviousArrow from './PreviousArrow';
-import NextArrow from './NextArrow';
-
 const Carousel = ({ children, placeholder, ...props }) => (
-  <TailwindCarousel
-    placeholder={placeholder}
-    prevArrow={PreviousArrow}
-    nextArrow={NextArrow}
-    {...props}
-  >
+  <TailwindCarousel placeholder={placeholder} {...props}>
     {children}
   </TailwindCarousel>
 );
