@@ -851,16 +851,17 @@ __metadata:
   linkType: hard
 
 "@slicemachine/adapter-next@npm:^0.3.35":
-  version: 0.3.35
-  resolution: "@slicemachine/adapter-next@npm:0.3.35"
+  version: 0.3.37
+  resolution: "@slicemachine/adapter-next@npm:0.3.37"
   dependencies:
     "@prismicio/simulator": ^0.1.4
     "@prismicio/types-internal": ^2.2.0
-    "@slicemachine/plugin-kit": 0.4.35
+    "@slicemachine/plugin-kit": 0.4.37
     common-tags: ^1.8.2
     fp-ts: ^2.13.1
     io-ts: ^2.2.20
     io-ts-types: ^0.5.19
+    lz-string: 1.5.0
     monocle-ts: ^2.3.13
     newtype-ts: ^0.3.5
     node-fetch: ^3.3.1
@@ -869,7 +870,7 @@ __metadata:
   peerDependencies:
     next: ">=11.0.0"
     react: ^17 || ^18
-  checksum: b859c871106dc3774ddedc18e6e891cd8f5c7dd381d29233f1a0e42cba7642ca1d133b5e60aac9b392f3aac70cbf6e6517ae47f8c7dc41e1bd2d350608ee72f6
+  checksum: d60b9a016216eb056415689c200bf7950a5f0c4f0d300592a7c1fe4d25877291f8d894b7f92af3c01d859e0a3cd2fa63a5c0df44d1a6795e145981d20939135b
   languageName: node
   linkType: hard
 
@@ -932,6 +933,24 @@ __metadata:
     prettier: ^3.0.3
     prismic-ts-codegen: ^0.1.19
   checksum: d87fc3884c23985c5121db0af115591e135af4e43290cccdb5e83c9166112d26783d47ec42583455caf7e77f8b11f358ddd2c556fdec830c55c1516e5ab7ef42
+  languageName: node
+  linkType: hard
+
+"@slicemachine/plugin-kit@npm:0.4.37":
+  version: 0.4.37
+  resolution: "@slicemachine/plugin-kit@npm:0.4.37"
+  dependencies:
+    common-tags: ^1.8.2
+    defu: ^6.1.2
+    dotenv: 16.3.1
+    fp-ts: ^2.13.1
+    fs-extra: 11.1.1
+    io-ts: ^2.2.20
+    io-ts-reporters: ^2.0.1
+    p-limit: ^4.0.0
+    prettier: ^3.0.3
+    prismic-ts-codegen: ^0.1.19
+  checksum: 658d5a7d7ef7246bc5f442a45ff254cc12297bac667fe35c9939ca377f391f8c650b78814463f8379d1359d2c4de52647081cdfa1a55ececcb8cca1fe44c10d8
   languageName: node
   linkType: hard
 
@@ -4365,6 +4384,15 @@ __metadata:
   dependencies:
     yallist: ^4.0.0
   checksum: f97f499f898f23e4585742138a22f22526254fdba6d75d41a1c2526b3b6cc5747ef59c5612ba7375f42aca4f8461950e925ba08c991ead0651b4918b7c978297
+  languageName: node
+  linkType: hard
+
+"lz-string@npm:1.5.0":
+  version: 1.5.0
+  resolution: "lz-string@npm:1.5.0"
+  bin:
+    lz-string: bin/bin.js
+  checksum: 1ee98b4580246fd90dd54da6e346fb1caefcf05f677c686d9af237a157fdea3fd7c83a4bc58f858cd5b10a34d27afe0fdcbd0505a47e0590726a873dc8b8f65d
   languageName: node
   linkType: hard
 
