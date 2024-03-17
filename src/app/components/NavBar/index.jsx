@@ -30,7 +30,6 @@ function NavbarDefault({ navItems }) {
         <Typography
           key={link.url}
           as="li"
-          variant="medium"
           className="flex items-center gap-x-2 py-2 font-medium border-b-2 lg:border-none "
         >
           <PrismicNextLink
