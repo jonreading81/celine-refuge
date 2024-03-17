@@ -29,7 +29,7 @@ const PriceList = ({ slice: { primary, items } }) => {
   return (
     <Slice>
       <h3 className="text-3xl text-center mb-8">{primary.title}</h3>
-      <div className=" text-sm md:text-lg overflow-hidden rounded-xl shadow-xl">
+      <div className="text-sm md:text-lg overflow-hidden rounded-xl shadow-xl text-gray-700 ">
         <table className=" table-fixed w-full text-left">
           <thead>
             <tr>
