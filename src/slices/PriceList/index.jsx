@@ -1,7 +1,7 @@
 'use client';
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
-import { Card } from '@material-tailwind/react';
+
 import { Slice } from '@app/components/Slice';
 
 /**
@@ -29,8 +29,8 @@ const PriceList = ({ slice: { primary, items } }) => {
   return (
     <Slice>
       <h3 className="text-3xl text-center mb-8">{primary.title}</h3>
-      <Card className="h-full w-full overflow-scroll text-sm md:text-lg">
-        <table className=" table-fixed w-full min-w-max table-auto text-left">
+      <div className=" text-sm md:text-lg overflow-hidden rounded-xl shadow-xl">
+        <table className=" table-fixed w-full text-left">
           <thead>
             <tr>
               <TableHeading>{primary.column_heading_1}</TableHeading>
@@ -62,7 +62,7 @@ const PriceList = ({ slice: { primary, items } }) => {
             })}
           </tbody>
         </table>
-      </Card>
+      </div>
     </Slice>
   );
 };
