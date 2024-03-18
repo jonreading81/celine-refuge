@@ -7,6 +7,7 @@ export const components = {
   contact_info: dynamic(() => import('./ContactInfo')),
   copyright: dynamic(() => import('./Copyright')),
   gallery_carousel: dynamic(() => import('./GalleryCarousel')),
+  icon_bar: dynamic(() => import('./IconBar')),
   image_block: dynamic(() => import('./ImageBlock')),
   image_with_text: dynamic(() => import('./ImageWithText')),
   map: dynamic(() => import('./Map')),

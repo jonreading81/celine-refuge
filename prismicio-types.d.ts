@@ -73,6 +73,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | IconBarSlice
   | ImageWithTextSlice
   | PriceListSlice
   | MapSlice
@@ -533,6 +534,76 @@ type GalleryCarouselSliceVariation = GalleryCarouselSliceDefault;
 export type GalleryCarouselSlice = prismic.SharedSlice<
   'gallery_carousel',
   GalleryCarouselSliceVariation
+>;
+
+/**
+ * Primary content in *IconBar → Primary*
+ */
+export interface IconBarSliceDefaultPrimary {
+  /**
+   * Title field in *IconBar → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: icon_bar.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *IconBar → Items*
+ */
+export interface IconBarSliceDefaultItem {
+  /**
+   * Text field in *IconBar → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: icon_bar.items[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+
+  /**
+   * Icon field in *IconBar → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Font awesome icon
+   * - **API ID Path**: icon_bar.items[].icon
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  icon: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for IconBar Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IconBarSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<IconBarSliceDefaultPrimary>,
+  Simplify<IconBarSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *IconBar*
+ */
+type IconBarSliceVariation = IconBarSliceDefault;
+
+/**
+ * IconBar Shared Slice
+ *
+ * - **API ID**: `icon_bar`
+ * - **Description**: IconBar
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IconBarSlice = prismic.SharedSlice<
+  'icon_bar',
+  IconBarSliceVariation
 >;
 
 /**
@@ -1201,6 +1272,11 @@ declare module '@prismicio/client' {
       GalleryCarouselSliceDefaultItem,
       GalleryCarouselSliceVariation,
       GalleryCarouselSliceDefault,
+      IconBarSlice,
+      IconBarSliceDefaultPrimary,
+      IconBarSliceDefaultItem,
+      IconBarSliceVariation,
+      IconBarSliceDefault,
       ImageBlockSlice,
       ImageBlockSliceDefaultPrimary,
       ImageBlockSliceVariation,
