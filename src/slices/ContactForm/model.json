@@ -12,10 +12,31 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "email": {
+        "name_label": {
           "type": "Text",
           "config": {
-            "label": "Email",
+            "label": "Name label",
+            "placeholder": ""
+          }
+        },
+        "email_label": {
+          "type": "Text",
+          "config": {
+            "label": "Email label",
+            "placeholder": ""
+          }
+        },
+        "phone_label": {
+          "type": "Text",
+          "config": {
+            "label": "Phone label",
+            "placeholder": ""
+          }
+        },
+        "message_label": {
+          "type": "Text",
+          "config": {
+            "label": "Message Label",
             "placeholder": ""
           }
         },
@@ -23,6 +44,13 @@
           "type": "Text",
           "config": {
             "label": "Button Text",
+            "placeholder": ""
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email",
             "placeholder": ""
           }
         },

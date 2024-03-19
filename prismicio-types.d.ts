@@ -176,14 +176,44 @@ export type AllDocumentTypes =
  */
 export interface ContactFormSliceDefaultPrimary {
   /**
-   * Email field in *ContactForm → Primary*
+   * Name label field in *ContactForm → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact_form.primary.email
+   * - **API ID Path**: contact_form.primary.name_label
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  email: prismic.KeyTextField;
+  name_label: prismic.KeyTextField;
+
+  /**
+   * Email label field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.email_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email_label: prismic.KeyTextField;
+
+  /**
+   * Phone label field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.phone_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone_label: prismic.KeyTextField;
+
+  /**
+   * Message Label field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.message_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  message_label: prismic.KeyTextField;
 
   /**
    * Button Text field in *ContactForm → Primary*
@@ -194,6 +224,16 @@ export interface ContactFormSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   button_text: prismic.KeyTextField;
+
+  /**
+   * Email field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.email
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
 
   /**
    * success message field in *ContactForm → Primary*

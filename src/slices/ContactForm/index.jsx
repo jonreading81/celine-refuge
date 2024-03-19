@@ -14,7 +14,16 @@ import { Slice } from '@app/components/Slice';
  */
 const ContactForm = ({
   slice: {
-    primary: { email, success_message, button_text, validation_error },
+    primary: {
+      email_label,
+      name_label,
+      phone_label,
+      message_label,
+      email,
+      success_message,
+      button_text,
+      validation_error,
+    },
   },
 }) => {
   const [userEmail, setUserEmail] = useState('');
@@ -51,7 +60,7 @@ const ContactForm = ({
           <div className="mb-6">
             <Input
               color="blue-gray"
-              label="Name"
+              label={name_label}
               size="lg"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -60,7 +69,7 @@ const ContactForm = ({
           <div className="mb-6">
             <Input
               color="blue-gray"
-              label="Email"
+              label={email_label}
               size="lg"
               value={userEmail}
               onChange={(e) => setUserEmail(e.target.value)}
@@ -69,7 +78,7 @@ const ContactForm = ({
           <div className="mb-6">
             <Input
               color="blue-gray"
-              label="Phone"
+              label={phone_label}
               size="lg"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
@@ -79,7 +88,7 @@ const ContactForm = ({
           <div className="mb-6">
             <Textarea
               color="blue-gray"
-              label="Message"
+              label={message_label}
               size="lg"
               onChange={(e) => setMessage(e.target.value)}
               value={message}

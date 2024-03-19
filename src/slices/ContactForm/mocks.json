@@ -22,6 +22,26 @@
 				"__TYPE__": "FieldContent",
 				"value": "frighten",
 				"type": "Text"
+			},
+			"email_label": {
+				"__TYPE__": "FieldContent",
+				"value": "safe",
+				"type": "Text"
+			},
+			"name_label": {
+				"__TYPE__": "FieldContent",
+				"value": "front",
+				"type": "Text"
+			},
+			"phone_label": {
+				"__TYPE__": "FieldContent",
+				"value": "cake",
+				"type": "Text"
+			},
+			"message_label": {
+				"__TYPE__": "FieldContent",
+				"value": "darkness",
+				"type": "Text"
 			}
 		},
 		"items": []
