@@ -4,7 +4,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/prismicio';
 
 export async function middleware(request: NextRequest) {
-  console.log('-------middle ware');
   const client = createClient();
   const repository = await client.getRepository();
 
@@ -20,7 +19,9 @@ export async function middleware(request: NextRequest) {
 
   // Redirect to default locale if there is no supported locale prefix
   if (pathnameIsMissingLocale) {
-    return NextResponse.rewrite(new URL(`/${defaultLocale}${pathname}`));
+    return NextResponse.rewrite(
+      new URL(`/${defaultLocale}${pathname}`, request.url)
+    );
   }
 }
 
