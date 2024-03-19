@@ -18,7 +18,7 @@ export async function middleware(request: NextRequest) {
   );
 
   // Redirect to default locale if there is no supported locale prefix
-  if (pathnameIsMissingLocale) {
+  if (pathnameIsMissingLocale && pathname !== '/api/preview') {
     return NextResponse.rewrite(
       new URL(`/${defaultLocale}${pathname}`, request.url)
     );
