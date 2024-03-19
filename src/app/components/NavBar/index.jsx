@@ -12,8 +12,9 @@ import { Logo } from '@app/components/Logo/Logo';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { PrismicNextLink } from '@prismicio/next';
+import { LanguageSwitcher } from '@app/components/LanguageSwitcher';
 
-function NavbarDefault({ navItems }) {
+function NavbarDefault({ navItems, locales, lang }) {
   const [openNav, setOpenNav] = React.useState(false);
   const pathname = usePathname();
 
@@ -25,12 +26,11 @@ function NavbarDefault({ navItems }) {
   }, []);
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-site">
+    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-site text-md">
       {navItems.map(({ title, link }) => (
-        <Typography
+        <li
           key={link.url}
-          as="li"
-          className="flex items-center gap-x-2 py-2 font-medium border-b-2 lg:border-none "
+          className="flex items-center gap-x-2 py-2 font-medium border-b-2 lg:border-none"
         >
           <PrismicNextLink
             field={link}
@@ -45,7 +45,7 @@ function NavbarDefault({ navItems }) {
           >
             {title}
           </PrismicNextLink>
-        </Typography>
+        </li>
       ))}
     </ul>
   );
@@ -56,11 +56,16 @@ function NavbarDefault({ navItems }) {
       fullWidth={true}
       className=" p-0 text-color-blue-site-900 mb-4 lg:m-0"
     >
-      <div className=" flex items-center justify-between">
+      <div className="flex items-center justify-between">
         <div className="flex-1 self-center">
           <Logo />
         </div>
-        <div className="hidden lg:block">{navList}</div>
+        <div className="hidden lg:flex items-center ">
+          {navList}
+          <div className="ml-4">
+            <LanguageSwitcher locales={locales} lang={lang} />
+          </div>
+        </div>
 
         <IconButton
           variant="text"

@@ -7,11 +7,10 @@ const Header = ({ navigationSlice, locales, lang }) => (
     <header className="w-full sticky top-0 z-50 bg-white shadow-xl">
       <div className="mx-auto max-w-screen-2xl px-4 2xl:px-0 py-4 0">
         <div className="w-full">
-          <Navigation slice={navigationSlice} />
+          <Navigation slice={navigationSlice} locales={locales} lang={lang} />
         </div>
-
         <div className="flex justify-end ">
-          <div className="w-full lg:w-auto">
+          <div className="w-full lg:hidden">
             <LanguageSwitcher locales={locales} lang={lang} />
           </div>
         </div>
