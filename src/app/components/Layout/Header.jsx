@@ -4,7 +4,7 @@ import { LanguageSwitcher } from '@app/components/LanguageSwitcher';
 
 const Header = ({ navigationSlice, locales, lang }) => (
   <>
-    <header className="w-full">
+    <header className="w-full fixed top-0 z-50 bg-white shadow-xl">
       <div className="mx-auto max-w-screen-2xl px-4 2xl:px-0 py-4 0">
         <Navigation slice={navigationSlice} />
         <div className="flex justify-end">
