@@ -8,16 +8,9 @@ import { Button } from '@material-tailwind/react';
 import { Slice } from '@app/components/Slice';
 
 /**
- * Props for `PromoPanel`.
- */
-export type PromoPanelProps = SliceComponentProps<Content.PromoPanelSlice>;
-
-/**
  * Component for "PromoPanel" Slices.
  */
-const PromoPanel = ({
-  slice: { primary, items },
-}: PromoPanelProps): JSX.Element => {
+const PromoPanel = ({ slice: { primary, items } }) => {
   return (
     <Slice>
       <div className="mx-auto relative">
