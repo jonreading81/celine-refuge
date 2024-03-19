@@ -20,7 +20,7 @@ const GalleryCarousel = ({
 }: GalleryCarouselProps): JSX.Element => {
   return (
     <Slice>
-      <div className=" rounded-xl shadow-xl overflow-hidden">
+      <div className="max-w-screen-lg m-auto rounded-xl shadow-xl overflow-hidden">
         <Carousel
           className="aspect-video "
           loop
