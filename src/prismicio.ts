@@ -41,3 +41,13 @@ export const createClient = (config: prismicNext.CreateClientConfig = {}) => {
 
   return client;
 };
+
+export const linkResolver: prismic.LinkResolverFunction = (doc) => {
+  if (doc.type === 'page') {
+    return `/${doc.lang}/${doc.uid}`;
+  }
+  if (doc.uid === 'home') {
+    return `/${doc.lang}`;
+  }
+  return '/';
+};
