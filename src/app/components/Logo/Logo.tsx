@@ -7,7 +7,7 @@ export const Logo = () => {
     <h2>
       <Link href="/">
         <Image
-          className="w-[300px]"
+          className="w-[220px] lg:w-[300px] "
           priority
           src={logo}
           alt="Follow us on Twitter"

@@ -23,16 +23,20 @@ const icons = {
   faCircle,
 };
 
-const Icon = ({ icon, text }) => (
-  <div className=" mb-8">
+const Icon = ({ icon, text, disabled }) => (
+  <div className=" mb-8  ">
     <FontAwesomeIcon
-      className="w-10 h-10 sm:w-20 sm:h-20 m-auto"
+      className={`w-10 h-10 sm:w-20 sm:h-20 m-auto ${
+        disabled ? 'opacity-20' : ''
+      }`}
       size="sm"
       color="white"
       icon={icons[icon] ?? faCircle}
       mask={faCircle}
       transform="shrink-10 up-.5"
+      strikethrough={true}
     />
+
     <p className="text-xs lg:text-sm text-white text-center mt-4">{text}</p>
   </div>
 );

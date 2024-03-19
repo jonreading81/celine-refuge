@@ -574,6 +574,17 @@ export interface IconBarSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   icon: prismic.KeyTextField;
+
+  /**
+   * Disabled field in *IconBar → Items*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: icon_bar.items[].disabled
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  disabled: prismic.BooleanField;
 }
 
 /**

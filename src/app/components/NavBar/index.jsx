@@ -26,11 +26,11 @@ function NavbarDefault({ navItems, locales, lang }) {
   }, []);
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-site text-md">
+    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-site lg:text-base">
       {navItems.map(({ title, link }) => (
         <li
           key={link.url}
-          className="flex items-center gap-x-2 py-2 font-medium border-b-2 lg:border-none"
+          className="flex items-center gap-x-2 py-2 font-bold border-b-2 lg:border-none"
         >
           <PrismicNextLink
             field={link}
@@ -62,7 +62,7 @@ function NavbarDefault({ navItems, locales, lang }) {
         </div>
         <div className="hidden lg:flex items-center ">
           {navList}
-          <div className="ml-4">
+          <div className="ml-6">
             <LanguageSwitcher locales={locales} lang={lang} />
           </div>
         </div>

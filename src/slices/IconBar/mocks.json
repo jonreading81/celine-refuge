@@ -28,6 +28,13 @@
 							"value": "itself",
 							"type": "Text"
 						}
+					],
+					[
+						"disabled",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": false
+						}
 					]
 				]
 			}

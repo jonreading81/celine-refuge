@@ -32,7 +32,7 @@ const MapSlice = ({
 
   return (
     <Slice>
-      <div className="aspect-video rounded-xl overflow-hidden">
+      <div className="aspect-video rounded-xl overflow-hidden m-auto max-w-screen-lg">
         <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}>
           <Map defaultCenter={position} defaultZoom={zoom ?? 12}>
             <Marker position={position} />
