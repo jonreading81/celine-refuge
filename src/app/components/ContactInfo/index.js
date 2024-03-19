@@ -57,7 +57,11 @@ export const ContactInfo = ({
               <br />
               {address_4}
             </p>
-            <p className="mt-10">{phone}</p>
+            <p className="mt-10">
+              <a href={`tel:${phone}`} className="text-md mt-10 font-bold">
+                {phone}
+              </a>
+            </p>
           </div>
         </div>
         <a href={`mailto:${email}`} className="text-md mt-10 font-bold">

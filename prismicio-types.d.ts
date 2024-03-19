@@ -1072,6 +1072,21 @@ export type PriceListSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *PromoPanel → Primary*
+ */
+export interface PromoPanelSliceDefaultPrimary {
+  /**
+   * Button Text field in *PromoPanel → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo_panel.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+}
+
+/**
  * Primary content in *PromoPanel → Items*
  */
 export interface PromoPanelSliceDefaultItem {
@@ -1125,7 +1140,7 @@ export interface PromoPanelSliceDefaultItem {
  */
 export type PromoPanelSliceDefault = prismic.SharedSliceVariation<
   'default',
-  Record<string, never>,
+  Simplify<PromoPanelSliceDefaultPrimary>,
   Simplify<PromoPanelSliceDefaultItem>
 >;
 
@@ -1314,6 +1329,7 @@ declare module '@prismicio/client' {
       PriceListSliceVariation,
       PriceListSliceDefault,
       PromoPanelSlice,
+      PromoPanelSliceDefaultPrimary,
       PromoPanelSliceDefaultItem,
       PromoPanelSliceVariation,
       PromoPanelSliceDefault,

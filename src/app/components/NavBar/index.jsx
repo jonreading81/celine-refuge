@@ -26,7 +26,7 @@ function NavbarDefault({ navItems, locales, lang }) {
   }, []);
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-site lg:text-base">
+    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-site lg:text-sm">
       {navItems.map(({ title, link }) => (
         <li
           key={link.url}

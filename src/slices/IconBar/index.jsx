@@ -47,7 +47,7 @@ const Icon = ({ icon, text, disabled }) => (
 const IconBar = ({ slice: { primary, items } }) => {
   return (
     <Slice>
-      <section className="bg-blue-site rounded-xl shadow-lg overflow-hidden">
+      <section className="bg-blue-site rounded-xl shadow-lg overflow-hidden m-auto max-w-screen-lg">
         <h3 className="text-white text-4xl text-center  mt-10 mb-12">
           {primary.title}
         </h3>

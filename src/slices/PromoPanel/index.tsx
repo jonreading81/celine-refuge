@@ -1,7 +1,9 @@
+'use client';
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
 import * as prismic from '@prismicio/client';
+import { Button } from '@material-tailwind/react';
 
 import { Slice } from '@app/components/Slice';
 
@@ -13,7 +15,9 @@ export type PromoPanelProps = SliceComponentProps<Content.PromoPanelSlice>;
 /**
  * Component for "PromoPanel" Slices.
  */
-const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
+const PromoPanel = ({
+  slice: { primary, items },
+}: PromoPanelProps): JSX.Element => {
   return (
     <Slice>
       <div className="mx-auto relative">
@@ -37,7 +41,9 @@ const PromoPanel = ({ slice: { items } }: PromoPanelProps): JSX.Element => {
                   className="text-purple-site py-6 font-site"
                   field={item.page_link}
                 >
-                  En savoir plus sur {item.title}
+                  <Button color="blue">
+                    {primary.button_text} {item.title}
+                  </Button>
                 </PrismicNextLink>
               </div>
             </div>
