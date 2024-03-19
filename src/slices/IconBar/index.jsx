@@ -24,9 +24,9 @@ const icons = {
 };
 
 const Icon = ({ icon, text }) => (
-  <div className="w-20 lg:w-30  mb-8">
+  <div className=" mb-8">
     <FontAwesomeIcon
-      className="w-10 h-10 lg:w-20 lg:h-20 m-auto"
+      className="w-10 h-10 sm:w-20 sm:h-20 m-auto"
       size="sm"
       color="white"
       icon={icons[icon] ?? faCircle}
@@ -47,7 +47,7 @@ const IconBar = ({ slice: { primary, items } }) => {
         <h3 className="text-white text-4xl text-center  mt-10 mb-12">
           {primary.title}
         </h3>
-        <div className="px-8 lg:px-16 flex justify-between flex-wrap mb-8">
+        <div className="px-8 lg:px-16 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6  gap-8 grid-flow-row mb-8">
           {items.map((icon) => (
             <Icon key={icon} {...icon} />
           ))}
