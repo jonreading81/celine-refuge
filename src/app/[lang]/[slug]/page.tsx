@@ -8,21 +8,34 @@ import { components } from '@/slices';
 import { generateMetadataForPage } from '@/app/utils/generateMetadataByPage';
 import { MastheadImage } from '@app/components/MastheadImage';
 import { SliceWrapper } from '@app/components/SliceWrapper';
+import { getLocales } from '@app/utils/getLocales';
+import { LanguageSwitcher } from '@app/components/LanguageSwitcher';
 
-type Params = { slug: string };
+type Params = { slug: string; lang: string };
 
 export const generateMetadata = async ({ params }: { params: Params }) => {
-  return generateMetadataForPage(params.slug);
+  return generateMetadataForPage(params.slug)({ params });
 };
 
-export default async function NewsItem({ params }: { params: Params }) {
+export default async function PageWithSlug({
+  params: { slug, lang },
+}: {
+  params: Params;
+}) {
   const client = createClient();
+
+  const page = await client
+    .getByUID('page', slug, { lang })
+    .catch(() => notFound());
+
+  const locales = await getLocales(page, client);
+
   const {
     data: { slices, title, masthead_image },
-  } = await client.getByUID('page', params.slug).catch(() => notFound());
-
+  } = page;
   return (
     <>
+      <LanguageSwitcher locales={locales} />
       <MastheadImage image={masthead_image} />
       <SliceWrapper>
         <h1 className="text-center  mb-10 font-site">
@@ -32,4 +45,16 @@ export default async function NewsItem({ params }: { params: Params }) {
       </SliceWrapper>
     </>
   );
+}
+
+export async function generateStaticParams() {
+  const client = createClient();
+
+  // ⬇️ Note this line using a '*' for the lang parameter
+  const pages = await client.getAllByType('page', {
+    predicates: [prismic.filter.not('my.page.uid', 'home')],
+    lang: '*',
+  });
+
+  return pages.map((page) => ({ uid: page.uid, lang: page.lang }));
 }

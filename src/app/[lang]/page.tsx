@@ -11,19 +11,34 @@ import { PrismicNextImage } from '@prismicio/next';
 import { MastheadImage } from '@app/components/MastheadImage';
 import { SliceWrapper } from '@app/components/SliceWrapper';
 import { ErrorBoundary } from '@app/components/ErrorBoundary';
+import { getLocales } from '@app/utils/getLocales';
+import { LanguageSwitcher } from '@app/components/LanguageSwitcher';
 
 const PAGE = 'home';
 
 export const generateMetadata = generateMetadataForPage(PAGE);
 
-export default async function Home() {
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: string };
+}) {
   const client = createClient();
+  const page = await client
+    .getByUID('page', PAGE, {
+      lang,
+    })
+    .catch(() => notFound());
+
+  const locales = await getLocales(page, client);
+
   const {
     data: { slices, masthead_image },
-  } = await client.getByUID('page', PAGE).catch(() => notFound());
+  } = page;
 
   return (
     <div>
+      <LanguageSwitcher locales={locales} />
       <MastheadImage image={masthead_image} />
       <SliceWrapper>
         <ErrorBoundary>
