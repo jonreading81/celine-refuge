@@ -13,6 +13,8 @@ import { SliceWrapper } from '@app/components/SliceWrapper';
 import { ErrorBoundary } from '@app/components/ErrorBoundary';
 import { getLocales } from '@app/utils/getLocales';
 import { LanguageSwitcher } from '@app/components/LanguageSwitcher';
+import Footer from '@app/components/Layout/Footer';
+import Header from '@app/components/Layout/Header';
 
 const PAGE = 'home';
 
@@ -24,11 +26,22 @@ export default async function Home({
   params: { lang: string };
 }) {
   const client = createClient();
-  const page = await client
-    .getByUID('page', PAGE, {
+
+  const [
+    page,
+    {
+      data: {
+        slices: [navigationSlice],
+      },
+    },
+    footer,
+  ] = await Promise.all([
+    client.getByUID('page', PAGE, {
       lang,
-    })
-    .catch(() => notFound());
+    }),
+    client.getSingle('navigation', { lang }),
+    client.getSingle('footer', { lang }),
+  ]).catch(() => notFound());
 
   const locales = await getLocales(page, client);
 
@@ -37,14 +50,18 @@ export default async function Home({
   } = page;
 
   return (
-    <div>
+    <>
+      <Header navigationSlice={navigationSlice} />
       <LanguageSwitcher locales={locales} />
-      <MastheadImage image={masthead_image} />
-      <SliceWrapper>
-        <ErrorBoundary>
-          <SliceZone slices={slices} components={components} />
-        </ErrorBoundary>
-      </SliceWrapper>
-    </div>
+      <main className="bg-white min-h-[600px]">
+        <MastheadImage image={masthead_image} />
+        <SliceWrapper>
+          <ErrorBoundary>
+            <SliceZone slices={slices} components={components} />
+          </ErrorBoundary>
+        </SliceWrapper>
+      </main>
+      <Footer {...footer.data} />
+    </>
   );
 }

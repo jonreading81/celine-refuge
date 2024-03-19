@@ -23,7 +23,7 @@ export default async function RootLayout({
     },
     footer,
   ] = await Promise.all([
-    client.getSingle('navigation'),
+    client.getSingle('navigation', { lang: 'en-gb' }),
     client.getSingle('footer'),
   ]);
 
@@ -33,9 +33,7 @@ export default async function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="text-blue-site bg-white">
-        <Header navigationSlice={navigationSlice} />
-        <main className="bg-white min-h-[600px]">{children}</main>
-        <Footer {...footer.data} />
+        {children}
         <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>
