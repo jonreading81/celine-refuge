@@ -54,14 +54,12 @@ function NavbarDefault({ navItems }) {
     <Navbar
       shadow={false}
       fullWidth={true}
-      className=" p-0 text-color-blue-site-900 mb-4"
+      className=" p-0 text-color-blue-site-900 mb-4 lg:m-0"
     >
       <div className=" flex items-center justify-between">
-        <h2 className="flex-1 self-center">
-          <a href="/" className="flex flex-col sm:flex-row gap-2 sm:gap-6">
-            <Logo />
-          </a>
-        </h2>
+        <div className="flex-1 self-center">
+          <Logo />
+        </div>
         <div className="hidden lg:block">{navList}</div>
 
         <IconButton

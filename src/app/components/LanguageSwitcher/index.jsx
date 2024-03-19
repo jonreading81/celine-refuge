@@ -27,21 +27,19 @@ export const LanguageSwitcher = ({ locales, lang }) => {
   const selected = locales.find((locale) => (locale.lang = lang));
 
   return (
-    <div className="w-full lg:w-60">
-      <Select label="Select Language" value={localeLabels[selected.lang]}>
-        {locales.map((locale) => (
-          <PrismicNextLink
-            key={locale.lang}
-            className="flex items-center mb-4 hover:bg-red"
-            href={locale.url}
-            locale={locale.lang}
-            aria-label={`Change language to ${locale.lang_name}`}
-          >
-            <FlagIcon countryCode={localeFlags[locale.lang]} />
-            <span className="text-sm ml-4"> {localeLabels[locale.lang]}</span>
-          </PrismicNextLink>
-        ))}
-      </Select>
-    </div>
+    <Select label="Select Language" value={localeLabels[selected.lang]}>
+      {locales.map((locale) => (
+        <PrismicNextLink
+          key={locale.lang}
+          className="flex items-center mb-4 hover:bg-red"
+          href={locale.url}
+          locale={locale.lang}
+          aria-label={`Change language to ${locale.lang_name}`}
+        >
+          <FlagIcon countryCode={localeFlags[locale.lang]} />
+          <span className="text-sm ml-4"> {localeLabels[locale.lang]}</span>
+        </PrismicNextLink>
+      ))}
+    </Select>
   );
 };
