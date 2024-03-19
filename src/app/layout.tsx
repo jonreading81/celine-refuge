@@ -1,4 +1,5 @@
 import './globals.css';
+import 'node_modules/flag-icons/css/flag-icons.min.css';
 
 import { PrismicPreview } from '@prismicio/next';
 import { repositoryName } from '@/prismicio';

@@ -1769,6 +1769,7 @@ __metadata:
     eslint-config-next: 14.1.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-prettier: ^4.2.1
+    flag-icons: ^7.2.0
     next: 14.1.0
     postcss: ^8
     postcss-nesting: ^12.0.2
@@ -3007,6 +3008,13 @@ __metadata:
     locate-path: ^6.0.0
     path-exists: ^4.0.0
   checksum: 07955e357348f34660bde7920783204ff5a26ac2cafcaa28bace494027158a97b9f56faaf2d89a6106211a8174db650dd9f503f9c0d526b1202d5554a00b9095
+  languageName: node
+  linkType: hard
+
+"flag-icons@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "flag-icons@npm:7.2.0"
+  checksum: 0d0dbca2aae63adcff513d974e03474b15bd4ba67ca6bedbfd62529733653a25e8c48f98c55c6ce57f850895d63e805d969829fb82f7e73096a3c5e894773b57
   languageName: node
   linkType: hard
 

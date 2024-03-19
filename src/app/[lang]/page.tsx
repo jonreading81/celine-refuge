@@ -12,7 +12,6 @@ import { MastheadImage } from '@app/components/MastheadImage';
 import { SliceWrapper } from '@app/components/SliceWrapper';
 import { ErrorBoundary } from '@app/components/ErrorBoundary';
 import { getLocales } from '@app/utils/getLocales';
-import { LanguageSwitcher } from '@app/components/LanguageSwitcher';
 import Footer from '@app/components/Layout/Footer';
 import Header from '@app/components/Layout/Header';
 
@@ -51,8 +50,7 @@ export default async function Home({
 
   return (
     <>
-      <Header navigationSlice={navigationSlice} />
-      <LanguageSwitcher locales={locales} />
+      <Header navigationSlice={navigationSlice} locales={locales} lang={lang} />
       <main className="bg-white min-h-[600px]">
         <MastheadImage image={masthead_image} />
         <SliceWrapper>

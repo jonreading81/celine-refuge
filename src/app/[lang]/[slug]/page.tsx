@@ -11,7 +11,6 @@ import { SliceWrapper } from '@app/components/SliceWrapper';
 import { getLocales } from '@app/utils/getLocales';
 import Footer from '@app/components/Layout/Footer';
 import Header from '@app/components/Layout/Header';
-import { LanguageSwitcher } from '@app/components/LanguageSwitcher';
 import { ErrorBoundary } from '@app/components/ErrorBoundary';
 
 type Params = { slug: string; lang: string };
@@ -51,8 +50,7 @@ export default async function PageWithSlug({
 
   return (
     <>
-      <Header navigationSlice={navigationSlice} />
-      <LanguageSwitcher locales={locales} />
+      <Header navigationSlice={navigationSlice} locales={locales} lang={lang} />
       <main className="bg-white min-h-[600px]">
         <MastheadImage image={masthead_image} />
         <SliceWrapper>
