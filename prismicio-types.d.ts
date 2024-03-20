@@ -625,6 +625,16 @@ export interface IconBarSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */
   disabled: prismic.BooleanField;
+
+  /**
+   * Link field in *IconBar → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: icon_bar.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
 }
 
 /**
