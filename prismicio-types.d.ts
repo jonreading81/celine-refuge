@@ -4,7 +4,10 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type FooterDocumentDataSlicesSlice = CopyrightSlice | ContactInfoSlice;
+type FooterDocumentDataSlicesSlice =
+  | FooterLinksSlice
+  | CopyrightSlice
+  | ContactInfoSlice;
 
 /**
  * Content for Footer documents
@@ -514,6 +517,61 @@ type CopyrightSliceVariation = CopyrightSliceDefault;
 export type CopyrightSlice = prismic.SharedSlice<
   'copyright',
   CopyrightSliceVariation
+>;
+
+/**
+ * Primary content in *FooterLinks → Items*
+ */
+export interface FooterLinksSliceDefaultItem {
+  /**
+   * Title field in *FooterLinks → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_links.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Link field in *FooterLinks → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_links.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Default variation for FooterLinks Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FooterLinksSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Record<string, never>,
+  Simplify<FooterLinksSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *FooterLinks*
+ */
+type FooterLinksSliceVariation = FooterLinksSliceDefault;
+
+/**
+ * FooterLinks Shared Slice
+ *
+ * - **API ID**: `footer_links`
+ * - **Description**: FooterLinks
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FooterLinksSlice = prismic.SharedSlice<
+  'footer_links',
+  FooterLinksSliceVariation
 >;
 
 /**
@@ -1353,6 +1411,10 @@ declare module '@prismicio/client' {
       CopyrightSliceDefaultPrimary,
       CopyrightSliceVariation,
       CopyrightSliceDefault,
+      FooterLinksSlice,
+      FooterLinksSliceDefaultItem,
+      FooterLinksSliceVariation,
+      FooterLinksSliceDefault,
       GalleryCarouselSlice,
       GalleryCarouselSliceDefaultPrimary,
       GalleryCarouselSliceDefaultItem,

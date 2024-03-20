@@ -18,7 +18,7 @@ const Copyright = ({
 
   return (
     <div className="mx-auto text-center sm:text-sm my-8">
-      {year} {copyright_text}
+      &copy; {year} {copyright_text}
     </div>
   );
 };

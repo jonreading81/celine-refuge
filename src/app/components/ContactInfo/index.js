@@ -39,66 +39,68 @@ export const ContactInfo = ({
   };
 
   return (
-    <div className="flex flex-col lg:flex-row">
-      <div className="basis-2/3 bg-blue-site text-white p-14 ">
-        <h2 className="text-2xl sm:text-3xl font-bold font-site">{title}</h2>
-        <div className="flex flex-col sm:flex-row text-sm font-helvetica mb-6 ">
-          <div className="basis-1/2 border-b border-white pb-4 sm:mr-6 md:mr-14">
-            <p className="mt-10">{intro}</p>
-          </div>
-          <div className="basis-1/2 border-b border-white pb-4">
-            <a target="blank" href={address_link} className="mt-10">
-              <p>
-                {name}
-                <br />
-                {address_1}
-                <br />
-                {address_2}
-                <br />
-                {address_3}
-                <br />
-                {address_4}
-              </p>
-            </a>
-            <p className="mt-10">
-              <a href={`tel:${phone}`} className="text-md mt-10 font-bold">
-                {phone}
+    <div className="mx-auto max-w-screen-2xl lg:px-8 lg:mb-20 ">
+      <div className="flex flex-col lg:flex-row">
+        <div className="basis-2/3 bg-blue-site text-white p-14 ">
+          <h2 className="text-2xl sm:text-3xl font-bold font-site">{title}</h2>
+          <div className="flex flex-col sm:flex-row text-sm font-helvetica mb-6 ">
+            <div className="basis-1/2 border-b border-white pb-4 sm:mr-6 md:mr-14">
+              <p className="mt-10">{intro}</p>
+            </div>
+            <div className="basis-1/2 border-b border-white pb-4">
+              <a target="blank" href={address_link} className="mt-10">
+                <p>
+                  {name}
+                  <br />
+                  {address_1}
+                  <br />
+                  {address_2}
+                  <br />
+                  {address_3}
+                  <br />
+                  {address_4}
+                </p>
               </a>
-            </p>
+              <p className="mt-10">
+                <a href={`tel:${phone}`} className="text-md mt-10 font-bold">
+                  {phone}
+                </a>
+              </p>
+            </div>
           </div>
+          <a href={`mailto:${email}`} className="text-md mt-10 font-bold">
+            {email}
+          </a>
         </div>
-        <a href={`mailto:${email}`} className="text-md mt-10 font-bold">
-          {email}
-        </a>
-      </div>
-      <div className="basis-1/3 bg-gray-100 p-14 text-color-blue-site">
-        <h2 className="mb-6 text-2xl sm:text-3xl font-bold font-site">
-          {signup_title}
-        </h2>
-        <p className="mb-6">{signup_intro}</p>
-        <div className="mb-6">
-          <Input
-            color="blue-gray"
-            label="Your email"
-            size="lg"
-            placeholder="name@mail.com"
-            value={userEmail}
-            onChange={(e) => setUserEmail(e.target.value)}
+        <div className="basis-1/3 bg-gray-100 p-14 text-color-blue-site">
+          <h2 className="mb-6 text-2xl sm:text-3xl font-bold font-site">
+            {signup_title}
+          </h2>
+          <p className="mb-6">{signup_intro}</p>
+          <div className="mb-6">
+            <Input
+              color="blue-gray"
+              label="Your email"
+              size="lg"
+              placeholder="name@mail.com"
+              value={userEmail}
+              onChange={(e) => setUserEmail(e.target.value)}
+            />
+          </div>
+          <FormStatus
+            loading={loading && 'Loading...'}
+            error={error}
+            success={success && signup_success_message}
           />
+          <Button
+            onClick={validate}
+            className="mt-6 bg-blue-site"
+            fullWidth
+            color="blue"
+          >
+            {signup_button}
+          </Button>
         </div>
-        <FormStatus
-          loading={loading && 'Loading...'}
-          error={error}
-          success={success && signup_success_message}
-        />
-        <Button
-          onClick={validate}
-          className="mt-6 bg-blue-site"
-          fullWidth
-          color="blue"
-        >
-          {signup_button}
-        </Button>
       </div>
     </div>
   );
