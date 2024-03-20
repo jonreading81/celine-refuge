@@ -61,6 +61,13 @@
             "placeholder": ""
           }
         },
+        "address_link": {
+          "type": "Text",
+          "config": {
+            "label": "Address Link",
+            "placeholder": ""
+          }
+        },
         "phone": {
           "type": "Text",
           "config": {

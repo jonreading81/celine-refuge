@@ -361,6 +361,16 @@ export interface ContactInfoSliceDefaultPrimary {
   address_4: prismic.KeyTextField;
 
   /**
+   * Address Link field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.address_link
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address_link: prismic.KeyTextField;
+
+  /**
    * Phone field in *ContactInfo → Primary*
    *
    * - **Field Type**: Text

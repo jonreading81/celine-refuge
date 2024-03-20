@@ -72,6 +72,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "deeply",
 				"type": "Text"
+			},
+			"address_link": {
+				"__TYPE__": "FieldContent",
+				"value": "suit",
+				"type": "Text"
 			}
 		},
 		"items": []

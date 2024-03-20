@@ -13,6 +13,7 @@ export const ContactInfo = ({
   address_2,
   address_3,
   address_4,
+  address_link,
   phone,
   email,
   signup_title,
@@ -46,17 +47,19 @@ export const ContactInfo = ({
             <p className="mt-10">{intro}</p>
           </div>
           <div className="basis-1/2 border-b border-white pb-4">
-            <p className="mt-10">
-              {name}
-              <br />
-              {address_1}
-              <br />
-              {address_2}
-              <br />
-              {address_3}
-              <br />
-              {address_4}
-            </p>
+            <a target="blank" href={address_link} className="mt-10">
+              <p>
+                {name}
+                <br />
+                {address_1}
+                <br />
+                {address_2}
+                <br />
+                {address_3}
+                <br />
+                {address_4}
+              </p>
+            </a>
             <p className="mt-10">
               <a href={`tel:${phone}`} className="text-md mt-10 font-bold">
                 {phone}
