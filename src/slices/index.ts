@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic';
 
 export const components = {
+  colored_text_block: dynamic(() => import('./ColoredTextBlock')),
   contact_form: dynamic(() => import('./ContactForm')),
   contact_info: dynamic(() => import('./ContactInfo')),
   copyright: dynamic(() => import('./Copyright')),

@@ -76,6 +76,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | ColoredTextBlockSlice
   | IconBarSlice
   | ImageWithTextSlice
   | PriceListSlice
@@ -173,6 +174,51 @@ export type AllDocumentTypes =
   | FooterDocument
   | NavigationDocument
   | PageDocument;
+
+/**
+ * Primary content in *ColoredTextBlock → Primary*
+ */
+export interface ColoredTextBlockSliceDefaultPrimary {
+  /**
+   * Text field in *ColoredTextBlock → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: colored_text_block.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for ColoredTextBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ColoredTextBlockSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<ColoredTextBlockSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ColoredTextBlock*
+ */
+type ColoredTextBlockSliceVariation = ColoredTextBlockSliceDefault;
+
+/**
+ * ColoredTextBlock Shared Slice
+ *
+ * - **API ID**: `colored_text_block`
+ * - **Description**: ColoredTextBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ColoredTextBlockSlice = prismic.SharedSlice<
+  'colored_text_block',
+  ColoredTextBlockSliceVariation
+>;
 
 /**
  * Primary content in *ContactForm → Primary*
@@ -1399,6 +1445,10 @@ declare module '@prismicio/client' {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      ColoredTextBlockSlice,
+      ColoredTextBlockSliceDefaultPrimary,
+      ColoredTextBlockSliceVariation,
+      ColoredTextBlockSliceDefault,
       ContactFormSlice,
       ContactFormSliceDefaultPrimary,
       ContactFormSliceVariation,
