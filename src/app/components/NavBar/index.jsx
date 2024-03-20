@@ -34,7 +34,7 @@ function NavbarDefault({ navItems, locales, lang }) {
         >
           <PrismicNextLink
             field={link}
-            className={`${
+            className={`w-full ${
               link.url === pathname
                 ? 'text-purple-site'
                 : 'hover:text-purple-site'
