@@ -82,39 +82,34 @@
             "placeholder": ""
           }
         },
-        "signup_title": {
+        "follow_title": {
           "type": "Text",
           "config": {
-            "label": "Signup title",
+            "label": "Follow title",
             "placeholder": ""
           }
         },
-        "signup_intro": {
+        "follow_text": {
           "type": "Text",
           "config": {
-            "label": "Signup Intro",
+            "label": "Follow text",
             "placeholder": ""
           }
         },
-        "signup_button": {
-          "type": "Text",
+        "facebook_link": {
+          "type": "Link",
           "config": {
-            "label": "Signup button",
-            "placeholder": ""
+            "label": "Facebook link",
+            "placeholder": "",
+            "select": null
           }
         },
-        "signup_success_message": {
-          "type": "Text",
+        "instagram_link": {
+          "type": "Link",
           "config": {
-            "label": "Signup success message",
-            "placeholder": ""
-          }
-        },
-        "signup_error_message": {
-          "type": "Text",
-          "config": {
-            "label": "Signup Error message",
-            "placeholder": ""
+            "label": "Instagram link",
+            "placeholder": "",
+            "select": null
           }
         }
       },

@@ -6,17 +6,8 @@ import { formatDate } from '@app/utils/date-formatter';
 import { Slice } from '@app/components/Slice';
 import { WrapWithLink } from '@app/components/WrapWithLink';
 import { Button } from '@material-tailwind/react';
-/**
- * Props for `PromoCards`.
- */
-export type PromoCardsProps = SliceComponentProps<Content.PromoCardsSlice>;
 
-/**
- * Component for "PromoCards" Slices.
- */
-const PromoCards = ({
-  slice: { primary, items },
-}: PromoCardsProps): JSX.Element => {
+const PromoCards = ({ slice: { primary, items } }) => {
   const columns = {
     2: ' lg:grid-cols-2',
     3: ' lg:grid-cols-3',
@@ -28,7 +19,7 @@ const PromoCards = ({
   return (
     <Slice>
       <div className={`grid grid-cols-1 ${column} gap-7 grid-flow-row`}>
-        {items!.map((item, id) => (
+        {items.map((item, id) => (
           <div
             key={id}
             className="relative border border-blue-gray-100 rounded-xl shadow-xl overflow-hidden"
@@ -54,7 +45,7 @@ const PromoCards = ({
               </WrapWithLink>
               <p className="text-sm mb-6">{item.text}</p>
 
-              {item.link.url && (
+              {item.link?.url && (
                 <WrapWithLink
                   className="text-purple-site py-6 font-primary"
                   link={item.link}

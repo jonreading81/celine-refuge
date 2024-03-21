@@ -440,54 +440,44 @@ export interface ContactInfoSliceDefaultPrimary {
   email: prismic.KeyTextField;
 
   /**
-   * Signup title field in *ContactInfo → Primary*
+   * Follow title field in *ContactInfo → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact_info.primary.signup_title
+   * - **API ID Path**: contact_info.primary.follow_title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  signup_title: prismic.KeyTextField;
+  follow_title: prismic.KeyTextField;
 
   /**
-   * Signup Intro field in *ContactInfo → Primary*
+   * Follow text field in *ContactInfo → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact_info.primary.signup_intro
+   * - **API ID Path**: contact_info.primary.follow_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  signup_intro: prismic.KeyTextField;
+  follow_text: prismic.KeyTextField;
 
   /**
-   * Signup button field in *ContactInfo → Primary*
+   * Facebook link field in *ContactInfo → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact_info.primary.signup_button
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: contact_info.primary.facebook_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  signup_button: prismic.KeyTextField;
+  facebook_link: prismic.LinkField;
 
   /**
-   * Signup success message field in *ContactInfo → Primary*
+   * Instagram link field in *ContactInfo → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact_info.primary.signup_success_message
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: contact_info.primary.instagram_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  signup_success_message: prismic.KeyTextField;
-
-  /**
-   * Signup Error message field in *ContactInfo → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: contact_info.primary.signup_error_message
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  signup_error_message: prismic.KeyTextField;
+  instagram_link: prismic.LinkField;
 }
 
 /**

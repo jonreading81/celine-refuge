@@ -48,34 +48,33 @@
 				"value": "business",
 				"type": "Text"
 			},
-			"signup_title": {
-				"__TYPE__": "FieldContent",
-				"value": "tail",
-				"type": "Text"
-			},
-			"signup_intro": {
-				"__TYPE__": "FieldContent",
-				"value": "beat",
-				"type": "Text"
-			},
-			"signup_button": {
-				"__TYPE__": "FieldContent",
-				"value": "involved",
-				"type": "Text"
-			},
-			"signup_success_message": {
-				"__TYPE__": "FieldContent",
-				"value": "soil",
-				"type": "Text"
-			},
-			"signup_error_message": {
-				"__TYPE__": "FieldContent",
-				"value": "deeply",
-				"type": "Text"
-			},
 			"address_link": {
 				"__TYPE__": "FieldContent",
 				"value": "suit",
+				"type": "Text"
+			},
+			"follow_title": {
+				"__TYPE__": "FieldContent",
+				"value": "terrible",
+				"type": "Text"
+			},
+			"facebook_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"instagram_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			},
+			"follow_text": {
+				"__TYPE__": "FieldContent",
+				"value": "castle",
 				"type": "Text"
 			}
 		},
