@@ -13,7 +13,7 @@ const ColoredTextBlock = ({
   return (
     <Slice>
       <section
-        className={`bg-site-blue rounded-xl shadow-xl p-12 m-auto max-w-screen-lg bg-blue-site text-white flex justify-center items-center`}
+        className={`bg-site-blue overflow-hidden rounded-xl shadow-xl p-12 m-auto max-w-screen-lg bg-blue-site text-white flex justify-center items-center`}
       >
         <div className="w-full max-w-prose">
           <PrismicRichText field={text} components={components} />
