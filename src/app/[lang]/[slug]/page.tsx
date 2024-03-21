@@ -54,9 +54,7 @@ export default async function PageWithSlug({
       <main className="bg-white min-h-[600px]">
         <MastheadImage image={masthead_image} />
         <SliceWrapper>
-          <h1 className="text-center  mb-10 font-site">
-            {prismic.asText(title)}
-          </h1>
+          <h1 className="text-center  mb-10 ">{prismic.asText(title)}</h1>
           <ErrorBoundary>
             <SliceZone slices={slices} components={components} />
           </ErrorBoundary>

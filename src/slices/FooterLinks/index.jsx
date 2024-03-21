@@ -4,13 +4,11 @@ import { PrismicNextLink } from '@prismicio/next';
 
 const FooterLinks = ({ slice }) => {
   return (
-    <div className="bg-blue-site text-white">
+    <div className="font-scondary-bold text-base bg-blue-site text-white">
       <ul className=" px-4 py-12 grid grid-cols-4 gap-4 m-auto max-w-screen-2xl">
         {slice.items.map(({ link, title }) => (
           <li key={title}>
-            <PrismicNextLink className="underline text-sm">
-              {title}
-            </PrismicNextLink>
+            <PrismicNextLink className="underline ">{title}</PrismicNextLink>
           </li>
         ))}
       </ul>

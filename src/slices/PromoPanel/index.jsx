@@ -27,11 +27,11 @@ const PromoPanel = ({ slice: { primary, items } }) => {
               </div>
               <div className=" border-y-4 border-blue-site p-8 md:w-[70%] lg:w-[60%] relative bg-white md:mt-[-200px]">
                 <PrismicNextLink field={item.page_link}>
-                  <h3 className="text-2xl font-site">{item.title}</h3>
+                  <h3 className="text-2xl ">{item.title}</h3>
                 </PrismicNextLink>
                 <p className="my-6 text-sm">{item.intro}</p>
                 <PrismicNextLink
-                  className="text-purple-site py-6 font-site"
+                  className="text-purple-site py-6 font-primary"
                   field={item.page_link}
                 >
                   <Button color="blue">

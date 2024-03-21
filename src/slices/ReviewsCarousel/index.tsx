@@ -24,7 +24,7 @@ const ReviewsCarousel = ({ slice }: ReviewsCarouselProps): JSX.Element => {
               key={i}
               className="flex flex-col gap-14 h-full items-center justify-center text-white p-8"
             >
-              <h3 className="text-2xl sm:text-3xl  max-w-xs sm:max-w-3xl font-site text-center leading-8 sm:leading-10">
+              <h3 className="text-2xl sm:text-3xl  max-w-xs sm:max-w-3xl text-center leading-8 sm:leading-10">
                 “ {review} “
               </h3>
               <p className="text-sm lg:text-lg">{name}</p>

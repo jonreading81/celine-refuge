@@ -7,11 +7,14 @@ import { components as richTextComponents } from '@app/utils/richTextComponents'
 
 const components = {
   ...richTextComponents,
+  heading4: ({ children }) => (
+    <h2 className="text-4xl font-bold mb-6">{children}</h2>
+  ),
   heading2: ({ children }) => (
-    <h2 className="text-3xl font-bold mb-4">{children}</h2>
+    <h2 className="text-3xl font-bold mb-6">{children}</h2>
   ),
   heading3: ({ children }) => (
-    <h3 className="text-2xl  font-bold mb-4">{children}</h3>
+    <h3 className="text-2xl  font-bold mb-6">{children}</h3>
   ),
 };
 

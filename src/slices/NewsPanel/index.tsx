@@ -37,12 +37,12 @@ const NewsPanel = ({ slice: { items } }: NewsPanelProps): JSX.Element => {
             </div>
             <div className="bg-white relative mt-4 px-8 pb-10">
               <PrismicNextLink field={item.link}>
-                <h2 className="mt-2 pt-3 mb-10 font-site">{item.title}</h2>
+                <h2 className="mt-2 pt-3 mb-10 ">{item.title}</h2>
               </PrismicNextLink>
               <p className="text-sm mb-6">{item.intro}</p>
 
               <PrismicNextLink
-                className="text-purple-site py-6 font-site"
+                className="text-purple-site py-6 font-primary"
                 field={item.link}
               >
                 Apprendre encore plus
