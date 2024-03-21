@@ -34,7 +34,7 @@ const PromoCards = ({ slice: { primary, items } }) => {
                 />
               </WrapWithLink>
               {item.date && (
-                <span className="bg-blue-site text-white px-6 py-2 absolute bottom-0">
+                <span className="bg-blue-site text-white px-8 py-2 absolute bottom-0">
                   {formatDate(new Date(item.date))}
                 </span>
               )}
