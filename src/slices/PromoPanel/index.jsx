@@ -5,16 +5,8 @@ import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
 import * as prismic from '@prismicio/client';
 import { Button } from '@material-tailwind/react';
 
+import { WrapWithLink } from '@app/components/WrapWithLink';
 import { Slice } from '@app/components/Slice';
-
-const WrapWithLink = ({ children, link, ...props }) =>
-  link.url ? (
-    <PrismicNextLink field={link} {...props}>
-      {children}
-    </PrismicNextLink>
-  ) : (
-    children
-  );
 
 /**
  * Component for "PromoPanel" Slices.

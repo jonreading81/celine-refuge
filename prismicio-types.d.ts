@@ -76,6 +76,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | PromoCardsSlice
   | ColoredTextBlockSlice
   | IconBarSlice
   | ImageWithTextSlice
@@ -85,7 +86,6 @@ type PageDocumentDataSlicesSlice =
   | ReviewsCarouselSlice
   | ContactFormSlice
   | ImageBlockSlice
-  | NewsPanelSlice
   | PromoPanelSlice
   | RichTextSlice;
 
@@ -1021,91 +1021,6 @@ export type NavigationSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *NewsPanel → Items*
- */
-export interface NewsPanelSliceDefaultItem {
-  /**
-   * Title field in *NewsPanel → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: news_panel.items[].title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Intro field in *NewsPanel → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: news_panel.items[].intro
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  intro: prismic.KeyTextField;
-
-  /**
-   * Image field in *NewsPanel → Items*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: news_panel.items[].image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * Date field in *NewsPanel → Items*
-   *
-   * - **Field Type**: Date
-   * - **Placeholder**: *None*
-   * - **API ID Path**: news_panel.items[].date
-   * - **Documentation**: https://prismic.io/docs/field#date
-   */
-  date: prismic.DateField;
-
-  /**
-   * Link field in *NewsPanel → Items*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: news_panel.items[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-}
-
-/**
- * Default variation for NewsPanel Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type NewsPanelSliceDefault = prismic.SharedSliceVariation<
-  'default',
-  Record<string, never>,
-  Simplify<NewsPanelSliceDefaultItem>
->;
-
-/**
- * Slice variation for *NewsPanel*
- */
-type NewsPanelSliceVariation = NewsPanelSliceDefault;
-
-/**
- * NewsPanel Shared Slice
- *
- * - **API ID**: `news_panel`
- * - **Description**: NewsPanel
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type NewsPanelSlice = prismic.SharedSlice<
-  'news_panel',
-  NewsPanelSliceVariation
->;
-
-/**
  * Primary content in *PriceList → Primary*
  */
 export interface PriceListSliceDefaultPrimary {
@@ -1233,6 +1148,117 @@ type PriceListSliceVariation = PriceListSliceDefault;
 export type PriceListSlice = prismic.SharedSlice<
   'price_list',
   PriceListSliceVariation
+>;
+
+/**
+ * Primary content in *PromoCards → Primary*
+ */
+export interface PromoCardsSliceDefaultPrimary {
+  /**
+   * Columns field in *PromoCards → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: 2
+   * - **API ID Path**: promo_cards.primary.columns
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  columns: prismic.SelectField<'2' | '3' | '4', 'filled'>;
+
+  /**
+   * Button Text field in *PromoCards → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo_cards.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *PromoCards → Items*
+ */
+export interface PromoCardsSliceDefaultItem {
+  /**
+   * Title field in *PromoCards → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo_cards.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Image field in *PromoCards → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo_cards.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Text field in *PromoCards → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo_cards.items[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+
+  /**
+   * Link field in *PromoCards → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo_cards.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Date field in *PromoCards → Items*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo_cards.items[].date
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date: prismic.DateField;
+}
+
+/**
+ * Default variation for PromoCards Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PromoCardsSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<PromoCardsSliceDefaultPrimary>,
+  Simplify<PromoCardsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *PromoCards*
+ */
+type PromoCardsSliceVariation = PromoCardsSliceDefault;
+
+/**
+ * PromoCards Shared Slice
+ *
+ * - **API ID**: `promo_cards`
+ * - **Description**: PromoCards
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PromoCardsSlice = prismic.SharedSlice<
+  'promo_cards',
+  PromoCardsSliceVariation
 >;
 
 /**
@@ -1502,15 +1528,16 @@ declare module '@prismicio/client' {
       NavigationSliceDefaultItem,
       NavigationSliceVariation,
       NavigationSliceDefault,
-      NewsPanelSlice,
-      NewsPanelSliceDefaultItem,
-      NewsPanelSliceVariation,
-      NewsPanelSliceDefault,
       PriceListSlice,
       PriceListSliceDefaultPrimary,
       PriceListSliceDefaultItem,
       PriceListSliceVariation,
       PriceListSliceDefault,
+      PromoCardsSlice,
+      PromoCardsSliceDefaultPrimary,
+      PromoCardsSliceDefaultItem,
+      PromoCardsSliceVariation,
+      PromoCardsSliceDefault,
       PromoPanelSlice,
       PromoPanelSliceDefaultPrimary,
       PromoPanelSliceDefaultItem,

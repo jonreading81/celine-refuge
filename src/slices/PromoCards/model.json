@@ -1,8 +1,8 @@
 {
-  "id": "news_panel",
+  "id": "promo_cards",
   "type": "SharedSlice",
-  "name": "NewsPanel",
-  "description": "NewsPanel",
+  "name": "PromoCards",
+  "description": "PromoCards",
   "variations": [
     {
       "id": "default",
@@ -11,19 +11,33 @@
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
-      "primary": {},
+      "primary": {
+        "columns": {
+          "type": "Select",
+          "config": {
+            "label": "Columns",
+            "placeholder": "",
+            "options": [
+              "2",
+              "3",
+              "4"
+            ],
+            "default_value": "2"
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
+        }
+      },
       "items": {
         "title": {
           "type": "Text",
           "config": {
             "label": "Title",
-            "placeholder": ""
-          }
-        },
-        "intro": {
-          "type": "Text",
-          "config": {
-            "label": "Intro",
             "placeholder": ""
           }
         },
@@ -35,10 +49,10 @@
             "thumbnails": []
           }
         },
-        "date": {
-          "type": "Date",
+        "text": {
+          "type": "Text",
           "config": {
-            "label": "Date",
+            "label": "Text",
             "placeholder": ""
           }
         },
@@ -48,6 +62,13 @@
             "label": "Link",
             "placeholder": "",
             "select": null
+          }
+        },
+        "date": {
+          "type": "Date",
+          "config": {
+            "label": "Date",
+            "placeholder": ""
           }
         }
       }
