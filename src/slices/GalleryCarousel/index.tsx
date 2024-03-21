@@ -21,20 +21,17 @@ const GalleryCarousel = ({
   return (
     <Slice>
       <div className="max-w-screen-lg m-auto rounded-xl shadow-xl overflow-hidden">
-        <Carousel
-          className="aspect-video "
-          loop
-          placeholder={primary.placeholder}
-        >
+        <Carousel loop placeholder={primary.placeholder}>
           {items.map(({ image }, i) => (
-            <PrismicNextImage
-              key={i}
-              field={image}
-              className="h-full w-full object-cover object-center"
-            />
+            <div key={i} className="h-full">
+              <PrismicNextImage
+                field={image}
+                className=" w-full aspect-video  object-cover object-center"
+              />
+              <Caption>{image.alt}</Caption>
+            </div>
           ))}
         </Carousel>
-        <Caption>{primary.description}</Caption>
       </div>
     </Slice>
   );
