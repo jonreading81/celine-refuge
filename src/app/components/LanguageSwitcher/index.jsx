@@ -4,6 +4,7 @@ import { Select, Option } from '@material-tailwind/react';
 import { PrismicNextLink } from '@prismicio/next';
 
 import { Slice } from '@app/components/Slice';
+import { useLocale } from '@app/hooks/useLocale';
 
 const localeLabels = {
   'en-gb': 'English',
@@ -23,7 +24,8 @@ const FlagIcon = ({ countryCode }) => {
   );
 };
 
-export const LanguageSwitcher = ({ locales, lang }) => {
+export const LanguageSwitcher = () => {
+  const { locales, lang } = useLocale();
   const selected = locales.find((locale) => (locale.lang = lang));
 
   return (

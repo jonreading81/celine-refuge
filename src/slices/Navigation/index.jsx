@@ -5,8 +5,8 @@ import NavBar from '@app/components/NavBar';
 /**
  * Component for "Navigation" Slices.
  */
-const Navigation = ({ slice, locales, lang }) => {
-  return <NavBar navItems={slice.items} locales={locales} lang={lang} />;
+const Navigation = ({ slice }) => {
+  return <NavBar navItems={slice.items} />;
 };
 
 export default Navigation;

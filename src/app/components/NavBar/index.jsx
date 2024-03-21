@@ -14,7 +14,7 @@ import { usePathname } from 'next/navigation';
 import { PrismicNextLink } from '@prismicio/next';
 import { LanguageSwitcher } from '@app/components/LanguageSwitcher';
 
-function NavbarDefault({ navItems, locales, lang }) {
+function NavbarDefault({ navItems }) {
   const [openNav, setOpenNav] = React.useState(false);
   const pathname = usePathname();
 
@@ -63,7 +63,7 @@ function NavbarDefault({ navItems, locales, lang }) {
         <div className="hidden lg:flex items-center ">
           {navList}
           <div className="ml-6">
-            <LanguageSwitcher locales={locales} lang={lang} />
+            <LanguageSwitcher />
           </div>
         </div>
 
