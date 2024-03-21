@@ -7,6 +7,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "bush",
 				"type": "Text"
+			},
+			"columns": {
+				"__TYPE__": "FieldContent",
+				"value": "2",
+				"type": "Select"
 			}
 		},
 		"items": [

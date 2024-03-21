@@ -7,37 +7,61 @@ import { Button } from '@material-tailwind/react';
 
 import { Slice } from '@app/components/Slice';
 
+const WrapWithLink = ({ children, link, ...props }) =>
+  link.url ? (
+    <PrismicNextLink field={link} {...props}>
+      {children}
+    </PrismicNextLink>
+  ) : (
+    children
+  );
+
 /**
  * Component for "PromoPanel" Slices.
  */
 const PromoPanel = ({ slice: { primary, items } }) => {
+  const columns = {
+    2: ' lg:grid-cols-2',
+    3: ' lg:grid-cols-3',
+    4: ' lg:grid-cols-4',
+  };
+
+  const column = columns[primary.columns] ?? columns[2];
+
   return (
     <Slice>
       <div className="mx-auto relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 grid-flow-row mb-12">
+        <div
+          className={`grid grid-cols-1 ${column} gap-x-8 gap-y-20 grid-flow-row mb-12`}
+        >
           {items.map((item, index) => (
-            <div key={index}>
+            <div
+              key={index}
+              className="relative rounded-lg shadow-xl overflow-hidden"
+            >
               <div className="h-[300px] lg:h-[400px] relative overflow-hidden">
-                <PrismicNextLink field={item.page_link}>
+                <WrapWithLink link={item.page_link}>
                   <PrismicNextImage
                     field={item.image}
-                    className="rounded-lg  object-cover object-center w-full h-full"
+                    className=" object-cover object-center w-full h-full"
                   />
-                </PrismicNextLink>
+                </WrapWithLink>
               </div>
-              <div className=" border-y-4 border-blue-site p-8 md:w-[70%] lg:w-[60%] relative bg-white md:mt-[-200px]">
-                <PrismicNextLink field={item.page_link}>
+              <div className=" border-t-4 border-blue-site p-8 md:w-[70%] lg:w-[60%]  bg-white  absolute bottom-0  opacity-95">
+                <WrapWithLink link={item.page_link}>
                   <h3 className="text-2xl ">{item.title}</h3>
-                </PrismicNextLink>
+                </WrapWithLink>
                 <p className="my-6 text-sm">{item.intro}</p>
-                <PrismicNextLink
-                  className="text-purple-site py-6 font-primary"
-                  field={item.page_link}
-                >
-                  <Button color="blue">
-                    {primary.button_text} {item.title}
-                  </Button>
-                </PrismicNextLink>
+                {item.page_link.url && (
+                  <WrapWithLink
+                    link={item.page_link}
+                    className="text-purple-site py-6 font-primary"
+                  >
+                    <Button className="bg-blue-site">
+                      {primary.button_text}
+                    </Button>
+                  </WrapWithLink>
+                )}
               </div>
             </div>
           ))}

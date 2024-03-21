@@ -1248,6 +1248,17 @@ export interface PromoPanelSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   button_text: prismic.KeyTextField;
+
+  /**
+   * Columns field in *PromoPanel → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: 2
+   * - **API ID Path**: promo_panel.primary.columns
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  columns: prismic.SelectField<'2' | '3' | '4', 'filled'>;
 }
 
 /**
