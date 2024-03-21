@@ -6,9 +6,6 @@ module.exports = withMT({
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      fontSize: {
-        12: '12px',
-      },
       colors: {
         'purple-site': '#8751BD',
         'blue-site': '#2859B6',

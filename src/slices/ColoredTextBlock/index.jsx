@@ -3,20 +3,7 @@ import { Content } from '@prismicio/client';
 import { PrismicRichText, SliceComponentProps } from '@prismicio/react';
 import { Slice } from '@app/components/Slice';
 
-import { components as richTextComponents } from '@app/utils/richTextComponents';
-
-const components = {
-  ...richTextComponents,
-  heading4: ({ children }) => (
-    <h2 className="text-4xl font-bold mb-6">{children}</h2>
-  ),
-  heading2: ({ children }) => (
-    <h2 className="text-3xl font-bold mb-6">{children}</h2>
-  ),
-  heading3: ({ children }) => (
-    <h3 className="text-2xl  font-bold mb-6">{children}</h3>
-  ),
-};
+import { components } from '@app/utils/richTextComponents';
 
 const ColoredTextBlock = ({
   slice: {

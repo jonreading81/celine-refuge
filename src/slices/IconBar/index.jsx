@@ -36,7 +36,7 @@ const icons = {
 const Icon = ({ icon, text, disabled }) => (
   <div className="mb-8 transition-transform hover:scale-110">
     <FontAwesomeIcon
-      className={`w-10 h-10 sm:w-20 sm:h-20 m-auto ${
+      className={`w-10 h-10 sm:w-20 sm:h-20 m-auto block ${
         disabled ? 'opacity-20' : ''
       }`}
       size="sm"
@@ -78,9 +78,7 @@ const IconBar = ({ slice: { primary, items } }) => {
   return (
     <Slice>
       <section className="bg-blue-site rounded-xl shadow-lg overflow-hidden m-auto max-w-screen-lg">
-        <h3 className="text-white text-4xl text-center  mt-10 mb-12">
-          {primary.title}
-        </h3>
+        <h2 className="text-white text-center  mt-10 mb-12">{primary.title}</h2>
         <div className={`px-8 lg:px-16 grid   ${col} gap-8  mb-8`}>
           {items.map((icon) => (
             <IconLink key={icon.icon} {...icon} />

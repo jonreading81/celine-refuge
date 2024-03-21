@@ -74,7 +74,7 @@ export const ContactInfo = ({
     <div className="mx-auto max-w-screen-2xl lg:px-8 lg:mb-20 ">
       <div className="lg:rounded-xl shadow-xl overflow-hidden  flex flex-col lg:flex-row">
         <div className="basis-2/3 bg-blue-site text-white p-14 ">
-          <h2 className="text-2xl sm:text-3xl font-bold ">{title}</h2>
+          <h2 className=" ">{title}</h2>
           <div className="flex flex-col sm:flex-row mb-6 ">
             <div className="basis-1/2 border-b border-white pb-4 sm:mr-6 md:mr-14">
               <p className="mt-10">{intro}</p>
@@ -105,9 +105,7 @@ export const ContactInfo = ({
           </a>
         </div>
         <div className="basis-1/3 bg-gray-100 p-14 text-color-blue-site">
-          <h2 className="mb-6 text-2xl sm:text-3xl text-center">
-            {follow_title}
-          </h2>
+          <h2 className="mb-6 text-center">{follow_title}</h2>
           <p className="mb-12 text-center text-lg">{follow_text}</p>
           <div className="mb-6">
             <div className={`grid grid-cols-2 gap-8`}>
