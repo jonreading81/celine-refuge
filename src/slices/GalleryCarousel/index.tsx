@@ -20,7 +20,7 @@ const GalleryCarousel = ({
 }: GalleryCarouselProps): JSX.Element => {
   return (
     <Slice>
-      <div className="max-w-screen-lg m-auto rounded-xl shadow-xl overflow-hidden">
+      <div className="bg-blue-site max-w-screen-lg m-auto rounded-xl shadow-xl overflow-hidden">
         <Carousel loop placeholder={primary.placeholder}>
           {items.map(({ image }, i) => (
             <div key={i} className="h-full">
