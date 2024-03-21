@@ -53,7 +53,9 @@ export default async function Home({
       <main className="bg-white min-h-[600px]">
         <MastheadImage image={masthead_image} />
         <SliceWrapper hasIndent>
-          <h1 className="text-center  mb-10 ">{prismic.asText(title)}</h1>
+          <h1 className="max-w-screen-md m-auto text-center  mb-10 ">
+            {prismic.asText(title)}
+          </h1>
           <ErrorBoundary>
             <SliceZone slices={slices} components={components} />
           </ErrorBoundary>
