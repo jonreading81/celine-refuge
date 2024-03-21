@@ -73,7 +73,7 @@ export const ContactInfo = ({
   return (
     <div className="mx-auto max-w-screen-2xl lg:px-8 lg:mb-20 ">
       <div className="lg:rounded-xl shadow-xl overflow-hidden  flex flex-col lg:flex-row">
-        <div className="basis-2/3 bg-blue-site text-white p-14 ">
+        <div className="basis-2/3 bg-blue-site text-white px-14 py-10 ">
           <h2 className=" ">{title}</h2>
           <div className="flex flex-col sm:flex-row mb-6 ">
             <div className="basis-1/2 border-b border-white pb-4 sm:mr-6 md:mr-14">
@@ -104,7 +104,7 @@ export const ContactInfo = ({
             {email}
           </a>
         </div>
-        <div className="basis-1/3 bg-gray-100 p-14 text-color-blue-site">
+        <div className="basis-1/3 bg-gray-100  text-color-blue-site px-14 py-10 ">
           <h2 className="mb-6 text-center">{follow_title}</h2>
           <p className="mb-12 text-center text-lg">{follow_text}</p>
           <div className="mb-6">
