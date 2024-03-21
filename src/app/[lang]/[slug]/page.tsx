@@ -52,8 +52,8 @@ export default async function PageWithSlug({
     <>
       <Header navigationSlice={navigationSlice} locales={locales} lang={lang} />
       <main className="bg-white min-h-[600px]">
-        <MastheadImage image={masthead_image} />
-        <SliceWrapper>
+        {masthead_image.url && <MastheadImage image={masthead_image} />}
+        <SliceWrapper hasIndent={!!masthead_image.url}>
           <h1 className="text-center  mb-10 ">{prismic.asText(title)}</h1>
           <ErrorBoundary>
             <SliceZone slices={slices} components={components} />

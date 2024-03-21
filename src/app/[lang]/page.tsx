@@ -53,7 +53,7 @@ export default async function Home({
       <Header navigationSlice={navigationSlice} locales={locales} lang={lang} />
       <main className="bg-white min-h-[600px]">
         <MastheadImage image={masthead_image} />
-        <SliceWrapper>
+        <SliceWrapper hasIndent>
           <ErrorBoundary>
             <SliceZone slices={slices} components={components} />
           </ErrorBoundary>
