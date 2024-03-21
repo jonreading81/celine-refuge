@@ -28,7 +28,7 @@ const price = (price) => `€${price.toFixed(2)}`;
 const PriceList = ({ slice: { primary, items } }) => {
   return (
     <Slice>
-      <h3 className="text-3xl text-center mb-8">{primary.title}</h3>
+      <h2 className="text-center mb-8">{primary.title}</h2>
       <div className="max-w-screen-xl m-auto  text-sm md:text-lg text-gray-700 ">
         <table className="table-fixed w-full text-left overflow-hidden rounded-xl shadow-xl ">
           <thead>
