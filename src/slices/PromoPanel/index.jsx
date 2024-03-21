@@ -44,7 +44,7 @@ const PromoPanel = ({ slice: { primary, items } }) => {
                   <h3 className="text-2xl ">{item.title}</h3>
                 </WrapWithLink>
                 <p className="my-6 text-sm">{item.intro}</p>
-                {item.page_link.url && (
+                {item.page_link.url && primary.button_text && (
                   <WrapWithLink
                     link={item.page_link}
                     className="text-purple-site py-6 font-primary"

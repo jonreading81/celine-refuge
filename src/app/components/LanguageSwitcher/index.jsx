@@ -39,7 +39,7 @@ export const LanguageSwitcher = () => {
           aria-label={`Change language to ${locale.lang_name}`}
         >
           <FlagIcon countryCode={localeFlags[locale.lang]} />
-          <span className="text-sm ml-4"> {localeLabels[locale.lang]}</span>
+          <span className="text-sm ml-1"> {localeLabels[locale.lang]}</span>
         </PrismicNextLink>
       ))}
     </Select>

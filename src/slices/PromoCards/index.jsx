@@ -45,7 +45,7 @@ const PromoCards = ({ slice: { primary, items } }) => {
               </WrapWithLink>
               <p className="text-sm mb-6">{item.text}</p>
 
-              {item.link?.url && (
+              {item.link?.url && primary.button_text && (
                 <WrapWithLink
                   className="text-purple-site py-6 font-primary"
                   link={item.link}
