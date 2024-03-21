@@ -36,7 +36,7 @@ const icons = {
 const Icon = ({ icon, text, disabled }) => (
   <div className="mb-8 transition-transform hover:scale-110">
     <FontAwesomeIcon
-      className={`w-10 h-10 sm:w-20 sm:h-20 m-auto block ${
+      className={`w-16 h-16 sm:w-20 sm:h-20 m-auto block ${
         disabled ? 'opacity-20' : ''
       }`}
       size="sm"
@@ -46,7 +46,7 @@ const Icon = ({ icon, text, disabled }) => (
       transform="shrink-10 up-.5"
     />
 
-    <p className="text-xs lg:text-sm text-white text-center mt-4">{text}</p>
+    <p className="text-sm lg:text-base text-white text-center mt-4">{text}</p>
   </div>
 );
 
