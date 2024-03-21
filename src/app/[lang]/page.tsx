@@ -1,8 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-
-import { SliceZone } from '@prismicio/react';
 import * as prismic from '@prismicio/client';
+import { SliceZone } from '@prismicio/react';
 
 import { createClient } from '@/prismicio';
 import { components } from '@/slices';
@@ -45,7 +44,7 @@ export default async function Home({
   const locales = await getLocales(page, client);
 
   const {
-    data: { slices, masthead_image },
+    data: { slices, title, masthead_image },
   } = page;
 
   return (
@@ -54,6 +53,7 @@ export default async function Home({
       <main className="bg-white min-h-[600px]">
         <MastheadImage image={masthead_image} />
         <SliceWrapper hasIndent>
+          <h1 className="text-center  mb-10 ">{prismic.asText(title)}</h1>
           <ErrorBoundary>
             <SliceZone slices={slices} components={components} />
           </ErrorBoundary>
