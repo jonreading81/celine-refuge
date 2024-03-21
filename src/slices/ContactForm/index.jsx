@@ -55,7 +55,7 @@ const ContactForm = ({
 
   return (
     <Slice>
-      <div className=" max-w-screen-lg mx-auto">
+      <div className="max-w-screen-md mx-auto">
         <form className=" rounded-xl shadow-md border-2 border-blue-gray-100 p-8">
           <div className="mb-6">
             <Input
