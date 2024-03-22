@@ -8,7 +8,7 @@ import * as prismic from '@prismicio/client';
 
 const FooterLinks = ({ pages }) => (
   <div className="font-scondary-bold text-base bg-blue-site text-white">
-    <ul className=" px-4 py-12 grid grid-cols-4 gap-4 m-auto max-w-screen-2xl">
+    <ul className=" px-4 py-12 grid  md:grid-cols-4 gap-4 m-auto max-w-screen-2xl">
       {pages.map(({ data: { title }, ...page }) => (
         <li key={title}>
           <PrismicNextLink field={page} className="underline ">
