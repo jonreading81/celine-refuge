@@ -3,7 +3,6 @@ import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
 import * as prismic from '@prismicio/client';
-import { Button } from '@material-tailwind/react';
 
 import { WrapWithLink } from '@app/components/WrapWithLink';
 import { Slice } from '@app/components/Slice';
@@ -45,13 +44,8 @@ const PromoPanel = ({ slice: { primary, items } }) => {
                 </WrapWithLink>
                 <p className="my-6 text-sm">{item.intro}</p>
                 {item.page_link.url && primary.button_text && (
-                  <WrapWithLink
-                    link={item.page_link}
-                    className="text-purple-site py-6 font-primary"
-                  >
-                    <Button className="bg-blue-site">
-                      {primary.button_text}
-                    </Button>
+                  <WrapWithLink link={item.page_link} className="btn-main">
+                    {primary.button_text}
                   </WrapWithLink>
                 )}
               </div>

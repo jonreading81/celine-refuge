@@ -5,7 +5,6 @@ import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
 import { formatDate } from '@app/utils/date-formatter';
 import { Slice } from '@app/components/Slice';
 import { WrapWithLink } from '@app/components/WrapWithLink';
-import { Button } from '@material-tailwind/react';
 
 const PromoCards = ({ slice: { primary, items } }) => {
   const columns = {
@@ -44,16 +43,13 @@ const PromoCards = ({ slice: { primary, items } }) => {
                 <h3 className="mt-2 pt-3 mb-6 ">{item.title}</h3>
               </WrapWithLink>
               <p className="text-base mb-10">{item.text}</p>
-
               {item.link?.url && primary.button_text && (
-                <WrapWithLink
-                  className="text-purple-site py-6 font-primary"
-                  link={item.link}
+                <PrismicNextLink
+                  className="btn-main bg-blue-site block w-full"
+                  field={item.link}
                 >
-                  <Button className="bg-blue-site w-full">
-                    {primary.button_text}
-                  </Button>
-                </WrapWithLink>
+                  {primary.button_text}
+                </PrismicNextLink>
               )}
             </div>
           </div>

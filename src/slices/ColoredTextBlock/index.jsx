@@ -1,9 +1,19 @@
 import { Content } from '@prismicio/client';
+import { PrismicNextLink } from '@prismicio/next';
 
 import { PrismicRichText, SliceComponentProps } from '@prismicio/react';
 import { Slice } from '@app/components/Slice';
 
-import { components } from '@app/utils/richTextComponents';
+import * as richTextComponents from '@app/utils/richTextComponents';
+
+const components = {
+  ...richTextComponents.components,
+  hyperlink: ({ node, children }) => (
+    <PrismicNextLink className="btn-inverse inline-block" field={node.data}>
+      {children}
+    </PrismicNextLink>
+  ),
+};
 
 const ColoredTextBlock = ({
   slice: {

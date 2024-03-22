@@ -8,19 +8,27 @@
 
 @layer components {
   .btn-main {
+    @apply text-center;
     @apply text-white;
     @apply text-sm;
+    @apply uppercase;
     @apply font-medium;
     @apply bg-blue-site;
-    @apply font-primary;
-    @apply hover:bg-purple-800;
-    @apply focus:outline-none;
-    @apply focus:ring-4;
-    @apply focus:ring-gray-300;
-    @apply rounded-none;
+    @apply hover:shadow-lg;
+    @apply hover:opacity-90;
+    @apply transition;
+    @apply rounded-lg;
+    @apply shadow-lg;
     @apply px-6;
     @apply py-3;
   }
+
+  .btn-inverse {
+    @apply btn-main;
+    @apply text-blue-site;
+    @apply bg-white;
+  }
+
 
   .btn-main[disabled] {
     @apply hover:text-white;
