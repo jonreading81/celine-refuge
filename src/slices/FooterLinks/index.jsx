@@ -3,6 +3,7 @@ import { SliceComponentProps } from '@prismicio/react';
 import { PrismicNextLink } from '@prismicio/next';
 
 const FooterLinks = ({ slice }) => {
+  return null;
   return (
     <div className="font-scondary-bold text-base bg-blue-site text-white">
       <ul className=" px-4 py-12 grid grid-cols-4 gap-4 m-auto max-w-screen-2xl">

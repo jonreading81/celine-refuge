@@ -76,7 +76,7 @@ export const ContactInfo = ({
         <div className="basis-2/3 bg-blue-site text-white px-14 py-10 ">
           <h2 className=" ">{title}</h2>
           <div className="flex flex-col sm:flex-row mb-6 ">
-            <div className="basis-1/2 border-b border-white pb-4 sm:mr-6 md:mr-14">
+            <div className="basis-1/2 border-b border-white pb-4 sm:mr-6 md:mr-14 mb-4 lg:mb-0">
               <p className="mt-10">{intro}</p>
             </div>
             <div className="basis-1/2 border-b border-white pb-4">

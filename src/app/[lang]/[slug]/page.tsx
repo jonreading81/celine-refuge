@@ -1,8 +1,5 @@
-import { notFound } from 'next/navigation';
-
 import { SliceZone } from '@prismicio/react';
 import * as prismic from '@prismicio/client';
-
 import { createClient } from '@/prismicio';
 import { components } from '@/slices';
 import { generateMetadataForPage } from '@/app/utils/generateMetadataByPage';
@@ -12,6 +9,7 @@ import { getLocales } from '@app/utils/getLocales';
 import Footer from '@app/components/Layout/Footer';
 import Header from '@app/components/Layout/Header';
 import { ErrorBoundary } from '@app/components/ErrorBoundary';
+import { getPageData } from '@/app/utils/getPageData';
 
 type Params = { slug: string; lang: string };
 
@@ -24,36 +22,25 @@ export default async function PageWithSlug({
 }: {
   params: Params;
 }) {
-  const client = createClient();
-
-  const [
-    page,
-    {
-      data: {
-        slices: [navigationSlice],
-      },
-    },
-    footer,
-  ] = await Promise.all([
-    client.getByUID('page', slug, {
-      lang,
-    }),
-    client.getSingle('navigation', { lang }),
-    client.getSingle('footer', { lang }),
-  ]).catch(() => notFound());
-
-  const locales = await getLocales(page, client);
-
   const {
-    data: { slices, title, masthead_image },
-  } = page;
+    slices,
+    title,
+    masthead_image,
+    navigationSlice,
+    footer,
+    pages,
+    locales,
+  } = await getPageData({
+    slug,
+    lang,
+  });
 
   return (
     <>
       <Header navigationSlice={navigationSlice} locales={locales} lang={lang} />
       <main className="bg-white min-h-[600px]">
         {masthead_image.url && <MastheadImage image={masthead_image} />}
-        <SliceWrapper hasIndent={!!masthead_image.url}>
+        <SliceWrapper>
           <h1 className="max-w-screen-md m-auto text-center  mb-10 ">
             {prismic.asText(title)}
           </h1>
@@ -62,7 +49,7 @@ export default async function PageWithSlug({
           </ErrorBoundary>
         </SliceWrapper>
       </main>
-      <Footer {...footer.data} />
+      <Footer {...footer.data} pages={pages} />
     </>
   );
 }

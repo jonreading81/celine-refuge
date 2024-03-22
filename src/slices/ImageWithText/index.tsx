@@ -31,7 +31,7 @@ const ImageWithText = ({
           }`}
           field={image}
         />
-        <div>
+        <div className="m-auto">
           <PrismicRichText field={text} components={components} />
         </div>
       </div>

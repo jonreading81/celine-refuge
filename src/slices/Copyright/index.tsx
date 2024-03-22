@@ -17,7 +17,7 @@ const Copyright = ({
   const year = new Date().getFullYear();
 
   return (
-    <div className="mx-auto text-center text-sm my-8">
+    <div className="w-full text-center text-sm py-8">
       &copy; {year} {copyright_text}
     </div>
   );
