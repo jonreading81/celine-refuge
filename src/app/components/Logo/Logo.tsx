@@ -8,7 +8,7 @@ export const Logo = () => {
 
   return (
     <h2>
-      <Link href={`/${lang === 'fr-fr' ? '' : lang}`} locale={lang}>
+      <Link href={`/${lang === 'fr-fr' ? '' : lang}`}>
         <Image
           className="w-[220px] lg:w-[300px] "
           priority
