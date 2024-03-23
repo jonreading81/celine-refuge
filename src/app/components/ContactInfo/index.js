@@ -21,18 +21,17 @@ const Icon = ({ icon, text, disabled }) => (
       icon={icon}
     />
 
-    <p className="text-base text-site-blue text-center mt-4">{text}</p>
+    <p className="font-secondary-bold text-base text-site-blue text-center mt-4">
+      {text}
+    </p>
   </div>
 );
 
-const IconLink = ({ link, ...props }) =>
-  link.url ? (
-    <PrismicNextLink field={link}>
-      <Icon {...props} />
-    </PrismicNextLink>
-  ) : (
+const IconLink = ({ link, ...props }) => (
+  <PrismicNextLink field={link}>
     <Icon {...props} />
-  );
+  </PrismicNextLink>
+);
 
 export const ContactInfo = ({
   title,

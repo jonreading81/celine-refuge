@@ -46,7 +46,9 @@ const Icon = ({ icon, text, disabled }) => (
       transform="shrink-10 up-.5"
     />
 
-    <p className="text-sm lg:text-base text-white text-center mt-4">{text}</p>
+    <p className="text-sm font-secondary-bold lg:text-base text-white text-center mt-4">
+      {text}
+    </p>
   </div>
 );
 
