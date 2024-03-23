@@ -12,7 +12,7 @@ import { Logo } from '@app/components/Logo/Logo';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { PrismicNextLink } from '@prismicio/next';
-import { LanguageSwitcher } from '@app/components/LanguageSwitcher';
+import { LanguageSelector } from '@app/components/LanguageSelector';
 
 function NavbarDefault({ navItems }) {
   const [openNav, setOpenNav] = React.useState(false);
@@ -62,8 +62,8 @@ function NavbarDefault({ navItems }) {
         </div>
         <div className="hidden lg:flex items-center ">
           {navList}
-          <div className="ml-6">
-            <LanguageSwitcher />
+          <div className="ml-6 w-[160px]">
+            <LanguageSelector />
           </div>
         </div>
 
