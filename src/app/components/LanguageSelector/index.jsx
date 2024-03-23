@@ -13,7 +13,9 @@ const localeFlags = {
 
 const FlagIcon = ({ countryCode = '' }) => (
   <span
-    className={`w-9 h-5 block bg-contain bg-no-repeat    fi-${localeFlags[countryCode]}`}
+    className={`w-9 h-5 block bg-contain bg-no-repeat    fi-${
+      localeFlags[countryCode] ?? ''
+    }`}
   />
 );
 
