@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 
-
-
-
 @layer components {
   .btn-main {
     @apply text-center;
@@ -83,7 +80,6 @@
     @apply font-bold;
   }
 
-
 }
 
 h1, h2, h3,h4, h5 {
@@ -107,4 +103,6 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
 

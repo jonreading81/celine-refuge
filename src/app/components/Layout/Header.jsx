@@ -2,7 +2,7 @@
 
 import Navigation from '@/slices/Navigation';
 import { Logo } from '@app/components/Logo/Logo';
-import { LanguageSwitcher } from '@app/components/LanguageSwitcher';
+import { LanguageSelector } from '@app/components/LanguageSelector';
 import LocaleContext from '@app/context/LocaleContext';
 
 const Header = ({ navigationSlice, locales, lang }) => (
@@ -15,7 +15,7 @@ const Header = ({ navigationSlice, locales, lang }) => (
           </div>
           <div className="flex justify-end ">
             <div className="w-full lg:hidden">
-              <LanguageSwitcher locales={locales} lang={lang} />
+              <LanguageSelector locales={locales} lang={lang} />
             </div>
           </div>
         </div>
