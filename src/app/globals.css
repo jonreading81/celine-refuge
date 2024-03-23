@@ -10,12 +10,12 @@
     @apply text-sm;
     @apply uppercase;
     @apply font-medium;
+    @apply font-secondary-bold; 
     @apply bg-blue-site;
-    @apply hover:shadow-lg;
-    @apply hover:opacity-90;
-    @apply transition;
+    @apply hover:bg-blue-700;
+    @apply transition-colors;
     @apply rounded-lg;
-    @apply shadow-lg;
+    @apply shadow;
     @apply px-6;
     @apply py-3;
   }
@@ -24,6 +24,7 @@
     @apply btn-main;
     @apply text-blue-site;
     @apply bg-white;
+    @apply hover:bg-gray-200
   }
 
 
