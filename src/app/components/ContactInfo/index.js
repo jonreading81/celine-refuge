@@ -72,7 +72,7 @@ export const ContactInfo = ({
 
   return (
     <div className="mx-auto max-w-screen-2xl lg:px-8 lg:mb-20 ">
-      <div className="lg:rounded-xl shadow-xl overflow-hidden  flex flex-col lg:flex-row">
+      <div className="lg:rounded-xl lg:shadow-xl overflow-hidden  flex flex-col lg:flex-row">
         <div className="basis-2/3 bg-blue-site text-white px-14 py-10 ">
           <h2 className=" ">{title}</h2>
           <div className="flex flex-col sm:flex-row mb-6 ">
