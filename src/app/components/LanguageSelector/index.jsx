@@ -95,7 +95,7 @@ export const LanguageSelector = () => {
                       selectedLanguage.lang === language.lang
                         ? 'bg-gray-100 text-gray-900'
                         : 'text-gray-700'
-                    } block px-4 py-2 text-sm text-left items-center inline-flex hover:bg-gray-100`}
+                    } block p-4 text-sm text-left items-center inline-flex hover:bg-gray-100`}
                     role="menuitem"
                   >
                     <FlagIcon countryCode={language.lang} />
