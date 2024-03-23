@@ -3,7 +3,7 @@ import LocaleContext from '@app/context/LocaleContext';
 
 const localeLabels = {
   'en-gb': 'English',
-  'fr-fr': 'French',
+  'fr-fr': 'Francais',
 };
 
 export const useLocale = () => {
