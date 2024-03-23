@@ -20,6 +20,7 @@ export type ImageBlockProps = SliceComponentProps<Content.ImageBlockSlice>;
  */
 const ImageBlock = ({ slice: { primary } }: ImageBlockProps): JSX.Element => {
   const width = WIDTHS[primary.width] ?? '';
+
   return (
     <Slice>
       <div className="flex justify-center items-center ">

@@ -71,6 +71,7 @@ const cols = [
   'grid-cols-2 md:grid-cols-4 lg:grid-cols-5',
   'grid-cols-2 md:grid-cols-4 lg:grid-cols-6',
 ];
+
 const IconBar = ({ slice: { primary, items } }) => {
   const index = Math.min(items.length, cols.length - 1);
   const col = cols[index];

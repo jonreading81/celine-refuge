@@ -8,7 +8,6 @@ const localeLabels = {
 
 export const useLocale = () => {
   const { lang, ...context } = useContext(LocaleContext);
-
   const locales = context.locales.map((locale) => ({
     ...locale,
     lang_name: localeLabels[locale.lang],

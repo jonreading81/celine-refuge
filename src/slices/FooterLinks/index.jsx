@@ -8,6 +8,7 @@ import * as prismic from '@prismicio/client';
  */
 const FooterLinks = () => {
   const { pages } = usePageData();
+
   return (
     <div className="font-scondary-bold text-base bg-blue-site text-white">
       <ul className=" px-4 py-12 grid  md:grid-cols-4 gap-4 m-auto max-w-screen-2xl">

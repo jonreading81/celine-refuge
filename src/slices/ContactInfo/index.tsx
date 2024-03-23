@@ -10,8 +10,8 @@ export type ContactInfoProps = SliceComponentProps<Content.ContactInfoSlice>;
 /**
  * Component for "ContactInfo" Slices.
  */
-const ContactSlice = ({ slice }: ContactInfoProps): JSX.Element => {
-  return <ContactInfo {...slice.primary} />;
-};
+const ContactSlice = ({ slice }: ContactInfoProps): JSX.Element => (
+  <ContactInfo {...slice.primary} />
+);
 
 export default ContactSlice;

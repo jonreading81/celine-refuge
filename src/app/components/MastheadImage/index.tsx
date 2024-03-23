@@ -6,15 +6,13 @@ type Props = {
   image: ImageField;
 };
 
-export const MastheadImage = ({ image }: Props) => {
-  return (
-    <div className="w-full h-[400px] overflow-hidden  relative">
-      <PrismicNextImage
-        field={image}
-        priority={true}
-        sizes="100vw"
-        className="object-cover object-center h-full w-full"
-      />
-    </div>
-  );
-};
+export const MastheadImage = ({ image }: Props) => (
+  <div className="w-full h-[400px] overflow-hidden  relative">
+    <PrismicNextImage
+      field={image}
+      priority={true}
+      sizes="100vw"
+      className="object-cover object-center h-full w-full"
+    />
+  </div>
+);

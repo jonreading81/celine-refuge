@@ -1,9 +1,5 @@
 'use client';
 
-import { useState } from 'react';
-import { FormStatus } from '@app/components/FormStatus';
-import { validateEmail } from '@app/utils/validateEmail';
-import { useSendEmail } from '@app/hooks/useSendEmail';
 import {
   faInstagram,
   faFacebook,
@@ -54,22 +50,6 @@ export const ContactInfo = ({
   facebook_link,
   instagram_link,
 }) => {
-  const [userEmail, setUserEmail] = useState('');
-  const { sendEmail, setError, success, error, loading } = useSendEmail({
-    email,
-    subject: 'Add email to mailing list',
-    message: userEmail,
-    reset: () => setUserEmail(''),
-  });
-
-  const validate = () => {
-    if (validateEmail(userEmail)) {
-      sendEmail();
-    } else {
-      setError(signup_error_message);
-    }
-  };
-
   return (
     <div className="mx-auto max-w-screen-2xl lg:px-8 lg:mb-20 ">
       <div className="lg:rounded-xl lg:shadow-xl overflow-hidden  flex flex-col lg:flex-row">

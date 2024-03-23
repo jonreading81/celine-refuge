@@ -17,24 +17,22 @@ export type GalleryCarouselProps =
  */
 const GalleryCarousel = ({
   slice: { primary, items },
-}: GalleryCarouselProps): JSX.Element => {
-  return (
-    <Slice>
-      <div className="bg-blue-site max-w-screen-lg m-auto rounded-xl shadow-xl overflow-hidden">
-        <Carousel loop placeholder={primary.placeholder}>
-          {items.map(({ image }, i) => (
-            <div key={i} className="h-full">
-              <PrismicNextImage
-                field={image}
-                className=" w-full aspect-video  object-cover object-center"
-              />
-              <Caption>{image.alt}</Caption>
-            </div>
-          ))}
-        </Carousel>
-      </div>
-    </Slice>
-  );
-};
+}: GalleryCarouselProps): JSX.Element => (
+  <Slice>
+    <div className="bg-blue-site max-w-screen-lg m-auto rounded-xl shadow-xl overflow-hidden">
+      <Carousel loop placeholder={primary.placeholder}>
+        {items.map(({ image }, i) => (
+          <div key={i} className="h-full">
+            <PrismicNextImage
+              field={image}
+              className=" w-full aspect-video  object-cover object-center"
+            />
+            <Caption>{image.alt}</Caption>
+          </div>
+        ))}
+      </Carousel>
+    </div>
+  </Slice>
+);
 
 export default GalleryCarousel;
