@@ -4,7 +4,10 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type FooterDocumentDataSlicesSlice = CopyrightSlice | ContactInfoSlice;
+type FooterDocumentDataSlicesSlice =
+  | FooterLinksSlice
+  | CopyrightSlice
+  | ContactInfoSlice;
 
 /**
  * Content for Footer documents
@@ -550,6 +553,36 @@ type CopyrightSliceVariation = CopyrightSliceDefault;
 export type CopyrightSlice = prismic.SharedSlice<
   'copyright',
   CopyrightSliceVariation
+>;
+
+/**
+ * Default variation for FooterLinks Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FooterLinksSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *FooterLinks*
+ */
+type FooterLinksSliceVariation = FooterLinksSliceDefault;
+
+/**
+ * FooterLinks Shared Slice
+ *
+ * - **API ID**: `footer_links`
+ * - **Description**: FooterLinks
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FooterLinksSlice = prismic.SharedSlice<
+  'footer_links',
+  FooterLinksSliceVariation
 >;
 
 /**
@@ -1430,6 +1463,9 @@ declare module '@prismicio/client' {
       CopyrightSliceDefaultPrimary,
       CopyrightSliceVariation,
       CopyrightSliceDefault,
+      FooterLinksSlice,
+      FooterLinksSliceVariation,
+      FooterLinksSliceDefault,
       GalleryCarouselSlice,
       GalleryCarouselSliceDefaultPrimary,
       GalleryCarouselSliceDefaultItem,
