@@ -4,8 +4,7 @@ import { components } from '@app/utils/richTextComponents';
 
 import * as styles from './styles.module.css';
 
-export default function RichText({ slice }) {
-  return (
+export default function RichText({ slice })  (
     <section
       className={`${styles.wrapper} flex justify-center items-center mb-12`}
     >
@@ -17,4 +16,4 @@ export default function RichText({ slice }) {
       </div>
     </section>
   );
-}
+
