@@ -27,7 +27,7 @@ function NavbarDefault({ navItems }) {
   const navList = (
     <ul className=" font-secondary-bold text-blue-site text-lg mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
       {navItems.map(({ title, link }, index) => {
-        const isLastItem = index !== navItems.length - 1;
+        const isLastItem = index === navItems.length - 1;
         const isBookingButton = isLastItem;
 
         return (
