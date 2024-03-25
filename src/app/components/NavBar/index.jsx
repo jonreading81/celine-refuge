@@ -26,26 +26,32 @@ function NavbarDefault({ navItems }) {
 
   const navList = (
     <ul className=" font-secondary-bold text-blue-site text-lg mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
-      {navItems.map(({ title, link }) => (
-        <li
-          key={link.url}
-          className="flex items-center gap-x-2 py-2 border-b-2 lg:border-none"
-        >
-          <PrismicNextLink
-            field={link}
-            className={`w-full ${
-              link.url === pathname
-                ? 'text-purple-site'
-                : 'hover:text-purple-site'
-            }`}
-            onClick={() => {
-              setOpenNav(false);
-            }}
+      {navItems.map(({ title, link }, index) => {
+        const isLastItem = index !== navItems.length - 1;
+        const isBookingButton = isLastItem;
+
+        return (
+          <li
+            key={link.url}
+            className="flex items-center gap-x-2 py-2 border-b-2 lg:border-none"
           >
-            {title}
-          </PrismicNextLink>
-        </li>
-      ))}
+            <PrismicNextLink
+              field={link}
+              className={`w-full ${
+                link.url === pathname && !isBookingButton
+                  ? 'text-purple-site'
+                  : ''
+              }
+             ${isBookingButton ? 'btn-main' : 'hover:text-purple-site'}`}
+              onClick={() => {
+                setOpenNav(false);
+              }}
+            >
+              {title}
+            </PrismicNextLink>
+          </li>
+        );
+      })}
     </ul>
   );
 
