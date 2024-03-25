@@ -20,7 +20,7 @@ const Price = ({ amount, className = '' }) => (
   <td className={`${className}  text-center`}>{price(amount)}</td>
 );
 
-const price = (price) => `€${price.toFixed(2)}`;
+const price = (price) => `${price}€`;
 /**
  * Component for "PriceList" Slices.
  */
