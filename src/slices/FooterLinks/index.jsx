@@ -6,7 +6,7 @@ import * as prismic from '@prismicio/client';
 /**
  * Component for "FooterLinks" Slices.
  */
-const FooterLinks = () => {
+const FooterLinks = ({ slice: { items } }) => {
   const { pages } = usePageData();
 
   return (
@@ -16,6 +16,13 @@ const FooterLinks = () => {
           <li key={page.url}>
             <PrismicNextLink field={page} className="underline ">
               {prismic.asText(title)}
+            </PrismicNextLink>
+          </li>
+        ))}
+        {items.map(({ title, link }) => (
+          <li key={title}>
+            <PrismicNextLink field={link} className="underline ">
+              {title}
             </PrismicNextLink>
           </li>
         ))}

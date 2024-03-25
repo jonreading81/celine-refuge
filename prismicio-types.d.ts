@@ -556,6 +556,31 @@ export type CopyrightSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *FooterLinks → Items*
+ */
+export interface FooterLinksSliceDefaultItem {
+  /**
+   * Title field in *FooterLinks → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_links.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Link field in *FooterLinks → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_links.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
  * Default variation for FooterLinks Slice
  *
  * - **API ID**: `default`
@@ -565,7 +590,7 @@ export type CopyrightSlice = prismic.SharedSlice<
 export type FooterLinksSliceDefault = prismic.SharedSliceVariation<
   'default',
   Record<string, never>,
-  never
+  Simplify<FooterLinksSliceDefaultItem>
 >;
 
 /**
@@ -1475,6 +1500,7 @@ declare module '@prismicio/client' {
       CopyrightSliceVariation,
       CopyrightSliceDefault,
       FooterLinksSlice,
+      FooterLinksSliceDefaultItem,
       FooterLinksSliceVariation,
       FooterLinksSliceDefault,
       GalleryCarouselSlice,
