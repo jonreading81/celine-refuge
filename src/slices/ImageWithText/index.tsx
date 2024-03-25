@@ -24,11 +24,13 @@ const ImageWithText = ({
 }: ImageWithTextProps): JSX.Element => (
   <Slice>
     <div className="m-auto max-w-screen-xl lg:grid grid-cols-2 gap-8">
-      <div className="w-full my-auto">
+      <div
+        className={`w-full my-auto ${
+          alignment === 'Image right' ? 'lg:order-last' : ''
+        }`}
+      >
         <PrismicNextImage
-          className={`w-full rounded-lg shadow-lg aspect-video  lg:aspect-[4/3] object-cover object-center mb-6 lg:mb-0 ${
-            alignment === 'Image right' ? 'lg:order-last' : ''
-          }`}
+          className="w-full rounded-lg shadow-lg aspect-video  lg:aspect-[4/3] object-cover object-center mb-6 lg:mb-0"
           field={image}
         />
       </div>
