@@ -10,6 +10,7 @@ import Footer from '@app/components/Layout/Footer';
 import Header from '@app/components/Layout/Header';
 import { ErrorBoundary } from '@app/components/ErrorBoundary';
 import { getPageData } from '@/app/utils/getPageData';
+import { LanguageSelectorWithContext } from '@app/components/LanguageSelector/WithContext';
 
 type Params = { slug: string; lang: string };
 
@@ -40,6 +41,7 @@ export default async function PageWithSlug({
       <Header navigationSlice={navigationSlice} locales={locales} lang={lang} />
       <main className="bg-white min-h-[600px]">
         {masthead_image.url && <MastheadImage image={masthead_image} />}
+        <LanguageSelectorWithContext locales={locales} lang={lang} />
         <SliceWrapper>
           <h1 className="max-w-screen-md m-auto text-center  mb-10 ">
             {prismic.asText(title)}
