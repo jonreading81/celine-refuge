@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
-import { Input, Typography, Button, Textarea } from '@material-tailwind/react';
+import { Input, Typography, Textarea } from '@material-tailwind/react';
 import { FormStatus } from '@app/components/FormStatus';
 import { validateEmail } from '@app/utils/validateEmail';
 import { useSendEmail } from '@app/hooks/useSendEmail';
@@ -100,14 +100,14 @@ const ContactForm = ({
             success={success && success_message}
           />
 
-          <Button
-            className="mt-6 bg-blue-site"
+          <button
+            className="mt-6 btn-main w-full"
             fullWidth
             color="blue"
             onClick={validateForm}
           >
             {button_text}
-          </Button>
+          </button>
         </form>
       </div>
     </Slice>

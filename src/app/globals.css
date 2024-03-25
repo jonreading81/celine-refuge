@@ -11,8 +11,8 @@
     @apply uppercase;
     @apply font-medium;
     @apply font-secondary-bold; 
-    @apply bg-blue-site;
-    @apply hover:bg-blue-700;
+    @apply bg-purple-site;
+    @apply hover:bg-purple-800;
     @apply transition-colors;
     @apply rounded-lg;
     @apply shadow;

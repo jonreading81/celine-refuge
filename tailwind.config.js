@@ -7,7 +7,7 @@ module.exports = withMT({
   theme: {
     extend: {
       colors: {
-        'purple-site': '#a095ef ',
+        'purple-site': '#7c3aed',
         'blue-site': '#2859B6',
       },
       animation: {
