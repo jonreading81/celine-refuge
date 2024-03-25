@@ -24,6 +24,13 @@
 								"url": "https://prismic.io"
 							}
 						}
+					],
+					[
+						"button",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": false
+						}
 					]
 				]
 			}

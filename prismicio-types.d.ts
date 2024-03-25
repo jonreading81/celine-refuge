@@ -953,6 +953,17 @@ export interface NavigationSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
+
+  /**
+   * Button field in *Navigation → Items*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: navigation.items[].button
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  button: prismic.BooleanField;
 }
 
 /**

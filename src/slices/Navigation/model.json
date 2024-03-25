@@ -27,6 +27,15 @@
             "placeholder": "",
             "select": null
           }
+        },
+        "button": {
+          "type": "Boolean",
+          "config": {
+            "label": "Button",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
         }
       }
     }
