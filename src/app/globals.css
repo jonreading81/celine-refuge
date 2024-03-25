@@ -12,7 +12,7 @@
     @apply font-medium;
     @apply font-secondary-bold; 
     @apply bg-purple-site;
-    @apply hover:bg-purple-800;
+    @apply hover:bg-[#6937C6];
     @apply transition-colors;
     @apply rounded-lg;
     @apply shadow;
