@@ -40,7 +40,8 @@ const ContactForm = ({
 
   const { sendEmail, setError, success, error, loading } = useSendEmail();
 
-  const validateForm = () => {
+  const validateForm = (evt) => {
+    evt.preventDefault();
     if (validateEmail(userEmail) && name && message) {
       sendEmail({
         email,
