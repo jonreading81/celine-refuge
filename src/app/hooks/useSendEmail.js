@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-export const useSendEmail = ({ email, subject, message, reset }) => {
+export const useSendEmail = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
 
-  const sendEmail = () => {
+  const sendEmail = ({ email, subject, message, reset }) => {
     setLoading(true);
     setError(false);
     setSuccess(false);

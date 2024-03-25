@@ -38,16 +38,16 @@ const ContactForm = ({
     setMessage('');
   };
 
-  const { sendEmail, setError, success, error, loading } = useSendEmail({
-    email,
-    subject: 'Contact from the website',
-    message: `Name: ${name}\nEmail: ${userEmail}\nPhone: ${phone}\n\n${message}`,
-    reset,
-  });
+  const { sendEmail, setError, success, error, loading } = useSendEmail();
 
   const validateForm = () => {
     if (validateEmail(userEmail) && name && message) {
-      sendEmail();
+      sendEmail({
+        email,
+        subject: 'Contact from the website',
+        message: `Name: ${name}\nEmail: ${userEmail}\nPhone: ${phone}\n\n${message}`,
+        reset,
+      });
     } else {
       setError(validation_error);
     }
