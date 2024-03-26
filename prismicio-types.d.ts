@@ -76,6 +76,8 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | WarningSlice
+  | AnnouncementSlice
   | PromoCardsSlice
   | ColoredTextBlockSlice
   | IconBarSlice
@@ -174,6 +176,61 @@ export type AllDocumentTypes =
   | FooterDocument
   | NavigationDocument
   | PageDocument;
+
+/**
+ * Primary content in *Announcement → Primary*
+ */
+export interface AnnouncementSliceDefaultPrimary {
+  /**
+   * Title field in *Announcement → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: announcement.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Text field in *Announcement → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: announcement.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Announcement Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AnnouncementSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<AnnouncementSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Announcement*
+ */
+type AnnouncementSliceVariation = AnnouncementSliceDefault;
+
+/**
+ * Announcement Shared Slice
+ *
+ * - **API ID**: `announcement`
+ * - **Description**: Announcement
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AnnouncementSlice = prismic.SharedSlice<
+  'announcement',
+  AnnouncementSliceVariation
+>;
 
 /**
  * Primary content in *ColoredTextBlock → Primary*
@@ -1463,6 +1520,61 @@ export type RichTextSlice = prismic.SharedSlice<
   RichTextSliceVariation
 >;
 
+/**
+ * Primary content in *Warning → Primary*
+ */
+export interface WarningSliceDefaultPrimary {
+  /**
+   * Title field in *Warning → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: warning.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Text field in *Warning → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: warning.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Warning Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type WarningSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<WarningSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Warning*
+ */
+type WarningSliceVariation = WarningSliceDefault;
+
+/**
+ * Warning Shared Slice
+ *
+ * - **API ID**: `warning`
+ * - **Description**: Warning
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type WarningSlice = prismic.SharedSlice<
+  'warning',
+  WarningSliceVariation
+>;
+
 declare module '@prismicio/client' {
   interface CreateClient {
     (
@@ -1483,6 +1595,10 @@ declare module '@prismicio/client' {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      AnnouncementSlice,
+      AnnouncementSliceDefaultPrimary,
+      AnnouncementSliceVariation,
+      AnnouncementSliceDefault,
       ColoredTextBlockSlice,
       ColoredTextBlockSliceDefaultPrimary,
       ColoredTextBlockSliceVariation,
@@ -1552,6 +1668,10 @@ declare module '@prismicio/client' {
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
       RichTextSliceDefault,
+      WarningSlice,
+      WarningSliceDefaultPrimary,
+      WarningSliceVariation,
+      WarningSliceDefault,
     };
   }
 }
