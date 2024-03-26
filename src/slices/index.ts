@@ -3,7 +3,6 @@
 import dynamic from 'next/dynamic';
 
 export const components = {
-  announcement: dynamic(() => import('./Announcement')),
   colored_text_block: dynamic(() => import('./ColoredTextBlock')),
   contact_form: dynamic(() => import('./ContactForm')),
   contact_info: dynamic(() => import('./ContactInfo')),
@@ -20,5 +19,4 @@ export const components = {
   promo_panel: dynamic(() => import('./PromoPanel')),
   reviews_carousel: dynamic(() => import('./ReviewsCarousel')),
   rich_text: dynamic(() => import('./RichText')),
-  warning: dynamic(() => import('./Warning')),
 };

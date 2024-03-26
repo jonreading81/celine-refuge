@@ -13,6 +13,11 @@
 						}
 					}
 				]
+			},
+			"color": {
+				"__TYPE__": "FieldContent",
+				"value": "blue",
+				"type": "Select"
 			}
 		},
 		"items": [

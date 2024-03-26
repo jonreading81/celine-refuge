@@ -35,12 +35,6 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "warning": {
-              "type": "SharedSlice"
-            },
-            "announcement": {
-              "type": "SharedSlice"
-            },
             "promo_cards": {
               "type": "SharedSlice"
             },
