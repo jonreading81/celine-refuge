@@ -33,6 +33,18 @@
             ],
             "default_value": "blue"
           }
+        },
+        "size": {
+          "type": "Select",
+          "config": {
+            "label": "Size",
+            "placeholder": "",
+            "options": [
+              "Large",
+              "Medium"
+            ],
+            "default_value": "Large"
+          }
         }
       },
       "items": {}

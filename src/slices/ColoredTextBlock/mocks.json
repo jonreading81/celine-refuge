@@ -18,6 +18,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "blue",
 				"type": "Select"
+			},
+			"size": {
+				"__TYPE__": "FieldContent",
+				"value": "Large",
+				"type": "Select"
 			}
 		},
 		"items": [

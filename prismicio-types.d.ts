@@ -199,6 +199,17 @@ export interface ColoredTextBlockSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   color: prismic.SelectField<'blue' | 'purple' | 'red', 'filled'>;
+
+  /**
+   * Size field in *ColoredTextBlock → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Large
+   * - **API ID Path**: colored_text_block.primary.size
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  size: prismic.SelectField<'Large' | 'Medium', 'filled'>;
 }
 
 /**

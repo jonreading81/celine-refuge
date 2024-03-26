@@ -13,22 +13,27 @@ const components = {
   ),
 };
 
-const colors = {
+const COLORS = {
   blue: 'bg-blue-site',
   purple: 'bg-purple-site',
   red: 'bg-red-400',
 };
 
+const SIZES = {
+  Large: 'max-w-screen-lg',
+  Medium: 'max-w-screen-md',
+};
+
 const ColoredTextBlock = ({
   slice: {
-    primary: { text, color },
+    primary: { text, color, size },
   },
 }) => (
   <Slice>
     <section
-      className={`${
-        colors[color] ?? colors.blue
-      } overflow-hidden rounded-xl shadow-xl p-12 m-auto max-w-screen-lg bg-blue-site text-white flex justify-center items-center`}
+      className={`${COLORS[color] ?? COLORS.blue} ${
+        SIZES[size] ?? SIZES.Large
+      } overflow-hidden rounded-xl shadow-xl text-white p-12 m-auto flex justify-center items-center`}
     >
       <div className="w-full max-w-prose">
         <PrismicRichText field={text} components={components} />
