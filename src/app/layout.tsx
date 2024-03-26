@@ -24,7 +24,7 @@ export default async function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="text-blue-site bg-white">
+      <body>
         {children}
         <PrismicPreview repositoryName={repositoryName} />
       </body>

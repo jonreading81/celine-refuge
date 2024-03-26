@@ -92,8 +92,14 @@ body {
   padding: 0;
   margin: 0;
 
-  @apply font-secondary-regular
+  @apply font-secondary-regular;
+  @apply text-blue-site;
+  @apply bg-white;
 }
+
+
+
+
 
 a {
   color: inherit;
