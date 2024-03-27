@@ -12,6 +12,7 @@ import { Logo } from '@app/components/Logo/Logo';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { PrismicNextLink } from '@prismicio/next';
+import { LanguageSelector } from '@app/components/LanguageSelector';
 
 function NavbarDefault({ navItems }) {
   const [openNav, setOpenNav] = React.useState(false);
@@ -47,6 +48,9 @@ function NavbarDefault({ navItems }) {
           </li>
         );
       })}
+      <li>
+        <LanguageSelector />
+      </li>
     </ul>
   );
 
@@ -54,7 +58,7 @@ function NavbarDefault({ navItems }) {
     <Navbar
       shadow={false}
       fullWidth={true}
-      className="p-0 text-color-blue-site-900 mb-4 lg:m-0"
+      className="p-0 text-color-blue-site-900  lg:m-0"
     >
       <div className="flex items-center justify-between">
         <div className="flex-1 self-center">

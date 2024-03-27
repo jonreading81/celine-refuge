@@ -2,8 +2,8 @@ import { useContext } from 'react';
 import LocaleContext from '@app/context/LocaleContext';
 
 const localeLabels = {
-  'en-gb': 'English',
-  'fr-fr': 'Francais',
+  'en-gb': 'En',
+  'fr-fr': 'Fr',
 };
 
 export const useLocale = () => {

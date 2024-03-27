@@ -10,7 +10,7 @@ export const Logo = () => {
     <h2>
       <Link href={`/${lang === 'fr-fr' ? '' : lang}`}>
         <Image
-          className="w-[220px] lg:w-[300px] "
+          className="w-[180px] lg:w-[220px]"
           priority
           src={logo}
           alt="Refuge du Suffet logo"

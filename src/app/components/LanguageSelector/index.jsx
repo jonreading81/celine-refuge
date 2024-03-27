@@ -57,7 +57,7 @@ export const LanguageSelector = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="inline-flex items-center justify-center w-full rounded-lg border border-gray-300 shadow-sm px-4 py-3 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none"
               id={LANGUAGE_SELECTOR_ID}
               aria-haspopup="true"
               aria-expanded={isOpen}
@@ -83,7 +83,7 @@ export const LanguageSelector = () => {
           </div>
           {isOpen && (
             <div
-              className="w-full origin-top-right absolute right-0 mt-2  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+              className="w-full origin-top-right lg:absolute  right-0 mt-2  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="language-selector"
