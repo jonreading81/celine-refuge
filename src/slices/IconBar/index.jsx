@@ -12,6 +12,7 @@ import {
   faCreditCard,
   faWifi,
   faCircle,
+  faKitchenSet,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -31,6 +32,7 @@ const icons = {
   faInstagram,
   faFacebook,
   faFacebookF,
+  faKitchenSet,
 };
 
 const Icon = ({ icon, text, disabled }) => (
