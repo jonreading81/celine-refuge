@@ -38,7 +38,7 @@ const PromoPanel = ({ slice: { primary, items } }) => {
                   />
                 </WrapWithLink>
               </div>
-              <div className="border-t-4 border-purple-site p-8 md:w-[70%] lg:w-[60%]  bg-white  md:absolute bottom-0  opacity-95">
+              <div className="border-t-4 border-blue-site p-8 md:w-[70%] lg:w-[60%]  bg-white  md:absolute bottom-0  opacity-95">
                 <WrapWithLink link={item.page_link}>
                   <h3 className="text-2xl ">{item.title}</h3>
                 </WrapWithLink>

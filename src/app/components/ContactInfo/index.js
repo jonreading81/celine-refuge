@@ -21,9 +21,7 @@ const Icon = ({ icon, text, disabled }) => (
       icon={icon}
     />
 
-    <p className="font-secondary-bold text-base text-site-blue text-center mt-4">
-      {text}
-    </p>
+    <p className="sr-only">{text}</p>
   </div>
 );
 
