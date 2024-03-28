@@ -13,7 +13,7 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons';
 const Icon = ({ icon, text, disabled }) => (
   <div className=" m-auto transition-transform hover:scale-110">
     <FontAwesomeIcon
-      className={`w-[65px] h-[65px] m-auto block ${
+      className={`w-[70px] h-[70px] m-auto block ${
         disabled ? 'opacity-20' : ''
       }`}
       size="sm"
