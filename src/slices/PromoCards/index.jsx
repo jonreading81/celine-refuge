@@ -45,7 +45,7 @@ const PromoCards = ({ slice: { primary, items } }) => {
               <p className="text-base mb-10">{item.text}</p>
               {item.link?.url && primary.button_text && (
                 <PrismicNextLink
-                  className="btn-main bg-blue-site block w-full"
+                  className="btn bg-blue-site block w-full"
                   field={item.link}
                 >
                   {primary.button_text}

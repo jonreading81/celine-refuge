@@ -102,7 +102,7 @@ const ContactForm = ({
           />
 
           <button
-            className="mt-6 btn-main w-full"
+            className="mt-6 btn-primary w-full"
             fullWidth
             color="blue"
             onClick={validateForm}

@@ -38,7 +38,7 @@ function NavbarDefault({ navItems }) {
               className={`w-full ${
                 link.url === pathname && !isButton ? 'text-purple-site' : ''
               }
-             ${isButton ? 'btn-main' : 'hover:text-purple-site'}`}
+             ${isButton ? 'btn-primary' : 'hover:text-purple-site'}`}
               onClick={() => {
                 setOpenNav(false);
               }}

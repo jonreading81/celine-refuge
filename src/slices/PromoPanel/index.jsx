@@ -44,7 +44,7 @@ const PromoPanel = ({ slice: { primary, items } }) => {
                 </WrapWithLink>
                 <p className="my-6 text-sm">{item.intro}</p>
                 {item.page_link.url && primary.button_text && (
-                  <WrapWithLink link={item.page_link} className="btn-main">
+                  <WrapWithLink link={item.page_link} className="btn">
                     {primary.button_text}
                   </WrapWithLink>
                 )}

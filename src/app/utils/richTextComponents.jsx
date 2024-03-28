@@ -13,7 +13,7 @@ export const components = {
   list: ({ children }) => <ul className="">{children}</ul>,
   listItem: ({ children }) => <li className="mb-4">{children}</li>,
   hyperlink: ({ node, children }) => (
-    <PrismicNextLink className="btn-main inline-block" field={node.data}>
+    <PrismicNextLink className="btn inline-block" field={node.data}>
       {children}
     </PrismicNextLink>
   ),
