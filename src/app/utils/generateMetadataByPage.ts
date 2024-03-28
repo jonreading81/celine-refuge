@@ -13,6 +13,7 @@ export const generateMetadataForPage =
     return {
       title: prismic.asText(page.data.title),
       description: page.data.meta_description,
+      keywords: page.tags,
       openGraph: {
         title: page.data.meta_title || undefined,
         images: [
