@@ -7,7 +7,7 @@ import * as richTextComponents from '@app/utils/richTextComponents';
 const components = {
   ...richTextComponents.components,
   hyperlink: ({ node, children }) => (
-    <PrismicNextLink className="btn inline-block" field={node.data}>
+    <PrismicNextLink className="btn-colored-bg inline-block" field={node.data}>
       {children}
     </PrismicNextLink>
   ),

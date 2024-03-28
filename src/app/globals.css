@@ -32,6 +32,13 @@
 
   }
 
+  .btn-colored-bg {
+    @apply btn;
+    @apply hover:bg-gray-200;
+    @apply hover:text-blue-site;
+
+  }
+
 
   .btn[disabled] {
     @apply hover:text-white;
