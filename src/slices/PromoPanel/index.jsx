@@ -30,7 +30,7 @@ const PromoPanel = ({ slice: { primary, items } }) => {
               key={index}
               className="relative rounded-lg shadow-xl overflow-hidden"
             >
-              <div className="aspect-[5/3] relative overflow-hidden">
+              <div className="aspect-video lg:aspect-[5/4] relative overflow-hidden">
                 <WrapWithLink link={item.page_link}>
                   <PrismicNextImage
                     field={item.image}
