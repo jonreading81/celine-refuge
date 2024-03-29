@@ -3,12 +3,13 @@ import { notFound } from 'next/navigation';
 import * as prismic from '@prismicio/client';
 
 export const generateMetadataForPage =
-  (name: string) =>
-  async ({ params: { lang } }: { params: { lang: string } }) => {
+  (name) =>
+  async ({ params: { lang } }) => {
     const client = createClient();
-    const page = await client
-      .getByUID('page', name, { lang })
-      .catch(() => notFound());
+    const [page, settings] = await Promise.all([
+      client.getByUID('page', name, { lang }),
+      client.getSingle('settings'),
+    ]).catch(() => notFound());
 
     const alternate_languages = page.alternate_languages.reduce(
       (pages, page) => ({
@@ -20,7 +21,7 @@ export const generateMetadataForPage =
 
     return {
       metadataBase: process.env.NEXT_PUBLIC_SITE_URL,
-      title: prismic.asText(page.data.title),
+      title: `${prismic.asText(page.data.title)} — ${settings.data.site_title}`,
       description: page.data.meta_description,
       keywords: page.tags,
       openGraph: {

@@ -170,10 +170,43 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, 'page', Lang>;
 
+/**
+ * Content for Settings documents
+ */
+interface SettingsDocumentData {
+  /**
+   * site_title field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.site_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  site_title: prismic.KeyTextField;
+}
+
+/**
+ * Settings document from Prismic
+ *
+ * - **API ID**: `settings`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SettingsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<SettingsDocumentData>,
+    'settings',
+    Lang
+  >;
+
 export type AllDocumentTypes =
   | FooterDocument
   | NavigationDocument
-  | PageDocument;
+  | PageDocument
+  | SettingsDocument;
 
 /**
  * Primary content in *ColoredTextBlock → Primary*
@@ -1504,6 +1537,8 @@ declare module '@prismicio/client' {
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
+      SettingsDocument,
+      SettingsDocumentData,
       AllDocumentTypes,
       ColoredTextBlockSlice,
       ColoredTextBlockSliceDefaultPrimary,

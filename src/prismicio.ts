@@ -43,11 +43,15 @@ export const createClient = (config: prismicNext.CreateClientConfig = {}) => {
 };
 
 export const linkResolver: prismic.LinkResolverFunction = (doc) => {
-  if (doc.type === 'page') {
-    return `/${doc.lang}/${doc.uid}`;
-  }
+  const prefix = doc.lang === 'fr-fr' ? '/' : `/${doc.lang}/`;
+
   if (doc.uid === 'home') {
-    return `/${doc.lang}`;
+    return prefix;
   }
+
+  if (doc.type === 'page') {
+    return `${prefix}${doc.uid}`;
+  }
+
   return '/';
 };
