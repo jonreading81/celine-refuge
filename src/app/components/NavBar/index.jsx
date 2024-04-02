@@ -30,7 +30,7 @@ function NavbarDefault({ navItems }) {
       {navItems.map(({ title, link, button: isButton }, index) => {
         return (
           <li
-            key={link.url}
+            key={title}
             className="flex items-center gap-x-2 py-2 border-b-2 lg:border-none"
           >
             <PrismicNextLink
