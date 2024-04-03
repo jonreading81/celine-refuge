@@ -5,10 +5,6 @@ export default async function sitemap() {
 
   const pages = await client.getAllByType('page', {
     lang: 'fr-fr',
-    orderings: {
-      field: 'my.page.title',
-      direction: 'asc',
-    },
   });
 
   return pages.map((page) => {
