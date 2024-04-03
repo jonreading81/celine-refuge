@@ -21,7 +21,7 @@ const PromoCards = ({ slice: { primary, items } }) => {
         {items.map((item, id) => (
           <div
             key={id}
-            className="relative border border-blue-gray-100 rounded-xl shadow-xl overflow-hidden"
+            className="relative border border-blue-gray-100 rounded-xl shadow-xl overflow-hidden flex flex-col h-full"
           >
             <div className="h-[320px] relative overflow-hidden">
               <WrapWithLink link={item.link}>
@@ -38,20 +38,22 @@ const PromoCards = ({ slice: { primary, items } }) => {
                 </span>
               )}
             </div>
-            <div className="bg-white relative mt-4 px-8 pb-10">
+            <div className="bg-white relative mt-4 px-8 flex-1 ">
               <WrapWithLink link={item.link}>
                 <h3 className="mt-2 pt-3 mb-6 ">{item.title}</h3>
               </WrapWithLink>
               <p className="text-base mb-10">{item.text}</p>
-              {item.link?.url && primary.button_text && (
+            </div>
+            {item.link?.url && primary.button_text && (
+              <div className=" m-8 mt-0">
                 <PrismicNextLink
-                  className="btn bg-blue-site block w-full"
+                  className="btn-primary bg-blue-site block w-full"
                   field={item.link}
                 >
                   {primary.button_text}
                 </PrismicNextLink>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         ))}
       </div>
