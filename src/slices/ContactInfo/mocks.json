@@ -76,6 +76,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "castle",
 				"type": "Text"
+			},
+			"phone_2": {
+				"__TYPE__": "FieldContent",
+				"value": "unhappy",
+				"type": "Text"
 			}
 		},
 		"items": []

@@ -41,6 +41,7 @@ export const ContactInfo = ({
   address_4,
   address_link,
   phone,
+  phone_2,
   email,
   follow_title,
   follow_text,
@@ -75,6 +76,16 @@ export const ContactInfo = ({
                   {phone}
                 </a>
               </p>
+              {phone_2 && (
+                <p className="">
+                  <a
+                    href={`tel:${phone_2}`}
+                    className="text-md mt-10 font-bold"
+                  >
+                    {phone_2}
+                  </a>
+                </p>
+              )}
             </div>
           </div>
           <a href={`mailto:${email}`} className="text-md mt-10 font-bold">

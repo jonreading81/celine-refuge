@@ -485,6 +485,16 @@ export interface ContactInfoSliceDefaultPrimary {
   phone: prismic.KeyTextField;
 
   /**
+   * Phone 2 field in *ContactInfo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_info.primary.phone_2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone_2: prismic.KeyTextField;
+
+  /**
    * email field in *ContactInfo → Primary*
    *
    * - **Field Type**: Text

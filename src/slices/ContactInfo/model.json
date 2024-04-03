@@ -75,6 +75,13 @@
             "placeholder": ""
           }
         },
+        "phone_2": {
+          "type": "Text",
+          "config": {
+            "label": "Phone 2",
+            "placeholder": ""
+          }
+        },
         "email": {
           "type": "Text",
           "config": {
