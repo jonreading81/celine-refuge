@@ -6,10 +6,16 @@ import * as richTextComponents from '@app/utils/richTextComponents';
 
 const components = {
   ...richTextComponents.components,
+
   hyperlink: ({ node, children }) => (
-    <PrismicNextLink className="btn-colored-bg block" field={node.data}>
-      {children}
-    </PrismicNextLink>
+    <div className="text-center ">
+      <PrismicNextLink
+        className="btn-colored-bg inline-block m-auto"
+        field={node.data}
+      >
+        {children}
+      </PrismicNextLink>
+    </div>
   ),
 };
 
@@ -34,9 +40,9 @@ const ColoredTextBlock = ({
     <section
       className={`${COLORS[color] ?? COLORS.blue} ${
         SIZES[size] ?? SIZES.Large
-      } overflow-hidden rounded-xl shadow-xl text-white p-12 m-auto flex justify-center items-center`}
+      } overflow-hidden rounded-xl shadow-xl text-white p-12 m-auto flex justify-center items-center  text-center`}
     >
-      <div className="w-full max-w-prose">
+      <div className="w-full max-w-md">
         <PrismicRichText field={text} components={components} />
       </div>
     </section>
