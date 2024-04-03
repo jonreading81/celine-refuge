@@ -9,21 +9,11 @@ export default async function sitemap() {
 
   return pages.map((page) => {
     const lastModified = new Date(page.last_publication_date).toISOString();
-
-    const languages = page.alternate_languages.reduce(
-      (pages, page) => ({
-        [page.lang]: linkResolver(page),
-        ...pages,
-      }),
-      {}
-    );
+    const url = new URL(linkResolver(page), process.env.NEXT_PUBLIC_SITE_URL);
 
     return {
-      url: linkResolver(page),
+      url: url.href,
       lastModified,
-      alternates: {
-        languages,
-      },
     };
   });
 }
