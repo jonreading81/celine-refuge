@@ -7,7 +7,7 @@ import * as richTextComponents from '@app/utils/richTextComponents';
 const components = {
   ...richTextComponents.components,
   hyperlink: ({ node, children }) => (
-    <PrismicNextLink className="btn-colored-bg inline-block" field={node.data}>
+    <PrismicNextLink className="btn-colored-bg block" field={node.data}>
       {children}
     </PrismicNextLink>
   ),
@@ -20,6 +20,7 @@ const COLORS = {
 };
 
 const SIZES = {
+  XLarge: 'max-w-screen-xl',
   Large: 'max-w-screen-lg',
   Medium: 'max-w-screen-md',
 };

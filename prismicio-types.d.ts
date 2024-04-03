@@ -242,7 +242,7 @@ export interface ColoredTextBlockSliceDefaultPrimary {
    * - **API ID Path**: colored_text_block.primary.size
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  size: prismic.SelectField<'Large' | 'Medium', 'filled'>;
+  size: prismic.SelectField<'Large' | 'Medium' | 'XLarge', 'filled'>;
 }
 
 /**
