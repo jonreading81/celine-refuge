@@ -19,7 +19,7 @@ const components = {
 
 const COLORS = {
   blue: 'bg-blue-site',
-  purple: 'bg-purple-site',
+  purple: 'bg-deep-purple-500',
   red: 'bg-red-400',
 };
 
