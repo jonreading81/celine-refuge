@@ -55,7 +55,7 @@ export default async function Home({
           </ErrorBoundary>
         </SliceWrapper>
       </main>
-      <Footer {...footer.data} pages={pages} settings={settings} />
+      <Footer {...footer.data} pages={pages} />
     </>
   );
 }

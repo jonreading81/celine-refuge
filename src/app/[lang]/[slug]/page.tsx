@@ -42,7 +42,7 @@ export default async function PageWithSlug({
         navigationSlice={navigationSlice}
         locales={locales}
         lang={lang}
-        pgaes={pages}
+        pages={pages}
         settings={settings}
       />
       <main className="bg-white min-h-[600px]">
@@ -56,7 +56,7 @@ export default async function PageWithSlug({
           </ErrorBoundary>
         </SliceWrapper>
       </main>
-      <Footer {...footer.data} pages={pages} settings={settings} />
+      <Footer {...footer.data} pages={pages} />
     </>
   );
 }
