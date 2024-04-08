@@ -30,6 +30,7 @@ export default async function PageWithSlug({
     footer,
     pages,
     locales,
+    settings,
   } = await getPageData({
     slug,
     lang,
@@ -37,7 +38,13 @@ export default async function PageWithSlug({
 
   return (
     <>
-      <Header navigationSlice={navigationSlice} locales={locales} lang={lang} />
+      <Header
+        navigationSlice={navigationSlice}
+        locales={locales}
+        lang={lang}
+        pgaes={pages}
+        settings={settings}
+      />
       <main className="bg-white min-h-[600px]">
         {masthead_image.url && <MastheadImage image={masthead_image} />}
         <SliceWrapper>
@@ -49,7 +56,7 @@ export default async function PageWithSlug({
           </ErrorBoundary>
         </SliceWrapper>
       </main>
-      <Footer {...footer.data} pages={pages} />
+      <Footer {...footer.data} pages={pages} settings={settings} />
     </>
   );
 }

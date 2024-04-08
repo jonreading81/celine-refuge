@@ -29,6 +29,7 @@ export default async function Home({
     footer,
     pages,
     locales,
+    settings,
   } = await getPageData({
     slug: PAGE,
     lang,
@@ -36,7 +37,13 @@ export default async function Home({
 
   return (
     <>
-      <Header navigationSlice={navigationSlice} locales={locales} lang={lang} />
+      <Header
+        navigationSlice={navigationSlice}
+        locales={locales}
+        lang={lang}
+        settings={settings}
+        pages={pages}
+      />
       <main className="bg-white min-h-[600px]">
         <MastheadImage image={masthead_image} />
         <SliceWrapper>
@@ -48,7 +55,7 @@ export default async function Home({
           </ErrorBoundary>
         </SliceWrapper>
       </main>
-      <Footer {...footer.data} pages={pages} />
+      <Footer {...footer.data} pages={pages} settings={settings} />
     </>
   );
 }

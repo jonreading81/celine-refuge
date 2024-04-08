@@ -15,6 +15,7 @@ export const getPageData = async ({ slug, lang }) => {
     },
     footer,
     pages,
+    settings,
   ] = await Promise.all([
     client.getByUID('page', slug, {
       lang,
@@ -29,6 +30,7 @@ export const getPageData = async ({ slug, lang }) => {
         direction: 'asc',
       },
     }),
+    client.getSingle('settings'),
   ]).catch(() => notFound());
 
   const locales = await getLocales(page, client);
@@ -45,5 +47,6 @@ export const getPageData = async ({ slug, lang }) => {
     footer,
     pages,
     locales,
+    settings,
   };
 };

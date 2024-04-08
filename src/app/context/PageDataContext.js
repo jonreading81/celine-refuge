@@ -2,6 +2,6 @@
 
 import { createContext } from 'react';
 
-const PageDataContexr = createContext({ pages: null });
+const PageDataContext = createContext({ pages: null, settings: null });
 
-export default PageDataContexr;
+export default PageDataContext;
