@@ -9,16 +9,14 @@ export const Logo = () => {
   const { settings } = usePageData();
 
   return (
-    <h1>
-      <Link href={`/${lang === 'fr-fr' ? '' : lang}`}>
-        <Image
-          className="w-[180px] lg:w-[220px]"
-          priority
-          src={logo}
-          alt="Refuge du Suffet logo"
-        />
-        <span className="sr-only">{settings.data.site_title}</span>
-      </Link>
-    </h1>
+    <Link href={`/${lang === 'fr-fr' ? '' : lang}`}>
+      <Image
+        className="w-[180px] lg:w-[220px]"
+        priority
+        src={logo}
+        alt="Refuge du Suffet logo"
+      />
+      <span className="sr-only">{settings.data.site_title}</span>
+    </Link>
   );
 };

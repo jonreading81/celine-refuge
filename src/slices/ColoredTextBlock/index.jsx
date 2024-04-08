@@ -8,14 +8,12 @@ const components = {
   ...richTextComponents.components,
 
   hyperlink: ({ node, children }) => (
-    <div className="text-center ">
-      <PrismicNextLink
-        className="btn-colored-bg inline-block m-auto"
-        field={node.data}
-      >
-        {children}
-      </PrismicNextLink>
-    </div>
+    <PrismicNextLink
+      className="btn-colored-bg inline-block m-auto"
+      field={node.data}
+    >
+      {children}
+    </PrismicNextLink>
   ),
 };
 
