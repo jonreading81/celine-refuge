@@ -33,7 +33,7 @@ export const LanguageSelector = () => {
   useEffect(() => {
     const handleWindowClick = (event) => {
       const target = event.target.closest('button');
-      if (target && target.id === LANGUAGE_SELECTOR_ID) {
+      if (target) {
         return;
       }
       setIsOpen(false);
@@ -58,7 +58,6 @@ export const LanguageSelector = () => {
               onClick={() => setIsOpen(!isOpen)}
               type="button"
               className="inline-flex items-center justify-center w-full rounded-lg border border-gray-300 shadow-sm px-4 py-3 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none"
-              id={LANGUAGE_SELECTOR_ID}
               aria-haspopup="true"
               aria-expanded={isOpen}
             >
