@@ -54,8 +54,11 @@ export const ContactInfo = ({
         <div className="basis-2/3 bg-blue-site text-white px-14 py-10 ">
           <h2 className=" ">{title}</h2>
           <div className="flex flex-col sm:flex-row mb-6 ">
-            <div className="basis-1/2 border-b border-white pb-4 sm:mr-6 md:mr-14 mb-4 lg:mb-0">
-              <p className="mt-10">{intro}</p>
+            <div className="basis-1/2 border-b border-white pb-4 sm:mr-6 md:mr-14 mb-4 lg:mb-0 flex flex-col">
+              <p className="mt-10 flex-1">{intro}</p>
+              <a href={`mailto:${email}`} className="text-md mt-10 font-bold">
+                {email}
+              </a>
             </div>
             <div className="basis-1/2 border-b border-white pb-4">
               <a target="blank" href={address_link} className="mt-10">
@@ -88,9 +91,6 @@ export const ContactInfo = ({
               )}
             </div>
           </div>
-          <a href={`mailto:${email}`} className="text-md mt-10 font-bold">
-            {email}
-          </a>
         </div>
         <div className="basis-1/3 bg-gray-100  text-color-blue-site px-14 py-10 ">
           <h2 className="mb-6 text-center">{follow_title}</h2>
