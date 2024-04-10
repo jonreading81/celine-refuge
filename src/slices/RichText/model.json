@@ -11,6 +11,15 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "RichText",
       "primary": {
+        "text_centered": {
+          "type": "Boolean",
+          "config": {
+            "label": "Text Centered",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
         "content": {
           "type": "StructuredText",
           "config": {
@@ -18,7 +27,9 @@
             "placeholder": "Lorem ipsum...",
             "allowTargetBlank": true,
             "multi": "paragraph,preformatted,heading1,heading2,heading3,strong,em,hyperlink,embed,list-item",
-            "labels": ["codespan"]
+            "labels": [
+              "codespan"
+            ]
           }
         }
       },

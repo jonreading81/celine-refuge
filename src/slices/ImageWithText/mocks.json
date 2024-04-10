@@ -41,6 +41,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "Image left",
 				"type": "Select"
+			},
+			"width": {
+				"__TYPE__": "FieldContent",
+				"value": "XLarge",
+				"type": "Select"
 			}
 		},
 		"items": []

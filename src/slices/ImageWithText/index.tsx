@@ -17,13 +17,22 @@ export type ImageWithTextProps =
 /**
  * Component for "ImageWithText" Slices.
  */
+
+const WIDTHS = {
+  Medium: 'max-w-screen-md',
+  Large: 'max-w-screen-lg',
+  XLarge: 'max-w-screen-xl',
+};
+
 const ImageWithText = ({
   slice: {
-    primary: { image, text, alignment },
+    primary: { image, text, alignment, width },
   },
 }: ImageWithTextProps): JSX.Element => (
   <Slice>
-    <div className="m-auto max-w-screen-xl lg:grid grid-cols-2 gap-8">
+    <div
+      className={`m-auto ${WIDTHS[width ?? 'Large']} lg:grid grid-cols-2 gap-8`}
+    >
       <div
         className={`w-full my-auto ${
           alignment === 'Image right' ? 'lg:order-last' : ''

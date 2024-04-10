@@ -24,6 +24,18 @@
             "default_value": "Image left"
           }
         },
+        "width": {
+          "type": "Select",
+          "config": {
+            "label": "Width",
+            "placeholder": "",
+            "options": [
+              "XLarge",
+              "Large",
+              "Medium"
+            ]
+          }
+        },
         "image": {
           "type": "Image",
           "config": {

@@ -918,6 +918,16 @@ export interface ImageWithTextSliceDefaultPrimary {
   alignment: prismic.SelectField<'Image left' | 'Image right', 'filled'>;
 
   /**
+   * Width field in *ImageWithText → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image_with_text.primary.width
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  width: prismic.SelectField<'XLarge' | 'Large' | 'Medium'>;
+
+  /**
    * Image field in *ImageWithText → Primary*
    *
    * - **Field Type**: Image
@@ -1487,6 +1497,17 @@ export type ReviewsCarouselSlice = prismic.SharedSlice<
  * Primary content in *RichText → Primary*
  */
 export interface RichTextSliceDefaultPrimary {
+  /**
+   * Text Centered field in *RichText → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: rich_text.primary.text_centered
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  text_centered: prismic.BooleanField;
+
   /**
    * Content field in *RichText → Primary*
    *
