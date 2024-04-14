@@ -39,9 +39,6 @@ const PriceList = ({ slice: { primary, items } }) => (
             <TableHeading className="text-center">
               {primary.column_heading_3}
             </TableHeading>
-            <TableHeading className="text-center">
-              {primary.column_heading_4}
-            </TableHeading>
           </tr>
         </thead>
         <tbody>
@@ -55,7 +52,6 @@ const PriceList = ({ slice: { primary, items } }) => (
                 <td className={`${classes} font-bold`}>{name}</td>
                 <Price className={classes} amount={price_1} />
                 <Price className={classes} amount={price_2} />
-                <Price className={classes} amount={price_3} />
               </tr>
             );
           })}

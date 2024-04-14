@@ -1139,16 +1139,6 @@ export interface PriceListSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   column_heading_3: prismic.KeyTextField;
-
-  /**
-   * Column heading 4 field in *PriceList → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: price_list.primary.column_heading_4
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  column_heading_4: prismic.KeyTextField;
 }
 
 /**
@@ -1184,16 +1174,6 @@ export interface PriceListSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   price_2: prismic.NumberField;
-
-  /**
-   * Price 3 field in *PriceList → Items*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: *None*
-   * - **API ID Path**: price_list.items[].price_3
-   * - **Documentation**: https://prismic.io/docs/field#number
-   */
-  price_3: prismic.NumberField;
 }
 
 /**

@@ -22,11 +22,6 @@
 				"__TYPE__": "FieldContent",
 				"value": "production",
 				"type": "Text"
-			},
-			"column_heading_4": {
-				"__TYPE__": "FieldContent",
-				"value": "ability",
-				"type": "Text"
 			}
 		},
 		"items": [
@@ -54,14 +49,6 @@
 						{
 							"__TYPE__": "FieldContent",
 							"value": "21",
-							"type": "Number"
-						}
-					],
-					[
-						"price_3",
-						{
-							"__TYPE__": "FieldContent",
-							"value": "74",
 							"type": "Number"
 						}
 					]

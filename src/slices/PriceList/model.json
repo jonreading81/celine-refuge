@@ -39,13 +39,6 @@
             "label": "Column heading 3",
             "placeholder": ""
           }
-        },
-        "column_heading_4": {
-          "type": "Text",
-          "config": {
-            "label": "Column heading 4",
-            "placeholder": ""
-          }
         }
       },
       "items": {
@@ -67,13 +60,6 @@
           "type": "Number",
           "config": {
             "label": "Price 2",
-            "placeholder": ""
-          }
-        },
-        "price_3": {
-          "type": "Number",
-          "config": {
-            "label": "Price 3",
             "placeholder": ""
           }
         }
