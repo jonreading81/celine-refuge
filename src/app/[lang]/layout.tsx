@@ -1,4 +1,4 @@
-import './globals.css';
+import '../globals.css';
 import 'node_modules/flag-icons/css/flag-icons.min.css';
 
 import { PrismicPreview } from '@prismicio/next';
@@ -10,11 +10,13 @@ import { Metadata } from 'next';
 
 export default async function RootLayout({
   children,
+  params: { lang },
 }: {
   children: React.ReactNode;
+  params: { lang: string };
 }) {
   return (
-    <html>
+    <html lang={lang}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
