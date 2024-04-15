@@ -21,10 +21,12 @@ export const generateMetadataForPage =
 
     return {
       metadataBase: process.env.NEXT_PUBLIC_SITE_URL,
+      applicationName: settings.data.site_title,
       title: `${prismic.asText(page.data.title)} — ${settings.data.site_title}`,
       description: page.data.meta_description,
       keywords: page.tags,
       openGraph: {
+        siteName: settings.data.site_title,
         title: page.data.meta_title || undefined,
         images: [
           {
