@@ -13,6 +13,7 @@ import {
   faWifi,
   faCircle,
   faKitchenSet,
+  faPhone,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -33,12 +34,13 @@ const icons = {
   faFacebook,
   faFacebookF,
   faKitchenSet,
+  faPhone,
 };
 
 const Icon = ({ icon, text, disabled }) => (
   <div className="mb-8 transition-transform hover:scale-110">
     <FontAwesomeIcon
-      className={`w-16 h-16 sm:w-20 sm:h-20 m-auto block ${
+      className={`w-16 h-16 sm:w-18 sm:h-18 m-auto block ${
         disabled ? 'opacity-20' : ''
       }`}
       size="sm"
@@ -74,6 +76,8 @@ const cols = [
   'grid-cols-2 md:grid-cols-4',
   'grid-cols-2 md:grid-cols-4 lg:grid-cols-5',
   'grid-cols-2 md:grid-cols-4 lg:grid-cols-6',
+  'grid-cols-2 md:grid-cols-4 lg:grid-cols-7',
+  'grid-cols-2 md:grid-cols-4 lg:grid-cols-8',
 ];
 
 const IconBar = ({ slice: { primary, items } }) => {
