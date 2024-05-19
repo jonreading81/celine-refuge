@@ -24,8 +24,8 @@ const BookingWidget = ({
     },
   },
 }: BookingWidgetProps): JSX.Element => {
-  console.log({ idPanier, idIntegration, langue, ui });
   const onReady = () => {
+    // @ts-ignore
     var widgetProduit = AllianceReseaux.Widget.Instance('Produit', {
       idPanier,
       idIntegration,
