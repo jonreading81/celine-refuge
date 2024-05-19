@@ -35,6 +35,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "booking_widget": {
+              "type": "SharedSlice"
+            },
             "promo_cards": {
               "type": "SharedSlice"
             },

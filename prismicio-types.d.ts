@@ -76,6 +76,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | BookingWidgetSlice
   | PromoCardsSlice
   | ColoredTextBlockSlice
   | IconBarSlice
@@ -207,6 +208,81 @@ export type AllDocumentTypes =
   | NavigationDocument
   | PageDocument
   | SettingsDocument;
+
+/**
+ * Primary content in *BookingWidget → Primary*
+ */
+export interface BookingWidgetSliceDefaultPrimary {
+  /**
+   * Panier field in *BookingWidget → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: booking_widget.primary.panier
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  panier: prismic.KeyTextField;
+
+  /**
+   * Integration field in *BookingWidget → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: booking_widget.primary.integration
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  integration: prismic.KeyTextField;
+
+  /**
+   * Language field in *BookingWidget → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: booking_widget.primary.language
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  language: prismic.KeyTextField;
+
+  /**
+   * ProductId field in *BookingWidget → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: booking_widget.primary.productid
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  productid: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for BookingWidget Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BookingWidgetSliceDefault = prismic.SharedSliceVariation<
+  'default',
+  Simplify<BookingWidgetSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *BookingWidget*
+ */
+type BookingWidgetSliceVariation = BookingWidgetSliceDefault;
+
+/**
+ * BookingWidget Shared Slice
+ *
+ * - **API ID**: `booking_widget`
+ * - **Description**: BookingWidget
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BookingWidgetSlice = prismic.SharedSlice<
+  'booking_widget',
+  BookingWidgetSliceVariation
+>;
 
 /**
  * Primary content in *ColoredTextBlock → Primary*
@@ -1551,6 +1627,10 @@ declare module '@prismicio/client' {
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
+      BookingWidgetSlice,
+      BookingWidgetSliceDefaultPrimary,
+      BookingWidgetSliceVariation,
+      BookingWidgetSliceDefault,
       ColoredTextBlockSlice,
       ColoredTextBlockSliceDefaultPrimary,
       ColoredTextBlockSliceVariation,

@@ -1,0 +1,47 @@
+{
+  "id": "booking_widget",
+  "type": "SharedSlice",
+  "name": "BookingWidget",
+  "description": "BookingWidget",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "panier": {
+          "type": "Text",
+          "config": {
+            "label": "Panier",
+            "placeholder": ""
+          }
+        },
+        "integration": {
+          "type": "Text",
+          "config": {
+            "label": "Integration",
+            "placeholder": ""
+          }
+        },
+        "language": {
+          "type": "Text",
+          "config": {
+            "label": "Language",
+            "placeholder": ""
+          }
+        },
+        "productid": {
+          "type": "Text",
+          "config": {
+            "label": "ProductId",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
