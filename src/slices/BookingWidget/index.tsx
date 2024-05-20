@@ -49,6 +49,7 @@ const BookingWidget = ({
   return (
     <>
       <Script
+        onReady={onLoad}
         onLoad={onLoad}
         src="//gadget.open-system.fr/widgets-libs/rel/noyau-1.0.min.js"
       />
