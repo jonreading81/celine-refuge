@@ -1312,11 +1312,10 @@ export interface PromoCardsSliceDefaultPrimary {
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
-   * - **Default Value**: 2
    * - **API ID Path**: promo_cards.primary.columns
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  columns: prismic.SelectField<'2' | '3' | '4', 'filled'>;
+  columns: prismic.SelectField<'1' | '2' | '3' | '4'>;
 
   /**
    * Button Text field in *PromoCards → Primary*
@@ -1327,6 +1326,28 @@ export interface PromoCardsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   button_text: prismic.KeyTextField;
+
+  /**
+   * Image Format field in *PromoCards → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Landscape
+   * - **API ID Path**: promo_cards.primary.image_format
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  image_format: prismic.SelectField<'Landscape' | 'Portrait', 'filled'>;
+
+  /**
+   * Width field in *PromoCards → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Full
+   * - **API ID Path**: promo_cards.primary.width
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  width: prismic.SelectField<'Full' | 'Large' | 'Medium', 'filled'>;
 }
 
 /**

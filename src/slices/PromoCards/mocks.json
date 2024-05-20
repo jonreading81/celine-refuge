@@ -5,13 +5,23 @@
 		"primary": {
 			"columns": {
 				"__TYPE__": "FieldContent",
-				"value": "2",
+				"value": "3",
 				"type": "Select"
 			},
 			"button_text": {
 				"__TYPE__": "FieldContent",
 				"value": "outer",
 				"type": "Text"
+			},
+			"image_format": {
+				"__TYPE__": "FieldContent",
+				"value": "Landscape",
+				"type": "Select"
+			},
+			"width": {
+				"__TYPE__": "FieldContent",
+				"value": "Full",
+				"type": "Select"
 			}
 		},
 		"items": [

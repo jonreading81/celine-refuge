@@ -18,11 +18,11 @@
             "label": "Columns",
             "placeholder": "",
             "options": [
+              "1",
               "2",
               "3",
               "4"
-            ],
-            "default_value": "2"
+            ]
           }
         },
         "button_text": {
@@ -30,6 +30,31 @@
           "config": {
             "label": "Button Text",
             "placeholder": ""
+          }
+        },
+        "image_format": {
+          "type": "Select",
+          "config": {
+            "label": "Image Format",
+            "placeholder": "",
+            "options": [
+              "Landscape",
+              "Portrait"
+            ],
+            "default_value": "Landscape"
+          }
+        },
+        "width": {
+          "type": "Select",
+          "config": {
+            "label": "Width",
+            "placeholder": "",
+            "options": [
+              "Full",
+              "Large",
+              "Medium"
+            ],
+            "default_value": "Full"
           }
         }
       },
