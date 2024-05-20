@@ -22,6 +22,15 @@
 				"__TYPE__": "FieldContent",
 				"type": "Text",
 				"value": "OSCH-131661-1"
+			},
+			"active": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"max_products": {
+				"__TYPE__": "FieldContent",
+				"value": "42",
+				"type": "Number"
 			}
 		},
 		"items": []

@@ -252,6 +252,27 @@ export interface BookingWidgetSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   productid: prismic.KeyTextField;
+
+  /**
+   * Active field in *BookingWidget → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: booking_widget.primary.active
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  active: prismic.BooleanField;
+
+  /**
+   * Max Products field in *BookingWidget → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: booking_widget.primary.max_products
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  max_products: prismic.NumberField;
 }
 
 /**

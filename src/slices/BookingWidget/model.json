@@ -39,6 +39,22 @@
             "label": "ProductId",
             "placeholder": ""
           }
+        },
+        "active": {
+          "type": "Boolean",
+          "config": {
+            "label": "Active",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        },
+        "max_products": {
+          "type": "Number",
+          "config": {
+            "label": "Max Products",
+            "placeholder": ""
+          }
         }
       },
       "items": {}

@@ -21,10 +21,12 @@ const BookingWidget = ({
       integration: idIntegration,
       language: langue,
       productid: ui,
+      active,
+      max_products,
     },
   },
 }: BookingWidgetProps): JSX.Element => {
-  const onReady = () => {
+  const onLoad = () => {
     // @ts-ignore
     var widgetProduit = AllianceReseaux.Widget.Instance('Produit', {
       idPanier,
@@ -33,17 +35,25 @@ const BookingWidget = ({
       ui,
     });
 
+    if (active) {
+      widgetProduit.PreApp('planning.actif', true);
+    }
+
+    if (max_products) {
+      widgetProduit.PreApp('planning.nbMaxProduits', max_products);
+    }
+
     widgetProduit.Initialise();
   };
 
   return (
     <>
       <Script
-        onReady={onReady}
+        onLoad={onLoad}
         src="//gadget.open-system.fr/widgets-libs/rel/noyau-1.0.min.js"
       />
       <div className="mb-12 relative">
-        <div id={`widget-produit-OSCH-131661-1`}></div>
+        <div id={`widget-produit-${ui}`}></div>
       </div>
     </>
   );
