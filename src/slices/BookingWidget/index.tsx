@@ -53,7 +53,7 @@ const BookingWidget = ({
         onLoad={onLoad}
         src="//gadget.open-system.fr/widgets-libs/rel/noyau-1.0.min.js"
       />
-      <div className="mb-12 relative">
+      <div className="mb-12 relative z-0">
         <div id={`widget-produit-${ui}`}></div>
       </div>
     </>
