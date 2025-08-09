@@ -9,6 +9,7 @@ type Props = {
 export const MastheadImage = ({ image }: Props) => (
   <div className="w-full aspect-video max-h-[360px] overflow-hidden  relative">
     <PrismicNextImage
+      alt=""
       field={image}
       priority={true}
       sizes="100vw"

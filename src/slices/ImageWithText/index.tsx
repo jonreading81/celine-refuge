@@ -39,6 +39,7 @@ const ImageWithText = ({
         }`}
       >
         <PrismicNextImage
+          alt=""
           className="w-full rounded-lg shadow-lg aspect-video  lg:aspect-[4/3] object-cover object-center mb-6 lg:mb-0"
           field={image}
         />

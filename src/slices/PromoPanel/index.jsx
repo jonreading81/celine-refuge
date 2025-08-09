@@ -33,6 +33,7 @@ const PromoPanel = ({ slice: { primary, items } }) => {
               <div className="aspect-video lg:aspect-[5/4] relative overflow-hidden">
                 <WrapWithLink link={item.page_link}>
                   <PrismicNextImage
+                    alt=""
                     field={item.image}
                     className=" object-cover object-center w-full h-full"
                   />

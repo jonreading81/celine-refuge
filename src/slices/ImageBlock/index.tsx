@@ -28,6 +28,7 @@ const ImageBlock = ({ slice: { primary } }: ImageBlockProps): JSX.Element => {
           className={`w-full ${width}  rounded-xl shadow-lg overflow-hidden`}
         >
           <PrismicNextImage
+            alt=""
             field={primary.image}
             className="object-cover w-full w-full"
           />

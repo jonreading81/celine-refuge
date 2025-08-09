@@ -48,6 +48,7 @@ const PromoCards = ({ slice: { primary, items } }) => {
             >
               <WrapWithLink link={item.link}>
                 <PrismicNextImage
+                  alt=""
                   field={item.image}
                   priority={true}
                   sizes="100vw"

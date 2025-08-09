@@ -24,6 +24,7 @@ const GalleryCarousel = ({
         {items.map(({ image }, i) => (
           <div key={i} className="h-full">
             <PrismicNextImage
+              alt=""
               field={image}
               className=" w-full aspect-video  object-cover object-center"
             />
