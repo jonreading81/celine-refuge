@@ -17,10 +17,11 @@ const PAGE = 'home';
 export const generateMetadata = generateMetadataForPage(PAGE);
 
 export default async function Home({
-  params: { lang },
+  params,
 }: {
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }) {
+  const { lang } = await params;
   const {
     slices,
     title,

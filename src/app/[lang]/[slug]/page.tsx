@@ -13,15 +13,22 @@ import { getPageData } from '@/app/utils/getPageData';
 
 type Params = { slug: string; lang: string };
 
-export const generateMetadata = async ({ params }: { params: Params }) => {
-  return generateMetadataForPage(params.slug)({ params });
+export const generateMetadata = async ({
+  params,
+}: {
+  params: Promise<Params>;
+}) => {
+  const { slug } = await params;
+  return generateMetadataForPage(slug)({ params });
 };
 
 export default async function PageWithSlug({
-  params: { slug, lang },
+  params,
 }: {
-  params: Params;
+  params: Promise<Params>;
 }) {
+  const { slug, lang } = await params;
+
   const {
     slices,
     title,

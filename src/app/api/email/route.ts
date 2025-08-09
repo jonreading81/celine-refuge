@@ -1,8 +1,8 @@
-import { type NextRequest, NextResponse } from 'next/server';
+import { type NextRequest } from 'next/server';
 
 import { Resend } from 'resend';
 
-export async function POST(request: NextRequest, res: NextResponse) {
+export async function POST(request: NextRequest) {
   const resend = new Resend(process.env.RESEND_APIKEY);
   const { email: to, subject, message: text } = await request.json();
 
@@ -14,8 +14,8 @@ export async function POST(request: NextRequest, res: NextResponse) {
       text,
     });
 
-    return NextResponse.json({ message: 'Email sent' });
+    return Response.json({ message: 'Email sent' });
   } catch (err) {
-    return NextResponse.json({ error: err }, { status: 500 });
+    return Response.json({ error: err }, { status: 500 });
   }
 }

@@ -10,11 +10,13 @@ import { Metadata } from 'next';
 
 export default async function RootLayout({
   children,
-  params: { lang },
+  params,
 }: {
   children: React.ReactNode;
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }) {
+  const { lang } = await params;
+
   return (
     <html lang={lang}>
       <head>
