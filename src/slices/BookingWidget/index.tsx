@@ -25,7 +25,7 @@ const BookingWidget = ({
       max_products,
     },
   },
-}: BookingWidgetProps): JSX.Element => {
+}: BookingWidgetProps) => {
   const onLoad = () => {
     // @ts-ignore
     var widgetProduit = AllianceReseaux.Widget.Instance('Produit', {

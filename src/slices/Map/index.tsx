@@ -18,7 +18,7 @@ const MapSlice = ({
       zoom,
     },
   },
-}: MapProps): JSX.Element => {
+}: MapProps) => {
   if (!lng || !lng) {
     return (
       <h3 className="p-6 my-6 text-center bg-red-300 text-black">

@@ -17,7 +17,7 @@ export type GalleryCarouselProps =
  */
 const GalleryCarousel = ({
   slice: { primary, items },
-}: GalleryCarouselProps): JSX.Element => (
+}: GalleryCarouselProps) => (
   <Slice>
     <div className="bg-blue-site max-w-screen-lg m-auto rounded-xl shadow-xl overflow-hidden">
       <Carousel loop placeholder={primary.placeholder}>

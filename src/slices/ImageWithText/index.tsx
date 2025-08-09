@@ -28,7 +28,7 @@ const ImageWithText = ({
   slice: {
     primary: { image, text, alignment, width },
   },
-}: ImageWithTextProps): JSX.Element => (
+}: ImageWithTextProps) => (
   <Slice>
     <div
       className={`m-auto ${WIDTHS[width ?? 'Large']} lg:grid grid-cols-2 gap-8`}

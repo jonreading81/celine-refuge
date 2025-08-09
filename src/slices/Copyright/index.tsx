@@ -13,7 +13,7 @@ const Copyright = ({
   slice: {
     primary: { copyright_text },
   },
-}: CopyrightProps): JSX.Element => {
+}: CopyrightProps) => {
   const year = new Date().getFullYear();
 
   return (

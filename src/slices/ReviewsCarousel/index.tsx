@@ -14,7 +14,7 @@ export type ReviewsCarouselProps =
 /**
  * Component for "ReviewsCarousel" Slices.
  */
-const ReviewsCarousel = ({ slice }: ReviewsCarouselProps): JSX.Element => {
+const ReviewsCarousel = ({ slice }: ReviewsCarouselProps) => {
   return (
     <Slice>
       <div className="h-60 sm:h-80 xl:h-96  mt-6 bg-blue-site rounded-xl shadow-lg">

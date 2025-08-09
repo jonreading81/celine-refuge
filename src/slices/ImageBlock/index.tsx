@@ -18,7 +18,7 @@ export type ImageBlockProps = SliceComponentProps<Content.ImageBlockSlice>;
 /**
  * Component for "ImageBlock" Slices.
  */
-const ImageBlock = ({ slice: { primary } }: ImageBlockProps): JSX.Element => {
+const ImageBlock = ({ slice: { primary } }: ImageBlockProps) => {
   const width = WIDTHS[primary.width] ?? '';
 
   return (
