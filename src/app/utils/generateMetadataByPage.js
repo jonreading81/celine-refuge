@@ -4,7 +4,9 @@ import * as prismic from '@prismicio/client';
 
 export const generateMetadataForPage =
   (name) =>
-  async ({ params: { lang } }) => {
+  async ({ params }) => {
+    const { lang } = await params;
+
     const client = createClient();
     const [page, settings] = await Promise.all([
       client.getByUID('page', name, { lang }),
@@ -16,7 +18,7 @@ export const generateMetadataForPage =
         [page.lang]: linkResolver(page),
         ...pages,
       }),
-      {}
+      {},
     );
 
     return {
