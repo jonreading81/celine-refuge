@@ -1,38 +1,38 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"panier": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "s5Czs7M"
-			},
-			"integration": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "1168"
-			},
-			"language": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "fr"
-			},
-			"productid": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "OSCH-131661-1"
-			},
-			"active": {
-				"__TYPE__": "BooleanContent",
-				"value": false
-			},
-			"max_products": {
-				"__TYPE__": "FieldContent",
-				"type": "Number",
-				"value": "0"
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "panier": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "s5Czs7M"
+      },
+      "integration": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "1168"
+      },
+      "language": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "fr"
+      },
+      "productid": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "OSCH-131661-1"
+      },
+      "active": {
+        "__TYPE__": "BooleanContent",
+        "value": false
+      },
+      "max_products": {
+        "__TYPE__": "FieldContent",
+        "type": "Number",
+        "value": "0"
+      }
+    },
+    "items": []
+  }
 ]

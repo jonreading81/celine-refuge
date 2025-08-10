@@ -17,10 +17,7 @@
           "config": {
             "label": "alignment",
             "placeholder": "",
-            "options": [
-              "Image left",
-              "Image right"
-            ],
+            "options": ["Image left", "Image right"],
             "default_value": "Image left"
           }
         },
@@ -29,11 +26,7 @@
           "config": {
             "label": "Width",
             "placeholder": "",
-            "options": [
-              "XLarge",
-              "Large",
-              "Medium"
-            ]
+            "options": ["XLarge", "Large", "Medium"]
           }
         },
         "image": {

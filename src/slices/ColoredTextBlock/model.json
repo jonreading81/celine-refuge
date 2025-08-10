@@ -26,11 +26,7 @@
           "config": {
             "label": "Color",
             "placeholder": "",
-            "options": [
-              "blue",
-              "purple",
-              "red"
-            ],
+            "options": ["blue", "purple", "red"],
             "default_value": "blue"
           }
         },
@@ -39,11 +35,7 @@
           "config": {
             "label": "Size",
             "placeholder": "",
-            "options": [
-              "Large",
-              "Medium",
-              "XLarge"
-            ],
+            "options": ["Large", "Medium", "XLarge"],
             "default_value": "Large"
           }
         }

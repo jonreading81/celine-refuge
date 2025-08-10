@@ -1,15 +1,13 @@
 .wrapper {
-    a {
-  
-    }
-    strong{
-      font-weight: bold;
-    }
-
-    ul {
-      list-style: disc;
-      list-style-position: outside;
-      margin-left:16px;
-    }
-    
+  a {
   }
+  strong {
+    font-weight: bold;
+  }
+
+  ul {
+    list-style: disc;
+    list-style-position: outside;
+    margin-left: 16px;
+  }
+}

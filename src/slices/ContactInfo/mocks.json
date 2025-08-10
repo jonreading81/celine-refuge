@@ -1,88 +1,88 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"title": {
-				"__TYPE__": "FieldContent",
-				"value": "meet",
-				"type": "Text"
-			},
-			"intro": {
-				"__TYPE__": "FieldContent",
-				"value": "somewhere",
-				"type": "Text"
-			},
-			"name": {
-				"__TYPE__": "FieldContent",
-				"value": "cheese",
-				"type": "Text"
-			},
-			"address_1": {
-				"__TYPE__": "FieldContent",
-				"value": "anything",
-				"type": "Text"
-			},
-			"address_2": {
-				"__TYPE__": "FieldContent",
-				"value": "rise",
-				"type": "Text"
-			},
-			"address_3": {
-				"__TYPE__": "FieldContent",
-				"value": "diagram",
-				"type": "Text"
-			},
-			"address_4": {
-				"__TYPE__": "FieldContent",
-				"value": "habit",
-				"type": "Text"
-			},
-			"phone": {
-				"__TYPE__": "FieldContent",
-				"value": "noun",
-				"type": "Text"
-			},
-			"email": {
-				"__TYPE__": "FieldContent",
-				"value": "business",
-				"type": "Text"
-			},
-			"address_link": {
-				"__TYPE__": "FieldContent",
-				"value": "suit",
-				"type": "Text"
-			},
-			"follow_title": {
-				"__TYPE__": "FieldContent",
-				"value": "terrible",
-				"type": "Text"
-			},
-			"facebook_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "http://google.com"
-				}
-			},
-			"instagram_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "http://twitter.com"
-				}
-			},
-			"follow_text": {
-				"__TYPE__": "FieldContent",
-				"value": "castle",
-				"type": "Text"
-			},
-			"phone_2": {
-				"__TYPE__": "FieldContent",
-				"value": "unhappy",
-				"type": "Text"
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "meet",
+        "type": "Text"
+      },
+      "intro": {
+        "__TYPE__": "FieldContent",
+        "value": "somewhere",
+        "type": "Text"
+      },
+      "name": {
+        "__TYPE__": "FieldContent",
+        "value": "cheese",
+        "type": "Text"
+      },
+      "address_1": {
+        "__TYPE__": "FieldContent",
+        "value": "anything",
+        "type": "Text"
+      },
+      "address_2": {
+        "__TYPE__": "FieldContent",
+        "value": "rise",
+        "type": "Text"
+      },
+      "address_3": {
+        "__TYPE__": "FieldContent",
+        "value": "diagram",
+        "type": "Text"
+      },
+      "address_4": {
+        "__TYPE__": "FieldContent",
+        "value": "habit",
+        "type": "Text"
+      },
+      "phone": {
+        "__TYPE__": "FieldContent",
+        "value": "noun",
+        "type": "Text"
+      },
+      "email": {
+        "__TYPE__": "FieldContent",
+        "value": "business",
+        "type": "Text"
+      },
+      "address_link": {
+        "__TYPE__": "FieldContent",
+        "value": "suit",
+        "type": "Text"
+      },
+      "follow_title": {
+        "__TYPE__": "FieldContent",
+        "value": "terrible",
+        "type": "Text"
+      },
+      "facebook_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://google.com"
+        }
+      },
+      "instagram_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://twitter.com"
+        }
+      },
+      "follow_text": {
+        "__TYPE__": "FieldContent",
+        "value": "castle",
+        "type": "Text"
+      },
+      "phone_2": {
+        "__TYPE__": "FieldContent",
+        "value": "unhappy",
+        "type": "Text"
+      }
+    },
+    "items": []
+  }
 ]

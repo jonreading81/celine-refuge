@@ -1,35 +1,35 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"text": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Laboris in adipisicing in do dolore commodo. Id tempor ea velit exercitation est adipisicing."
-						}
-					}
-				]
-			},
-			"color": {
-				"__TYPE__": "FieldContent",
-				"value": "blue",
-				"type": "Select"
-			},
-			"size": {
-				"__TYPE__": "FieldContent",
-				"value": "Large",
-				"type": "Select"
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Laboris in adipisicing in do dolore commodo. Id tempor ea velit exercitation est adipisicing."
+            }
+          }
+        ]
+      },
+      "color": {
+        "__TYPE__": "FieldContent",
+        "value": "blue",
+        "type": "Select"
+      },
+      "size": {
+        "__TYPE__": "FieldContent",
+        "value": "Large",
+        "type": "Select"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
 ]

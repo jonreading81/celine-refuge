@@ -4,7 +4,7 @@ import { Client, Content } from '@prismicio/client';
 
 export async function getLocales(
   doc: Content.AllDocumentTypes,
-  client: Client<Content.AllDocumentTypes>
+  client: Client<Content.AllDocumentTypes>,
 ) {
   const [repository, altDocs] = await Promise.all([
     client.getRepository(),
@@ -15,7 +15,7 @@ export async function getLocales(
             lang: '*',
             // Exclude all fields to speed up the query.
             fetch: `${doc.type}.__nonexistent-field__`,
-          }
+          },
         )
       : Promise.resolve([]),
   ]);

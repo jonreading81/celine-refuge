@@ -17,12 +17,7 @@
           "config": {
             "label": "Columns",
             "placeholder": "",
-            "options": [
-              "1",
-              "2",
-              "3",
-              "4"
-            ]
+            "options": ["1", "2", "3", "4"]
           }
         },
         "button_text": {
@@ -37,10 +32,7 @@
           "config": {
             "label": "Image Format",
             "placeholder": "",
-            "options": [
-              "Landscape",
-              "Portrait"
-            ],
+            "options": ["Landscape", "Portrait"],
             "default_value": "Landscape"
           }
         },
@@ -49,11 +41,7 @@
           "config": {
             "label": "Width",
             "placeholder": "",
-            "options": [
-              "Full",
-              "Large",
-              "Medium"
-            ],
+            "options": ["Full", "Large", "Medium"],
             "default_value": "Full"
           }
         }

@@ -1,21 +1,21 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"zoom": {
-				"__TYPE__": "FieldContent",
-				"value": "73",
-				"type": "Number"
-			},
-			"position": {
-				"position": {
-					"lat": 48.8703712,
-					"lng": 2.3865198
-				},
-				"__TYPE__": "GeoPointContent"
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "zoom": {
+        "__TYPE__": "FieldContent",
+        "value": "73",
+        "type": "Number"
+      },
+      "position": {
+        "position": {
+          "lat": 48.8703712,
+          "lng": 2.3865198
+        },
+        "__TYPE__": "GeoPointContent"
+      }
+    },
+    "items": []
+  }
 ]

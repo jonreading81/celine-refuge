@@ -24,11 +24,7 @@
           "config": {
             "label": "Columns",
             "placeholder": "",
-            "options": [
-              "2",
-              "3",
-              "4"
-            ],
+            "options": ["2", "3", "4"],
             "default_value": "2"
           }
         }

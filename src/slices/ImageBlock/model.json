@@ -32,11 +32,7 @@
           "config": {
             "label": "width",
             "placeholder": "",
-            "options": [
-              "Full",
-              "Large",
-              "Medium"
-            ],
+            "options": ["Full", "Large", "Medium"],
             "default_value": "Full"
           }
         }

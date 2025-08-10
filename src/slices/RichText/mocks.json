@@ -1,29 +1,29 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"content": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Consectetur cillum aliquip culpa voluptate ex duis. Exercitation eu proident sint. Eu ad anim in qui dolor amet aliqua id ut dolore elit fugiat officia do."
-						}
-					}
-				]
-			},
-			"text_centered": {
-				"__TYPE__": "BooleanContent",
-				"value": false
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "content": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Consectetur cillum aliquip culpa voluptate ex duis. Exercitation eu proident sint. Eu ad anim in qui dolor amet aliqua id ut dolore elit fugiat officia do."
+            }
+          }
+        ]
+      },
+      "text_centered": {
+        "__TYPE__": "BooleanContent",
+        "value": false
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
 ]

@@ -1,59 +1,59 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"title": {
-				"__TYPE__": "FieldContent",
-				"value": "one",
-				"type": "Text"
-			},
-			"column_heading_1": {
-				"__TYPE__": "FieldContent",
-				"value": "stared",
-				"type": "Text"
-			},
-			"column_heading_2": {
-				"__TYPE__": "FieldContent",
-				"value": "west",
-				"type": "Text"
-			},
-			"column_heading_3": {
-				"__TYPE__": "FieldContent",
-				"value": "production",
-				"type": "Text"
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": [
-					[
-						"name",
-						{
-							"__TYPE__": "FieldContent",
-							"value": "darkness",
-							"type": "Text"
-						}
-					],
-					[
-						"price_1",
-						{
-							"__TYPE__": "FieldContent",
-							"value": "91",
-							"type": "Number"
-						}
-					],
-					[
-						"price_2",
-						{
-							"__TYPE__": "FieldContent",
-							"value": "21",
-							"type": "Number"
-						}
-					]
-				]
-			}
-		]
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "one",
+        "type": "Text"
+      },
+      "column_heading_1": {
+        "__TYPE__": "FieldContent",
+        "value": "stared",
+        "type": "Text"
+      },
+      "column_heading_2": {
+        "__TYPE__": "FieldContent",
+        "value": "west",
+        "type": "Text"
+      },
+      "column_heading_3": {
+        "__TYPE__": "FieldContent",
+        "value": "production",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "name",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "darkness",
+              "type": "Text"
+            }
+          ],
+          [
+            "price_1",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "91",
+              "type": "Number"
+            }
+          ],
+          [
+            "price_2",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "21",
+              "type": "Number"
+            }
+          ]
+        ]
+      }
+    ]
+  }
 ]
