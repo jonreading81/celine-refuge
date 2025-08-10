@@ -10,13 +10,14 @@ export async function middleware(request: NextRequest) {
   const defaultLocale = locales[0];
   const { pathname } = request.nextUrl;
   const pathnameIsMissingLocale = locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+    (locale) =>
+      !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
   );
 
   // Redirect to default locale if there is no supported locale prefix
   if (pathnameIsMissingLocale) {
     return NextResponse.rewrite(
-      new URL(`/${defaultLocale}${pathname}`, request.url)
+      new URL(`/${defaultLocale}${pathname}`, request.url),
     );
   }
 }
