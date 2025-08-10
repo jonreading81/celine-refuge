@@ -1407,16 +1407,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vis.gl/react-google-maps@npm:^0.7.1":
-  version: 0.7.1
-  resolution: "@vis.gl/react-google-maps@npm:0.7.1"
+"@vis.gl/react-google-maps@npm:1.5.5":
+  version: 1.5.5
+  resolution: "@vis.gl/react-google-maps@npm:1.5.5"
   dependencies:
     "@types/google.maps": ^3.54.10
     fast-deep-equal: ^3.1.3
   peerDependencies:
-    react: ">=16.8.0"
-    react-dom: ">=16.8.0"
-  checksum: b6d47cef4d61ac6d291012ba6d65ac314eaf601b79b7ef8e08ae53a334d39c0fff2e388223c081450bbf8f142cec3ff3d56276ada3f8930973c77f309b5b2472
+    react: ">=16.8.0 || ^19.0 || ^19.0.0-rc"
+    react-dom: ">=16.8.0 || ^19.0 || ^19.0.0-rc"
+  checksum: 2c2087cfe7fd084d8a7c0ffc4d73f4ebc57e928e0ad15294252dec1fd598dec2bb8f10156bcb4735039f80f9f3b152272cd2ca2bc31406287dce061fab851d0f
   languageName: node
   linkType: hard
 
@@ -2027,7 +2027,7 @@ __metadata:
     "@types/node": ^24.2.1
     "@types/react": ^19.1.9
     "@types/react-dom": ^19.1.7
-    "@vis.gl/react-google-maps": ^0.7.1
+    "@vis.gl/react-google-maps": 1.5.5
     autoprefixer: ^10.4.21
     concurrently: ^9.2.0
     eslint: ^9.33.0
