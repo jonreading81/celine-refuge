@@ -272,14 +272,14 @@ __metadata:
   linkType: hard
 
 "@fortawesome/react-fontawesome@npm:latest":
-  version: 0.2.3
-  resolution: "@fortawesome/react-fontawesome@npm:0.2.3"
+  version: 3.0.0
+  resolution: "@fortawesome/react-fontawesome@npm:3.0.0"
   dependencies:
-    prop-types: ^15.8.1
+    semver: ^7.7.2
   peerDependencies:
-    "@fortawesome/fontawesome-svg-core": ~1 || ~6 || ~7
-    react: ^16.3 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 6e32ce71c72d91fbb8323c108868421fcadc4a166850e3296c785440615eb7e5c249100951d4ad252afbb68570ffe5acf6e48e07dea05cff64787823c42f38ea
+    "@fortawesome/fontawesome-svg-core": ~6 || ~7
+    react: ^18.0.0 || ^19.0.0
+  checksum: c99e9f27de6136393477e7e32031c0b39e624c732d22f53788d321292d3780a8e33843d812df9d549eb8ef2ec727a3ee1487358b45df7feb6bf03d6d2e80d9d9
   languageName: node
   linkType: hard
 
