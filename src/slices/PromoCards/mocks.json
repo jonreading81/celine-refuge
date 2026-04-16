@@ -47,6 +47,7 @@
 					[
 						"link",
 						{
+							"key": "df9a00ae-8710-4c11-ae14-8f56fe5240df",
 							"__TYPE__": "LinkContent",
 							"value": {
 								"__TYPE__": "ExternalLink",
@@ -86,6 +87,20 @@
 							"alt": null,
 							"__TYPE__": "ImageContent",
 							"thumbnails": {}
+						}
+					],
+					[
+						"rich_text",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Eiusmod officia ea nostrud mollit quis adipisicing."
+									}
+								}
+							]
 						}
 					]
 				]

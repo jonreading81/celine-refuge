@@ -1,11 +1,25 @@
 'use client';
 import { Content } from '@prismicio/client';
-import { SliceComponentProps } from '@prismicio/react';
+import { PrismicRichText, SliceComponentProps } from '@prismicio/react';
 import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
 import { formatDate } from '@app/utils/date-formatter';
 import { Slice } from '@app/components/Slice';
 import { WrapWithLink } from '@app/components/WrapWithLink';
+import { components as baseRichTextCompoents } from '@app/utils/richTextComponents';
 
+const components = {
+  ...baseRichTextCompoents,
+
+  hyperlink: ({ node, children }) => (
+    <PrismicNextLink
+      className="font-semibold underline inline-block"
+      field={node.data}
+      target={node.data.link_type === 'Media' ? '_blank' : undefined}
+    >
+      {children}
+    </PrismicNextLink>
+  ),
+};
 const columns = {
   1: ' lg:grid-cols-1',
   2: ' lg:grid-cols-2',
@@ -65,7 +79,16 @@ const PromoCards = ({ slice: { primary, items } }) => {
               <WrapWithLink link={item.link}>
                 <h3 className="mt-2 pt-3 mb-6 ">{item.title}</h3>
               </WrapWithLink>
-              <p className="text-base mb-10">{item.text}</p>
+              {!!item.text?.length && (
+                <p className="text-base mb-10">{item.text}</p>
+              )}
+
+              {!!item.rich_text.length && (
+                <PrismicRichText
+                  field={item.rich_text}
+                  components={components}
+                />
+              )}
             </div>
             {item.link?.url && primary.button_text && (
               <div className=" m-8 mt-0">
