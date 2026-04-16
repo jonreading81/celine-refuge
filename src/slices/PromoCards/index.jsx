@@ -78,7 +78,7 @@ const PromoCards = ({ slice: { primary, items } }) => {
               <WrapWithLink link={item.link}>
                 <h3 className="mt-2 pt-3 mb-6 ">{item.title}</h3>
               </WrapWithLink>
-              {!!item.text.length && (
+              {!!item.text?.length && (
                 <p className="text-base mb-10">{item.text}</p>
               )}
 
