@@ -14,6 +14,7 @@ const components = {
     <PrismicNextLink
       className="font-semibold underline inline-block"
       field={node.data}
+      target={node.data.link_type === 'Media' ? '_blank' : undefined}
     >
       {children}
     </PrismicNextLink>
