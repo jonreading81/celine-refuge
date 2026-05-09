@@ -6741,17 +6741,17 @@ __metadata:
   linkType: hard
 
 "resend@npm:^6.11.0":
-  version: 6.11.0
-  resolution: "resend@npm:6.11.0"
+  version: 6.12.3
+  resolution: "resend@npm:6.12.3"
   dependencies:
     postal-mime: 2.7.4
-    svix: 1.90.0
+    svix: 1.92.2
   peerDependencies:
     "@react-email/render": "*"
   peerDependenciesMeta:
     "@react-email/render":
       optional: true
-  checksum: 1a5ee5c34d33adf363137d5e295d4aca4a3cef4a00fead4e76c388fefe74e182b70f0d6b3cc6527a7fb448f81c6deb067fb9b1bf1e710b172d7acc43afc85e7b
+  checksum: 9a0cf86cdb2b6f2b021a14ff207b614ae291ed765b80de61d6079108f809d476adb52842684e1f35cd922db96a7fa8f16ec44d6dca5fbc7e4449d356d89c6fc9
   languageName: node
   linkType: hard
 
@@ -7710,13 +7710,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svix@npm:1.90.0":
-  version: 1.90.0
-  resolution: "svix@npm:1.90.0"
+"svix@npm:1.92.2":
+  version: 1.92.2
+  resolution: "svix@npm:1.92.2"
   dependencies:
     standardwebhooks: 1.0.0
-    uuid: ^10.0.0
-  checksum: 3fecb82831288937301c51be050d1da6194f8b89f22699ea3728d6f57c7008583e8f1dd36d203c716237254cd624c736b009d0e578e787f7494c05f2bce05b08
+  checksum: 4807fa3fbe680ac40baa9537da88f91af4879f3b41fc5395fcb48c2d71ce9a7cf4f7681e94de44602b7b2f9128f7b2526ecf9c1fb02f0c6de229401f50b10dda
   languageName: node
   linkType: hard
 
@@ -8187,15 +8186,6 @@ __metadata:
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
   checksum: c81095493225ecfc28add49c106ca4f09cdf56bc66731aa8dabc2edbbccb1e1bfe2de6a115e5c6a380d3ea166d1636410b62ef216bb07b3feb1cfde1d95d5080
-  languageName: node
-  linkType: hard
-
-"uuid@npm:^10.0.0":
-  version: 10.0.0
-  resolution: "uuid@npm:10.0.0"
-  bin:
-    uuid: dist/bin/uuid
-  checksum: 4b81611ade2885d2313ddd8dc865d93d8dccc13ddf901745edca8f86d99bc46d7a330d678e7532e7ebf93ce616679fb19b2e3568873ac0c14c999032acb25869
   languageName: node
   linkType: hard
 
