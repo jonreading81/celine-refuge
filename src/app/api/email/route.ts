@@ -9,6 +9,7 @@ export async function POST(request: NextRequest) {
   try {
     await resend.emails.send({
       from: 'celine@refugedusuffet.fr',
+      replyTo: to,
       to,
       subject,
       text,
